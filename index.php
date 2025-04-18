@@ -73,7 +73,7 @@ session_start();
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best eLearning Platform</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Welcome to the Community</h5>
                                 <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">We offet a wide viriety of courses that enhance our students with modern technical skills for the furture</p>
                                 <a href="about.about" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
@@ -90,7 +90,7 @@ session_start();
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best eLearning Platform</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <h1 class="display-3 text-white animated slideInDown">Connect With Like Minded Tech Enthusiasts</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Get to teach yourself new skills at the comfort of your home</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="join_now.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
@@ -129,7 +129,7 @@ session_start();
                         <div class="p-4">
                             <i class="fa fa-3x fa-pen text-primary mb-4"></i>
                             <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>We have well trained and certified tutors with internationaly recognised certificates</p>
+                            <p>We have well trained and certified tutors who have volunteered to guide students</p>
                         </div>
                     </div>
                 </div>
@@ -146,8 +146,8 @@ session_start();
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Examinations</h5>
-                            <p>After a series of lessons and learning, our students are always examined and tested</p>
+                            <h5 class="mb-3">Projects</h5>
+                            <p>Get an apportunity to build real world projects and make contributions to open soucrce projects</p>
                         </div>
                     </div>
                 </div>
@@ -155,8 +155,8 @@ session_start();
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Learners can aalways get books from our library and our online store</p>
+                            <h5 class="mb-3">Library</h5>
+                            <p>We offer learning materials to the community members for free to allow them sharpen their</p>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@ session_start();
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Jackson Williams</h5>
+                            <h5 class="mb-0">Collins Otieno</h5>
                             <small>Director</small>
                         </div>
                     </div>
@@ -316,8 +316,8 @@ session_start();
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Sharon Knight</h5>
-                            <small>Tutor</small>
+                            <h5 class="mb-0">**********</h5>
+                            <small>*******</small>
                         </div>
                     </div>
                 </div>
@@ -334,8 +334,8 @@ session_start();
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Tessa Thompsons</h5>
-                            <small>Receptionist</small>
+                            <h5 class="mb-0">*************</h5>
+                            <small>**********</small>
                         </div>
                     </div>
                 </div>

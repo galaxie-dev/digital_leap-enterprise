@@ -77,13 +77,13 @@
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-4">
+        <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-pen text-primary mb-4"></i>
                             <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>We have well trained and certified tutors with internationaly recognised certificates</p>
+                            <p>We have well trained and certified tutors who have volunteered to guide students</p>
                         </div>
                     </div>
                 </div>
@@ -99,9 +99,9 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Examinations</h5>
-                            <p>After a series of lessons and learning, our students are always examined and tested</p>
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Projects</h5>
+                            <p>Get an apportunity to build real world projects and make contributions to open soucrce projects</p>
                         </div>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Learners can aalways get books from our library and our online store</p>
+                            <h5 class="mb-3">Library</h5>
+                            <p>We offer learning materials to the community members for free to allow them sharpen their</p>
                         </div>
                     </div>
                 </div>
