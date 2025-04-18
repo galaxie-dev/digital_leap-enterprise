@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('Course details loaded');
+
     
     // Example: Smooth scrolling to sections
     document.querySelectorAll('h2').forEach(header => {
