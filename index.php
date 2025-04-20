@@ -52,7 +52,7 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="about.php" class="nav-item nav-link">Blog</a>
                 <a href="courses.php" class="nav-item nav-link">Courses</a>                         
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
                 <a href="join_now.php" class="nav-item nav-link">Join Now</a>
@@ -178,25 +178,37 @@ session_start();
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                     <h1 class="mb-4">Welcome to Digital Leap</h1>
-                    <p class="mb-4">We offer courses, programs that equip our learners with digital skills that are in demand in today's market  </p>
-                    <p class="mb-4">Students leave our institutions with some of the following skills:</p>
+                    <p class="mb-4">Digital Leap is a vibrant tech mentorship community founded in November 2024. 
+                        We are a passionate network of aspiring and experienced tech enthusiasts dedicated to learning, collaboration, and personal growth.
+                    </p>
+                    <p class="mb-4">Our mission is to empower individuals—especially students, early-career professionals, 
+                        and self-taught developers—with the skills, knowledge, and support they need to thrive in the digital 
+                        world. Whether you're into software development, UI/UX design, data, networking, or digital 
+                        entrepreneurship, you'll find valuable conversations, free resources, mentorship, and motivation right here.
+                    </p>
+                    <p class="mb-4">In this space, we:
+                    </p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Digital Skills</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Share learning resources, tutorials, and job/internship opportunities
+                            </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experience</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Encourage accountability, skill-building, and project showcases
+                            </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Host Q&A sessions and community-driven mini-workshops
+                            </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Good Connections</p>
-                        </div>                        
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Wide Network</p>
-                        </div>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Build lasting friendships with like-minded peers in tech
+                            </p>
+                        </div>                  
+                       
                     </div>
+                    <p class="mb-4">Digital Leap is more than a community—it's a movement to help you grow, 
+                        contribute, and stay ahead in the tech ecosystem. Let’s level up together!</p>
              
                 </div>
             </div>

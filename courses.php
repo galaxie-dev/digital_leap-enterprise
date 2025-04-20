@@ -81,9 +81,8 @@ function getCourseIdByName($conn, $name) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="courses.php" class="nav-item nav-link">Courses</a>                         
-              
+                <a href="about.php" class="nav-item nav-link">Blog</a>
+                <a href="courses.php" class="nav-item nav-link">Courses</a>                      
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>

@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="about.php" class="nav-item nav-link">Blog</a>
                 <a href="courses.php" class="nav-item nav-link">Courses</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
