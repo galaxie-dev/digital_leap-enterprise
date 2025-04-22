@@ -1,308 +1,250 @@
-<?php
-
-session_start();
-
-$servername = "localhost";
-$username = "root";  // Default for XAMPP
-$password = "";      // Default for XAMPP, but use your password if set
-$dbname = "digital_leap";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-if (isset($_GET['course_id'])) {
-    $course_id = $conn->real_escape_string($_GET['course_id']);
-    $sql = "SELECT * FROM courses WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $course_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $course = $result->fetch_assoc();
-} else {
-    header("Location: courses.php");
-    exit();
-}
-
-
-if ($course === null) {
-    echo "No course found with this ID.";
-    exit;
-}
-
-// Function to clean and format text
-function cleanText($text) {
-    $text = preg_replace("/\r\n|\r|\n/", "<br>", $text);
-    $text = str_replace("\\r", "", $text);
-    $text = str_replace("\\n", "", $text);
-    $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-    $text = stripslashes($text);
-    return $text;
-}
-
-$course['about_course'] = cleanText($course['about_course']);
-$course['career_opportunities'] = cleanText($course['career_opportunities']);
-$course['additional_info'] = cleanText($course['additional_info']);
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($course['course_name']); ?> - Digital Leap</title>
+    <title>Document Structure - Notes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles for the admin-like layout */
-        .admin-container {
-            display: flex;
-            min-height: 100vh;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f5f7fa;
         }
-        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
         .sidebar {
             width: 280px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px 0;
         }
-        
         .main-content {
             flex: 1;
             padding: 20px;
-            background-color: var(--light);
         }
-        
-        .sidebar-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .sidebar-menu li {
-            position: relative;
-        }
-        
-        .sidebar-menu a {
-            display: block;
-            padding: 12px 20px;
-            color: var(--dark);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .sidebar-menu a:hover {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: var(--primary);
-        }
-        
-        .sidebar-menu .active > a {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: var(--primary);
-            border-left: 3px solid var(--primary);
-        }
-        
         .menu-header {
             padding: 15px 20px;
             text-transform: uppercase;
             font-weight: 600;
-            color: var(--dark);
+            color: #333;
             font-size: 14px;
-            letter-spacing: 0.5px;
         }
-        
         .submenu {
             list-style: none;
             padding-left: 20px;
-            display: none;
         }
-        
         .submenu a {
-            padding: 10px 20px 10px 30px;
-            font-size: 14px;
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
         }
-        
-        .menu-item.has-submenu > a::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            float: right;
-            font-size: 12px;
-            transition: transform 0.3s;
+        .submenu a:hover {
+            background-color: rgba(6, 92, 204, 0.1);
+            color: #065ccc;
         }
-        
-        .menu-item.has-submenu.active > a::after {
-            transform: rotate(180deg);
+        .submenu li.active a {
+            background-color: rgba(6, 92, 204, 0.1);
+            color: #065ccc;
+            border-left: 3px solid #065ccc;
         }
-        
-        .course-content {
+        .content-section {
             background: white;
             border-radius: 8px;
             padding: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
         }
-        
-        .course-image {
+        .code-block {
+            position: relative;
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        .code-block pre {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #065ccc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background: #044caa;
+        }
+        .image-placeholder {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
-    </div>
-    <!-- Spinner End -->
-
-    <div class="admin-container">
+    <div class="container">
         <!-- Sidebar Navigation -->
         <div class="sidebar">
             <ul class="sidebar-menu">
-                <li class="menu-header">Course Content</li>
-                
-                <!-- Main Topics (would be fetched from database in real implementation) -->
+                <li class="menu-header">Document Structure</li>
                 <li class="menu-item has-submenu active">
-                    <a href="#"><i class="fas fa-code me-2"></i> Web Development</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Document Structure</a>
                     <ul class="submenu" style="display: block;">
-                        <!-- Subtopic 1 (active by default) -->
-                        <li class="active"><a href="#" data-content="about"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> About the Course</a></li>
-                        <!-- Other subtopics -->
-                        <li><a href="#" data-content="career"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Career Opportunities</a></li>
-                        <li><a href="#" data-content="info"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Additional Information</a></li>
-                        <!-- More subtopics would be added dynamically from database -->
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Root Element</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Head Section</a></li>
+                        <li><a href="#" data-content="body"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Body Section</a></li>
                     </ul>
-                </li>
-                
-                <li class="menu-item has-submenu">
-                    <a href="#"><i class="fas fa-database me-2"></i> Database</a>
-                    <ul class="submenu">
-                        <li><a href="#"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> SQL Basics</a></li>
-                        <li><a href="#"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Advanced Queries</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item has-submenu active">
-                    <a href="#"><i class="fas fa-code me-2"></i> Web Development</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Content Sections</a>
                     <ul class="submenu" style="display: block;">
-                        <!-- Subtopic 1 (active by default) -->
-                        <li class="active"><a href="#" data-content="about"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> About the Course</a></li>
-                        <!-- Other subtopics -->
-                        <li><a href="#" data-content="career"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Career Opportunities</a></li>
-                        <li><a href="#" data-content="info"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Additional Information</a></li>
-                        <!-- More subtopics would be added dynamically from database -->
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Semantic Containers</a></li>
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i>Headings and Text</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Headings</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Text Elements</a></li>
+                        
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i>Media</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Images</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Videos</a></li>
+                        <li><a href="#" data-content="body"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Videos from other sites</a></li>
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i>Lists</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Unordered List</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Ordered List</a></li>
+                        <li><a href="#" data-content="body"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Description List</a></li>
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i> Interactive Elements</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Links and  Buttons</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Forms</a></li>
+                        <li><a href="#" data-content="body"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Advanced Forms</a></li>
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i>Dividers</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Thematic Break</a></li>
+                    </ul>
+                    <a href="#"><i class="fas fa-code me-2"></i>Containers</a>
+                    <ul class="submenu" style="display: block;">
+                        <li class="active"><a href="#" data-content="root"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Div</a></li>
+                        <li><a href="#" data-content="head"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Span</a></li>
+                        <li><a href="#" data-content="body"><i class="fas fa-circle me-2" style="font-size: 8px;"></i>Others</a></li>
                     </ul>
                 </li>
-                
-                <li class="menu-item has-submenu">
-                    <a href="#"><i class="fas fa-database me-2"></i> Database</a>
-                    <ul class="submenu">
-                        <li><a href="#"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> SQL Basics</a></li>
-                        <li><a href="#"><i class="fas fa-circle me-2" style="font-size: 8px;"></i> Advanced Queries</a></li>
-                    </ul>
-                </li>
-                <!-- More main topics would be added here -->
             </ul>
         </div>
-        
+
         <!-- Main Content Area -->
         <div class="main-content">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="mb-0"><?php echo htmlspecialchars($course['course_name']); ?></h2>
-                <a href="courses.php" class="btn btn-primary return-to-courses">Return to Courses</a>
+            <div id="root-content" class="content-section">
+                <h2>Root Element</h2>
+                <p>The root element is the top-level container for all HTML elements.</p>
+                <div class="code-block">
+                    <pre>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Content goes here -->
+    </body>
+</html>
+                    </pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+                <img src="" alt="Root Element Example" class="image-placeholder">
             </div>
-            
-            <div class="course-content">
-                <!-- Default content shown (About the Course) -->
-                <div id="about-content" class="content-section">
-                    <img src="<?php echo htmlspecialchars($course['course_image']); ?>" alt="<?php echo htmlspecialchars($course['course_name']); ?>" class="course-image">
-                    <h3 class="section-title">About the Course</h3>
-                    <div class="section-content">
-                        <?php echo $course['about_course']; ?>
-                    </div>
+
+            <div id="head-content" class="content-section" style="display: none;">
+                <h2>Head Section</h2>
+                <p>The head section contains metadata and links to external resources.</p>
+                <div class="code-block">
+                    <pre>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the page">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS */
+    </style>
+    <base href="https://example.com/">
+</head>
+                    </pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                 </div>
-                
-                <!-- Career Opportunities (hidden by default) -->
-                <div id="career-content" class="content-section" style="display: none;">
-                    <h3 class="section-title">Career Opportunities</h3>
-                    <div class="section-content">
-                        <?php echo $course['career_opportunities']; ?>
-                    </div>
+                <img src="https://via.placeholder.com/600x200?text=Head+Section+Example" alt="Head Section Example" class="image-placeholder">
+            </div>
+
+            <div id="body-content" class="content-section" style="display: none;">
+                <h2>Body Section</h2>
+                <p>The body section contains the visible content of the webpage.</p>
+                <div class="code-block">
+                    <pre>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <p>This is the main content.</p>
+    </main>
+    <footer></footer>
+</body>
+                    </pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                 </div>
-                
-                <!-- Additional Information (hidden by default) -->
-                <div id="info-content" class="content-section" style="display: none;">
-                    <h3 class="section-title">Additional Information</h3>
-                    <div class="section-content">
-                        <?php echo $course['additional_info']; ?>
-                    </div>
-                </div>
+                <img src="https://via.placeholder.com/600x200?text=Body+Section+Example" alt="Body Section Example" class="image-placeholder">
             </div>
         </div>
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(document).ready(function() {
-            // Handle menu toggling
-            $('.has-submenu > a').click(function(e) {
+        // Handle menu clicks
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
-                $(this).parent().toggleClass('active');
-                $(this).next('.submenu').slideToggle();
-            });
-            
-            // Handle content switching when subtopics are clicked
-            $('.submenu a').click(function(e) {
-                e.preventDefault();
-                
-                // Update active state in menu
-                $('.submenu li').removeClass('active');
-                $(this).parent().addClass('active');
-                
-                // Get which content to show
-                var contentId = $(this).data('content');
-                
+                // Remove active class from all items
+                document.querySelectorAll('.submenu li').forEach(li => li.classList.remove('active'));
+                // Add active class to clicked item
+                this.parentElement.classList.add('active');
                 // Hide all content sections
-                $('.content-section').hide();
-                
+                document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
                 // Show the selected content
-                $('#' + contentId + '-content').show();
+                const contentId = this.getAttribute('data-content');
+                document.getElementById(`${contentId}-content`).style.display = 'block';
             });
-            
-            // Hide spinner when page is loaded
-            setTimeout(function() {
-                $('#spinner').fadeOut();
-            }, 500);
         });
+
+        // Copy code to clipboard
+        function copyCode(button) {
+            const codeBlock = button.parentElement.querySelector('pre');
+            navigator.clipboard.writeText(codeBlock.innerText).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
     </script>
 </body>
 </html>
