@@ -110,7 +110,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i> Containers</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Generic Containers</a>
                     <ul class="submenu">
                         <li><a href="#" data-content="div"><i style="font-size: 8px;"></i> Div</a></li>
                         <li><a href="#" data-content="span"><i style="font-size: 8px;"></i> Span</a></li>
@@ -875,8 +875,9 @@
                                         <pre>
     
 &lt;search&gt;
-    &lt;form&gt;
-        &lt;p&gt; Contact: +254790****45&lt;/p&gt;
+    &lt;form action="/search" method="get"&gt;
+        &lt;input type="search" name="q" placeholder="Search..."&gt;
+        &lt;button type="submit"&gt;Search&lt;/button&gt;
     &lt;/form&gt;
 &lt;/search&gt;  
                                         </pre>
