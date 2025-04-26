@@ -52,12 +52,10 @@ function getCourseIdByName($conn, $name) {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="owl.carousel.min.css" rel="stylesheet">
-
-    <link href="bootst.css" rel="stylesheet">
-
-    <link href="courses.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootst.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
 </head>
 
 <body>
@@ -153,9 +151,9 @@ function getCourseIdByName($conn, $name) {
 </div>
 <!-- Categories End -->
 
-
-    <!-- Courses Start -->
-    <!-- <div class="container-xxl py-5">
+<!-- 
+    Courses Start -->
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -173,19 +171,19 @@ function getCourseIdByName($conn, $name) {
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Ksh 44,000.00</h3>
+                            <h3 class="mb-0">Ksh 00.00</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
-                                <small>(45)</small>
+                                <small>(22)</small>
                             </div>
-                            <h5 class="mb-4">Videography and Video Editing</h5>
+                            <h5 class="mb-4">Front End Web Development</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Jackson Williams</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Evans Osumba</small>
                             <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>48 Hrs</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>24 Students</small>
                         </div>
@@ -201,21 +199,21 @@ function getCourseIdByName($conn, $name) {
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Ksh 95,550.00</h3>
+                            <h3 class="mb-0">Ksh 00.00</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
-                                <small>(58)</small>
+                                <small>(22)</small>
                             </div>
-                            <h5 class="mb-4">Web Design & Development</h5>
+                            <h5 class="mb-4">Back-End Web Development</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Evans Osumba</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Collins Otieno</small>
                             <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>72 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>18 Students</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>12 Students</small>
                         </div>
                     </div>
                 </div>
@@ -229,27 +227,27 @@ function getCourseIdByName($conn, $name) {
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Ksh 68,000.00</h3>
+                            <h3 class="mb-0">Ksh 00.00</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                               
-                                <small>(72)</small>
+                                <small>(22)</small>
                             </div>
                             <h5 class="mb-4">Graphic Design</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Sharon Knight</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Collins Otieno</small>
                             <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>54 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>32 Students</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>12 Students</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Courses End -->
 
 
@@ -341,13 +339,13 @@ function getCourseIdByName($conn, $name) {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="easing.min.js"></script>
-    <script src="waypoints.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

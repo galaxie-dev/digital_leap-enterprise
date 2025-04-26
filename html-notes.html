@@ -6,219 +6,45 @@
     <title>Digital Leap - Notes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-        }
-        .app-container {
-            display: flex;
-            min-height: 100vh;
-        }
-        .sidebar {
-            width: 280px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px 0;
-            overflow-y: auto;
-        }
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        .right-sidebar {
-            width: 14%;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            overflow-y: auto;
-        }
-        .menu-header {
-            padding: 15px 20px;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #333;
-            font-size: 14px;
-        }
-        .menu-item > a {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .menu-item > a:hover {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: #065ccc;
-        }
-        .menu-item.active > a {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: #065ccc;
-            border-left: 3px solid #065ccc;
-        }
-        .submenu {
-            list-style: none;
-            padding-left: 20px;
-            display: none;
-        }
-        .submenu.active {
-            display: block;
-        }
-        .submenu a {
-            display: block;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .submenu a:hover {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: #065ccc;
-        }
-        .submenu li.active a {
-            background-color: rgba(6, 92, 204, 0.1);
-            color: #065ccc;
-            border-left: 3px solid #065ccc;
-        }
-        .content-section {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
-            display: none;
-        }
-        .content-section.active {
-            display: block;
-        }
-        .code-display {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .code-container {
-            flex: 1;
-        }
-        .preview-container {
-            width: 40%;
-        }
-        .code-block {
-            position: relative;
-            background: #282c34;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            color: #abb2bf;
-        }
-        .code-block pre {
-            margin: 0;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            tab-size: 2;
-        }
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #065ccc;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        .copy-btn:hover {
-            background: #044caa;
-        }
-        .preview-frame {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            height: 100%;
-            overflow: auto;
-        }
-        .sidebar-section {
-            margin-bottom: 30px;
-        }
-        .sidebar-section h3 {
-            color: #065ccc;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .progress-container {
-            background: #f5f7fa;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .progress-title {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .progress-bar {
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%;
-            background: #065ccc;
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-        .progress-percent {
-            text-align: right;
-            font-size: 12px;
-            color: #757575;
-            margin-top: 5px;
-        }
-        .resource-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .resource-item:last-child {
-            border-bottom: none;
-        }
-        .resource-icon {
-            width: 30px;
-            height: 30px;
-            background: #065ccc;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-        .resource-info h4 {
-            font-size: 14px;
-            margin-bottom: 2px;
-        }
-        .resource-info p {
-            font-size: 12px;
-            color: #757575;
-        }
-        @media (max-width: 1200px) {
-            .right-sidebar {
-                display: none;
-            }
-        }
+
     </style>
+
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/bootst.css" rel="stylesheet">
+<link href="css/about.css" rel="stylesheet">
+
+<!-- Specific for notes sections -->
+<link href="css/notes.css" rel="stylesheet">
+
+   <!-- Google Web Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="opacity: 50%;">
+            <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Digital Leap</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="about.php" class="nav-item nav-link">Blog</a>
+                    <a href="courses.php" class="nav-item nav-link">Courses</a>                         
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
+                    <a href="join_now.php" class="nav-item nav-link">Join Now</a>
+                    <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                </div>
+                
+            </div>
+        </nav>
+        <!-- Navbar End -->
     <div class="app-container">
         <!-- Left Sidebar Navigation -->
         <div class="sidebar">
@@ -776,5 +602,17 @@
         // Initialize progress
         updateLearningProgress();
     </script>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/easing.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+    
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 </html>

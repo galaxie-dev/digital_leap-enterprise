@@ -59,12 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="owl.carousel.min.css" rel="stylesheet">
-
-    <link href="bootst.css" rel="stylesheet">
-
-    <link href="contact.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootst.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
 </head>
 
 <body>
@@ -157,13 +155,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="easing.min.js"></script>
-    <script src="waypoints.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
