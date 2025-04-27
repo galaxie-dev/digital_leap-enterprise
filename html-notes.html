@@ -49,7 +49,11 @@
         <!-- Left Sidebar Navigation -->
         <div class="sidebar">
             <ul class="sidebar-menu">
-                <li class="menu-header">HTML COURSE</li>
+                <select>
+                    <option class="menu-header">HTML COURSE</option>
+                    <option class="menu-header">CSS COURSE</option>
+                    <option class="menu-header">JavaScript COURSE</option>
+                </select>
                 <li class="menu-item active">
                     <a href="#"><i class="fas fa-code me-2"></i> Document Structure</a>
                     <ul class="submenu active">
@@ -1090,6 +1094,113 @@
                                 <li>Links to external resources like CSS</li>
                             </ul>
                         </div> -->
+            </div>
+
+             <!-- Main Section -->           
+             <div id="headings-content" class="content-section active">
+                <h4>&lt;h1&gt; to &lt;h6&gt;  (Headings)</h4>
+                <p>HTML headings are used to define the structure and hierarchy of the content on a webpage.</p>
+                <p>They range from &lt;h1&gt; to &lt;h1&gt;, with &lt;h1&gt; being the highest level and &lt;h6&gt; being the lowest.</p>
+                <p>Proper use of headings is crucial for both accessibility and SEO.</p>               
+
+                        <!-- Explains h tags -->
+                        <br><h5>Purpose</h5>
+                        <li>&lt;h1&gt;: The most important heading, typically used for the main title of the page.</li>
+                        <li>&lt;h2&gt;: Subheadings or secondary titles.</li>
+                        <li>&lt;h3&gt; to &lt;h6&gt;: Further sub headings or nested sections.</li>
+
+                  
+                            <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
+
+                            <br><h5>Accessibility</h5>
+                            <li> Headings should be used to provide a clear structure to the content.</li>
+                            <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
+
+
+                            <br><h5>Best Practices</h5>
+                                <li>Use only one &lt;h1&gt; per page, typically for the main title.</li>
+                                <li>Ensure that headings are descriptive and relevant to the content they introduce.</li>
+                                <li>Use headings to break up long blocks of text, making the content more readable.</li>
+
+                            <div class="code-display">
+                                <div class="code-container">
+                                    <h3>Usage</h3>
+                                    <div class="code-block">
+                                        <pre> 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Example of Headings&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+            &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;About Us&lt;/h2&gt;
+                &lt;p&gt;This section provides information about our community.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Our Services&lt;/h2&gt;
+                &lt;article&gt;
+                    &lt;h3&gt;Service 1&lt;/h3&gt;
+                    &lt;p&gt;Details about Service 1.&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article&gt;
+                    &lt;h3&gt;Service 2&lt;/h3&gt;
+                    &lt;p&gt;Details about Service 2.&lt;/p&gt;
+                &lt;/article&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Contact Us&lt;/h2&gt;
+            &lt;p&gt;Get in touch with us through the following methods.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 Digital Leap&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;                                                         
+                                        </pre>
+                                        <button class="copy-btn">Copy</button>
+                                    </div>
+
+                                </div>    
+                                                 
+                            </div>   
+                            <div class="preview-container">
+                                <h3>Result</h3>
+                                <div class="preview-frame">
+                                    <h4>Image</h4>
+                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
+                                    
+                                </div>
+                            </div>                   
+                        <div class="preview-frame">
+                            <h4>Key Elements</h4>
+                            <ul>
+                                <li>Use headings in a logical order. For example, an &lt;h2&gt; should not come before an &lt;h1&gt;.</li>
+                                <li>Avoid skipping heading levels (e.g., using an &lt;h3&gt; after an &lt;h1&gt; without an &lt;h2&gt; in between).</li>
+                                <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
+                                <li>Search engines use headings to understand the structure and content of a webpage.</li>
+                                <li>Proper use of headings can improve search engine rankings.</li>
+                            </ul>
+                        </div> 
             </div>
 
 
