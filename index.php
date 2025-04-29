@@ -235,9 +235,9 @@ session_start();
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="images/1934823-e1540532501723.jpg" alt="">
+                                <img class="img-fluid" src="images/database.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
+                                    <h5 class="m-0">Database Management</h5>
                                     <small class="text-primary">Comming Soon!</small>
                                 </div>
                             </a>
@@ -255,7 +255,7 @@ session_start();
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="images/7_digital_skills600x38733333.png" alt="" style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="images/androiddd.png" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                             <h5 class="m-0">Android Development</h5>
                             <small class="text-primary">Comming Soon!</small>
