@@ -228,7 +228,7 @@ session_start();
                             <a class="position-relative d-block overflow-hidden" href="html-notes.html">
                                 <img class="img-fluid" src="images/students2.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
+                                    <h5 class="m-0">Front-end Web Development</h5>
                                     <small class="text-primary">Comming Soon!</small>
                                 </div>
                             </a>
@@ -246,7 +246,7 @@ session_start();
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/cat-3.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
+                                    <h5 class="m-0">Back-end Web Development</h5>
                                     <small class="text-primary">Comming Soon!</small>
                                 </div>
                             </a>
@@ -257,7 +257,7 @@ session_start();
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
                         <img class="img-fluid position-absolute w-100 h-100" src="images/7_digital_skills600x38733333.png" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
+                            <h5 class="m-0">Android Development</h5>
                             <small class="text-primary">Comming Soon!</small>
                         </div>
                     </a>
