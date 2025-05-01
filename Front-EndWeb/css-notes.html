@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Leap - HTML</title>
+    <title>Digital Leap - CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
 
     </style>
 
-<link href="css/animate.min.css" rel="stylesheet">
-<link href="css/owl.carousel.min.css" rel="stylesheet">
-<link href="css/bootst.css" rel="stylesheet">
-<link href="css/about.css" rel="stylesheet">
+<link href="../css/animate.min.css" rel="stylesheet">
+<link href="../css/owl.carousel.min.css" rel="stylesheet">
+<link href="../css/bootst.css" rel="stylesheet">
+<link href="../css/about.css" rel="stylesheet">
 
 <!-- Specific for notes sections -->
-<link href="css/notes.css" rel="stylesheet">
+<link href="../css/notes.css" rel="stylesheet">
 
    <!-- Google Web Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,18 +27,18 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="opacity: 50%;">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Digital Leap</h2>
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Digital Leap - CSS</h2>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <!-- <a href="index.php" class="nav-item nav-link active">Home</a>
                     <a href="about.php" class="nav-item nav-link">Blog</a>
                     <a href="courses.php" class="nav-item nav-link">Courses</a>                         
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
-                    <a href="join_now.php" class="nav-item nav-link">Join Now</a>
+                    <a href="join_now.php" class="nav-item nav-link">Join Now</a> -->
                     <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
                 
@@ -48,12 +48,13 @@
     <div class="app-container">
         <!-- Left Sidebar Navigation -->
         <div class="sidebar">
-            <ul class="sidebar-menu">
-                <select>
-                    <option class="menu-header">HTML COURSE</option>
-                    <option class="menu-header">CSS COURSE</option>
-                    <option class="menu-header">JavaScript COURSE</option>
-                </select>
+            <ul class="sidebar-menu">             
+                    <select id="courseMenu" onchange="goToPage()">
+                        <option value="">-- Select a Course --</option>
+                        <option value="html-notes.html">HTML COURSE</option>
+                        <option value="css-notes.html">CSS COURSE</option>
+                        <option value="js-notes.html">JavaScript COURSE</option>
+                    </select>                
                 <li class="menu-item active">
                     <a href="#"><i class="fas fa-code me-2"></i> Document Structure</a>
                     <ul class="submenu active">
@@ -1374,12 +1375,12 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/easing.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/easing.min.js"></script>
+        <script src="../js/waypoints.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
     
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script src="../js/main.js"></script>
 </body>
 </html>

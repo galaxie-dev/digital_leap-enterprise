@@ -107,3 +107,12 @@
     
 })(jQuery);
 
+
+// course selector
+function goToPage() {
+    const selectedPage = document.getElementById("courseMenu").value;
+    if (selectedPage) {
+        window.location.href = selectedPage;
+    }
+}
+
