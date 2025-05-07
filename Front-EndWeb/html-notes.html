@@ -34,9 +34,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
                     <a href="about.php" class="nav-item nav-link">Blog</a>
-                    <a href="courses.php" class="nav-item nav-link">Courses</a>                         
+                    <a href="courses.php" class="nav-item nav-link active">Courses</a>                         
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                     <a href="join_now.php" class="nav-item nav-link">Join Now</a>
                     <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
@@ -1268,6 +1268,702 @@
                         <p>Just now</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text Elements -->
+    <div id="text-content" class="content-section">
+        <h2>Text Elements</h2>
+        <p>HTML provides various elements to format and emphasize text, enhancing readability and semantics.</p>
+        <h4>Common Text Elements</h4>
+        <ul>
+            <li><strong>&lt;p&gt;</strong>: Defines a paragraph of text.</li>
+            <li><strong>&lt;br&gt;</strong>: Inserts a line break within text.</li>
+            <li><strong>&lt;strong&gt;</strong>: Indicates text of strong importance, typically rendered as bold.</li>
+            <li><strong>&lt;em&gt;</strong>: Marks text with emphasis, typically rendered as italic.</li>
+            <li><strong>&lt;b&gt;</strong>: Styles text as bold without semantic importance.</li>
+            <li><strong>&lt;i&gt;</strong>: Styles text as italic without semantic emphasis.</li>
+            <li><strong>&lt;small&gt;</strong>: Represents side comments or fine print, rendered in smaller font.</li>
+            <li><strong>&lt;mark&gt;</strong>: Highlights text for reference or notation purposes.</li>
+            <li><strong>&lt;ins&gt;</strong>: Indicates text that has been inserted into a document.</li>
+            <li><strong>&lt;del&gt;</strong>: Indicates text that has been deleted from a document.</li>
+            <li><strong>&lt;s&gt;</strong>: Renders text with a strikethrough, indicating it is no longer relevant.</li>
+            <li><strong>&lt;u&gt;</strong>: Underlines text, used for semantic purposes like misspelled words.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use semantic elements like <strong>&lt;strong&gt;</strong> and <strong>&lt;em&gt;</strong> to convey meaning for screen readers.</li>
+            <li>Avoid using <strong>&lt;b&gt;</strong> or <strong>&lt;i&gt;</strong> for emphasis; reserve them for stylistic purposes.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;p&gt;</strong> for blocks of text rather than multiple <strong>&lt;br&gt;</strong> tags.</li>
+            <li>Ensure text elements are used semantically to improve SEO and accessibility.</li>
+            <li>Avoid excessive use of formatting tags; rely on CSS for styling.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<p>This is a <strong>strongly emphasized</strong> paragraph.</p>
+<p>This text includes <em>emphasized</em> content and a <br>line break.</p>
+<p>Here is some <b>bold</b> and <i>italic</i> text.</p>
+<p><small>Small text</small> and <mark>highlighted</mark> content.</p>
+<p><ins>Inserted</ins> and <del>deleted</del> text examples.</p>
+<p><s>Strikethrough</s> and <u>underlined</u> text.</p>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <p>This is a <strong>strongly emphasized</strong> paragraph.</p>
+                <p>This text includes <em>emphasized</em> content and a <br>line break.</p>
+                <p>Here is some <b>bold</b> and <i>italic</i> text.</p>
+                <p><small>Small text</small> and <mark>highlighted</mark> content.</p>
+                <p><ins>Inserted</ins> and <del>deleted</del> text examples.</p>
+                <p><s>Strikethrough</s> and <u>underlined</u> text.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images -->
+    <div id="images-content" class="content-section">
+        <h2>Images</h2>
+        <p>The <strong>&lt;img&gt;</strong> element is used to embed images in a webpage.</p>
+        <h4>Key Attributes</h4>
+        <ul>
+            <li><strong>src</strong>: Specifies the path to the image file.</li>
+            <li><strong>alt</strong>: Provides alternative text for accessibility and when the image fails to load.</li>
+            <li><strong>width</strong> and <strong>height</strong>: Define the image dimensions for faster rendering.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Always include a descriptive <strong>alt</strong> attribute for screen readers.</li>
+            <li>Use empty <strong>alt=""</strong> for decorative images to avoid redundant narration.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use responsive images with <strong>&lt;picture&gt;</strong> or <strong>srcset</strong> for different screen sizes.</li>
+            <li>Optimize images to reduce file size and improve page load times.</li>
+            <li>Avoid using images for text content; use CSS or text instead.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<img src="example.jpg" alt="A descriptive image" width="300" height="200">
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <h4>Image</h4>
+                <p>Displays an image with specified attributes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Videos -->
+    <div id="videos-content" class="content-section">
+        <h2>Videos</h2>
+        <p>The <strong>&lt;video&gt;</strong> element embeds video content in a webpage.</p>
+        <h4>Key Attributes</h4>
+        <ul>
+            <li><strong>src</strong>: Specifies the video file path.</li>
+            <li><strong>controls</strong>: Adds playback controls (play, pause, volume).</li>
+            <li><strong>autoplay</strong>: Automatically plays the video (use cautiously).</li>
+            <li><strong>loop</strong>: Repeats the video indefinitely.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Include <strong>&lt;track&gt;</strong> elements for captions or subtitles.</li>
+            <li>Provide fallback content inside the <strong>&lt;video&gt;</strong> tag for unsupported browsers.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use multiple <strong>&lt;source&gt;</strong> elements for different video formats (e.g., MP4, WebM).</li>
+            <li>Optimize video files for web delivery to reduce load times.</li>
+            <li>Avoid autoplay unless user consent is clear to enhance user experience.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<video controls width="400">
+<source src="example.mp4" type="video/mp4">
+<source src="example.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <h4>Video</h4>
+                <p>Displays a video player with controls.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Videos -->
+    <div id="external-videos-content" class="content-section">
+        <h2>Videos from Other Sites</h2>
+        <p>The <strong>&lt;iframe&gt;</strong> element is used to embed videos from external sites like YouTube or Vimeo.</p>
+        <h4>Key Attributes</h4>
+        <ul>
+            <li><strong>src</strong>: Specifies the URL of the video embed.</li>
+            <li><strong>width</strong> and <strong>height</strong>: Define the iframe dimensions.</li>
+            <li><strong>allow</strong>: Controls permissions (e.g., fullscreen).</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Include a <strong>title</strong> attribute for screen readers.</li>
+            <li>Ensure the embedded content is accessible on the source platform.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use responsive iframes with CSS to adapt to different screen sizes.</li>
+            <li>Verify the embed URL is secure (HTTPS).</li>
+            <li>Limit the number of iframes to maintain page performance.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/example" 
+title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <h4>Video</h4>
+                <p>Embeds an external video player.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unordered List -->
+    <div id="unordered-content" class="content-section">
+        <h2>Unordered List</h2>
+        <p>The <strong>&lt;ul&gt;</strong> element creates an unordered list, typically rendered with bullet points.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;ul&gt;</strong>: Defines the unordered list.</li>
+            <li><strong>&lt;li&gt;</strong>: Represents each list item.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Ensure list items are clear and concise for screen readers.</li>
+            <li>Use semantic <strong>&lt;ul&gt;</strong> instead of styling divs to mimic lists.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;ul&gt;</strong> for items without a specific order.</li>
+            <li>Customize bullet styles with CSS instead of images.</li>
+            <li>Nest <strong>&lt;ul&gt;</strong> elements for hierarchical lists when needed.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ordered List -->
+    <div id="ordered-content" class="content-section">
+        <h2>Ordered List</h2>
+        <p>The <strong>&lt;ol&gt;</strong> element creates an ordered list, typically rendered with numbers.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;ol&gt;</strong>: Defines the ordered list.</li>
+            <li><strong>&lt;li&gt;</strong>: Represents each list item.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Ensure the order is meaningful for screen readers to convey sequence.</li>
+            <li>Use semantic <strong>&lt;ol&gt;</strong> for sequential content.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;ol&gt;</strong> for items with a specific order, like steps or rankings.</li>
+            <li>Customize numbering styles (e.g., roman numerals) with CSS.</li>
+            <li>Use the <strong>start</strong> attribute to begin numbering at a specific value.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description List -->
+    <div id="description-content" class="content-section">
+        <h2>Description List</h2>
+        <p>The <strong>&lt;dl&gt;</strong> element creates a description list for terms and their definitions.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;dl&gt;</strong>: Defines the description list.</li>
+            <li><strong>&lt;dt&gt;</strong>: Specifies a term.</li>
+            <li><strong>&lt;dd&gt;</strong>: Provides the description for the term.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Ensure terms and descriptions are clearly associated for screen readers.</li>
+            <li>Use semantic <strong>&lt;dl&gt;</strong> for glossaries or metadata lists.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;dl&gt;</strong> for key-value pairs like glossaries or FAQs.</li>
+            <li>Keep terms and descriptions concise and relevant.</li>
+            <li>Style with CSS to align terms and descriptions visually.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<dl>
+<dt>HTML</dt>
+<dd>HyperText Markup Language</dd>
+<dt>CSS</dt>
+<dd>Cascading Style Sheets</dd>
+</dl>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links and Buttons -->
+    <div id="links-content" class="content-section">
+        <h2>Links and Buttons</h2>
+        <p>HTML provides elements for creating hyperlinks and interactive buttons.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;a&gt;</strong>: Creates a hyperlink to other pages, files, or locations.</li>
+            <li><strong>&lt;button&gt;</strong>: Defines a clickable button for user interaction.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use descriptive <strong>href</strong> values and <strong>title</strong> attributes for links.</li>
+            <li>Ensure buttons have clear text or <strong>aria-label</strong> for screen readers.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;a&gt;</strong> for navigation and <strong>&lt;button&gt;</strong> for actions.</li>
+            <li>Include <strong>target="_blank"</strong> for external links with caution.</li>
+            <li>Style buttons and links with CSS to match the site’s design.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<a href="https://example.com" title="Visit Example">Go to Example</a>
+<button onclick="myFunction()">Click Me</button>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <a href="https://example.com" title="Visit Example">Go to Example</a><br><br>
+                <button>Click Me</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forms -->
+    <div id="forms-content" class="content-section">
+        <h2>Forms</h2>
+        <p>The <strong>&lt;form&gt;</strong> element creates interactive forms for user input.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;form&gt;</strong>: Defines the form container.</li>
+            <li><strong>&lt;label&gt;</strong>: Associates a label with an input for accessibility.</li>
+            <li><strong>&lt;input&gt;</strong>: Creates input fields (e.g., text, email, password).</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use <strong>&lt;label&gt;</strong> with <strong>for</strong> attributes matching input IDs.</li>
+            <li>Include <strong>required</strong> attributes and <strong>aria-required</strong> for mandatory fields.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>method="post"</strong> for sensitive data and <strong>method="get"</strong> for search forms.</li>
+            <li>Validate input on both client and server sides.</li>
+            <li>Provide clear error messages for invalid inputs.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<form action="/submit" method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+<input type="submit" value="Submit">
+</form>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <form action="/submit" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Forms -->
+    <div id="advanced-forms-content" class="content-section">
+        <h2>Advanced Forms</h2>
+        <p>Advanced form elements enhance user interaction with dropdowns, progress bars, and more.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;select&gt;</strong> and <strong>&lt;option&gt;</strong>: Create dropdown menus.</li>
+            <li><strong>&lt;textarea&gt;</strong>: Allows multi-line text input.</li>
+            <li><strong>&lt;progress&gt;</strong>: Displays a progress bar.</li>
+            <li><strong>&lt;meter&gt;</strong>: Shows a scalar measurement within a range.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use <strong>&lt;optgroup&gt;</strong> to group related options in dropdowns.</li>
+            <li>Ensure <strong>&lt;progress&gt;</strong> and <strong>&lt;meter&gt;</strong> have <strong>aria-label</strong> for clarity.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;datalist&gt;</strong> for autocomplete suggestions in inputs.</li>
+            <li>Group related controls with <strong>&lt;fieldset&gt;</strong> and <strong>&lt;legend&gt;</strong>.</li>
+            <li>Test forms across devices for responsiveness.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<form>
+<label for="country">Country:</label>
+<select id="country" name="country">
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+</select>
+<label for="comments">Comments:</label>
+<textarea id="comments" name="comments"></textarea>
+<progress value="50" max="100">50%</progress>
+</form>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <form>
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select><br><br>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea><br><br>
+                    <progress value="50" max="100">50%</progress>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thematic Break -->
+    <div id="thematic-content" class="content-section">
+        <h2>Thematic Break</h2>
+        <p>The <strong>&lt;hr&gt;</strong> element represents a thematic break between paragraph-level elements.</p>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use <strong>aria-hidden="true"</strong> for purely decorative breaks.</li>
+            <li>Ensure thematic breaks are meaningful for content separation.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;hr&gt;</strong> to separate distinct sections or topics.</li>
+            <li>Style with CSS to match the site’s design.</li>
+            <li>Avoid using <strong>&lt;hr&gt;</strong> for purely visual separation; use CSS borders instead.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<p>First section content.</p>
+<hr>
+<p>Second section content.</p>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <p>First section content.</p>
+                <hr>
+                <p>Second section content.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Div -->
+    <div id="div-content" class="content-section">
+        <h2>Div</h2>
+        <p>The <strong>&lt;div&gt;</strong> element is a generic block-level container for grouping content.</p>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Use semantic elements when possible instead of <strong>&lt;div&gt;</strong>.</li>
+            <li>Add <strong>role</strong> attributes if <strong>&lt;div&gt;</strong> serves a specific purpose (e.g., <strong>role="region"</strong>).</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;div&gt;</strong> for layout purposes when semantic elements are not applicable.</li>
+            <li>Avoid excessive nesting of <strong>&lt;div&gt;</strong> elements to maintain clean code.</li>
+            <li>Apply CSS classes for styling and JavaScript interaction.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<div class="container">
+<h2>Section Title</h2>
+<p>Content goes here.</p>
+</div>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <div class="container">
+                    <h2>Section Title</h2>
+                    <p>Content goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Span -->
+    <div id="span-content" class="content-section">
+        <h2>Span</h2>
+        <p>The <strong>&lt;span&gt;</strong> element is a generic inline container for styling or scripting small portions of text.</p>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Avoid using <strong>&lt;span&gt;</strong> for semantic purposes; use elements like <strong>&lt;strong&gt;</strong> or <strong>&lt;em&gt;</strong>.</li>
+            <li>Use <strong>aria-label</strong> if <strong>&lt;span&gt;</strong> contains interactive content.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;span&gt;</strong> for minor stylistic changes or JavaScript hooks.</li>
+            <li>Keep <strong>&lt;span&gt;</strong> usage minimal to maintain clean HTML.</li>
+            <li>Apply CSS classes for consistent styling.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<p>This is a <span class="highlight">highlighted</span> word.</p>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <p>This is a <span style="background-color: yellow;">highlighted</span> word.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Containers -->
+    <div id="other-containers-content" class="content-section">
+        <h2>Other Containers</h2>
+        <p>HTML includes additional containers for specific purposes.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;figure&gt;</strong>: Groups self-contained content, like images or diagrams.</li>
+            <li><strong>&lt;figcaption&gt;</strong>: Provides a caption for a <strong>&lt;figure&gt;</strong>.</li>
+            <li><strong>&lt;template&gt;</strong>: Holds client-side content that is not rendered until activated via JavaScript.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Ensure <strong>&lt;figcaption&gt;</strong> clearly describes the <strong>&lt;figure&gt;</strong> content.</li>
+            <li>Use <strong>&lt;template&gt;</strong> for dynamic content with proper accessibility attributes when rendered.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;figure&gt;</strong> for content like images with captions.</li>
+            <li>Keep <strong>&lt;template&gt;</strong> content semantic and accessible when instantiated.</li>
+            <li>Style <strong>&lt;figure&gt;</strong> with CSS for consistent presentation.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<figure>
+<img src="example.jpg" alt="Example image">
+<figcaption>Caption for the image</figcaption>
+</figure>
+<template id="my-template">
+<p>Content to be added via JavaScript</p>
+</template>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <figure>
+                    <img src="example.jpg" alt="Example image">
+                    <figcaption>Caption for the image</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- Semantic Tags (HTML5) -->
+    <div id="semantic-tags-content" class="content-section">
+        <h2>Semantic Tags (HTML5)</h2>
+        <p>HTML5 semantic tags provide additional meaning to content structure.</p>
+        <h4>Key Elements</h4>
+        <ul>
+            <li><strong>&lt;aside&gt;</strong>: Represents content tangentially related to the main content.</li>
+            <li><strong>&lt;details&gt;</strong>: Creates an interactive widget that can be toggled open or closed.</li>
+            <li><strong>&lt;summary&gt;</strong>: Defines the visible heading for a <strong>&lt;details&gt;</strong> element.</li>
+            <li><strong>&lt;time&gt;</strong>: Represents a specific date or time.</li>
+            <li><strong>&lt;dialog&gt;</strong>: Defines a dialog box or modal window.</li>
+        </ul>
+        <h5>Accessibility</h5>
+        <ul>
+            <li>Ensure <strong>&lt;details&gt;</strong> and <strong>&lt;dialog&gt;</strong> are keyboard-accessible.</li>
+            <li>Use <strong>datetime</strong> attribute in <strong>&lt;time&gt;</strong> for machine-readable formats.</li>
+        </ul>
+        <h5>Best Practices</h5>
+        <ul>
+            <li>Use <strong>&lt;details&gt;</strong> for FAQs or collapsible content.</li>
+            <li>Style <strong>&lt;dialog&gt;</strong> with CSS and manage with JavaScript for modals.</li>
+            <li>Ensure <strong>&lt;aside&gt;</strong> content is relevant but not critical to the main content.</li>
+        </ul>
+        <div class="code-display">
+            <div class="code-container">
+                <h3>Usage</h3>
+                <div class="code-block">
+                    <pre>
+<details>
+<summary>More Information</summary>
+<p>Additional details here.</p>
+</details>
+<time datetime="2025-05-07">May 7, 2025</time>
+<dialog id="myDialog">
+<p>This is a dialog box.</p>
+<button onclick="myDialog.close()">Close</button>
+</dialog>
+                    </pre>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <h3>Result</h3>
+            <div class="preview-frame">
+                <details>
+                    <summary>More Information</summary>
+                    <p>Additional details here.</p>
+                </details>
+                <time datetime="2025-05-07">May 7, 2025</time>
             </div>
         </div>
     </div>
