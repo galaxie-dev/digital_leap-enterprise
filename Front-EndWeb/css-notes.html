@@ -265,943 +265,490 @@
 
         <!-- Main Content Area -->
         <div class="main-content">
-            <!-- Root Element Content -->
-            <div id="root-content" class="content-section active">
-                <h2>Root Element</h2>
-                <p>The root element is the top-level container for all HTML elements.</p>
-                <h3 style="margin-top: 30px;">Key Elements</h3>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <!-- Explains Doctype -->
-                    <h4>&lt;!DOCTYPE html&gt;</h4>
-                        <li>The document type declaration (not an HTML tag)</li>
-                        <li>Must be the first line in an HTML document</li>
-                        <li>Declares this as an HTML5 document (simplified from previous HTML versions)</li>
-                        <li>Ensures the browser renders content in standards mode</li>
 
-                    <!-- Explains html tag -->
-                    <br><h4>&lt;html&gt; Element</h4>
-                        <li>The root element wrapping all HTML content</li>
-                        <li>Should include the lang attribute for accessibility and SEO</li>
-                        <div class="code-display">
-                            <div class="code-container">
-                                <div class="code-block">
-                                <pre>
+            
 
-&lt;html lang="en"&gt; &lt;!-- Specifies English language content --&gt;
-                                </pre>
-                                <button class="copy-btn">Copy</button>                          
-                                </div>
-                            </div>
-                        </div>
-
-                    
-                    <!-- body section -->
-                    <br><h4>&lt;body&gt;  Section</h4>
-                    <li>Contains all visible page content</li>
-                    <li>Where you place headings, paragraphs, images, etc.
-                        <div class="code-display">
-                            <div class="code-container">                               
-                                <div class="code-block">
-                                    <pre>
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;  
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                            </div>                         
-                        </div>
-                
+            <div id="css-basics-content" class="content-section active">
+                <h2>What is CSS</h2>
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.</p>
+                <p>It controls the visual appearance of web pages, including layout, colors, fonts, and other stylistic aspects.</p>
+                <p>CSS separates content from design, allowing developers to maintain and update styles independently of the HTML structure.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Defines how HTML elements are displayed on screen, in print, or other media.</li>
+                    <li>Enables consistent styling across multiple pages or elements.</li>
+                    <li>Improves user experience by enhancing visual appeal and readability.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Use high-contrast colors and readable fonts to ensure text is legible for users with visual impairments.</li>
+                    <li>Avoid relying solely on CSS for critical content, as screen readers may ignore purely stylistic elements.</li>
+                    <li>Test styles with assistive technologies to ensure they don’t obscure content.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Keep CSS modular and organized for maintainability.</li>
+                    <li>Use semantic HTML alongside CSS to ensure meaningful structure.</li>
+                    <li>Validate CSS using tools like the W3C CSS Validator to catch errors.</li>
+                    <li>Minimize specificity conflicts by using clear, targeted selectors.</li>
+                </ul>
+            
                 <div class="code-display">
                     <div class="code-container">
-                        <h3>Sample HTML Document Structure</h3>
+                        <h3>Usage</h3>
                         <div class="code-block">
                             <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, <br>    initial-scale=1.0"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;CSS Example&lt;/title&gt;
+                &lt;style&gt;
+                    h1 {
+                        color: blue;
+                        font-family: Arial, sans-serif;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Welcome to CSS&lt;/h1&gt;
+                &lt;p&gt;This paragraph is styled with CSS.&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
                             </pre>
                             <button class="copy-btn">Copy</button>
                         </div>
                     </div>
-                    
-                    
                 </div>
+            
                 <div class="preview-container">
                     <h3>Result</h3>
                     <div class="preview-frame">
-                        <h4>Image</h4>
-                        <p>The content area is currently empty.</p>
+                        <h1 style="color: blue; font-family: Arial, sans-serif;">Welcome to CSS</h1>
+                        <p style="font-size: 16px; line-height: 1.5;">This paragraph is styled with CSS.</p>
                     </div>
                 </div>
-                
-
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>CSS rules consist of a selector (e.g., &lt;code&gt;h1&lt;/code&gt) and declarations (e.g., &lt;code&gt;color: blue&lt;/code&gt;).</li>
+                        <li>Styles can be applied via internal (&lt;code&gt;&lt;style&gt;&lt/code&gt;), external (CSS files), or inline methods.</li>
+                        <li>CSS cascades, meaning styles can inherit or override based on specificity and order.</li>
+                        <li>Use vendor prefixes for experimental features to ensure cross-browser compatibility.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a simple webpage that:</p>
+                    <ul>
+                        <li>Includes a heading (&lt;code&gt;&lt;h1&gt;&lt;/code&gt) and a paragraph (&lt;code&gt;&lt;p&gt;&lt;/code&gt;).</li>
+                        <li>Uses internal CSS to style the heading with a color and font, and the paragraph with font size and line height.</li>
+                        <li>Tests the page in a browser to verify the styles are applied correctly.</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Head Section and tag Content -->
-            <div id="head-content" class="content-section">
-                <h2>&lt;head&gt;  Section (Document Metadata)</h2>
-                <p>The head section contains metadata and links to external resources.</p>
-                <p>Also contains non-visible page information </p>
 
-                        <!-- Explains head tag -->
-                        <h4>&lt;meta&gt;  tag</h4>
-                            <li>Contains metadata about the HTML document, such as character set, 
-                                description, keywords, author, and viewport settings.</li>
-                            <li>Provides information to browsers and search engines, 
-                                helping with page rendering and SEO.
-                            </li>
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Head Section Elements</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-    &lt;head&gt;
-        &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-        &lt;meta name="description" content="Brief description of the page"&gt;
-        &lt;meta name="keywords" content="HTML, CSS, Javascript"&gt;
-        &lt;meta name="auther" content="Evans Osumba"&gt;
-        &lt;meta name="viewport" content="width=device-width, <br>         initial-scale=1.0"&gt;      
-    &lt;/head&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>
-                              
-                            </div>
-
-                        <h4>&lt;title&gt;  tag</h4>
-                            <li>Defines the title of the HTML document, which
-                                 is displayed in the browser's title bar or tab</li>
-                            <li>Important for SEO as it provides a concise description of the page's content</li>
-                        <div class="code-display">
-                            <div class="code-container">                                  
-                                <div class="code-block">
-                                    <pre>
-
-&lt;head&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-&lt;/head&gt;
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <h4>&lt;link&gt;  tag</h4>
-                            <li>Used to link external resources to the HTML document, such 
-                                as stylesheets, icons, and other documents.</li>
-                                <li>Helps in defining the relationship between the current 
-                                    document and an external resource.</li>
-                            <div class="code-display">
-                                <div class="code-container">                                  
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;head&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;link rel="icon" href="favicon.ico"&gt;
-&lt;/head&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        <h4>&lt;style&gt;&lt;/style&gt;  tag</h4>
-                            <li>Defines CSS styles within the HTML document, 
-                                allowing for the styling of elements on the page.</li>
-                            <li>Can be used to embed CSS directly within the HTML file, 
-                                useful for small projects or inline styling.</li>
-                                <div class="code-display">
-                                    <div class="code-container">                                  
-                                        <div class="code-block">
-                                            <pre>
-        
-&lt;head&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-        body{
-            font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-                                            </pre>
-                                            <button class="copy-btn">Copy</button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                        <div class="code-display">
-                            <div class="code-container">
-                                <h3>Head Section Elements</h3>
-                                <div class="code-block">
-                                    <pre>
-
-&lt;head&gt;
-    &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-    &lt;meta name="description" content="A brief description of the page"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-    &lt;/style&gt;
-    &lt;base href="https://example.com/"&gt;
-&lt;/head&gt;
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                                <div class="preview-container">
-                                    <h3>Result</h3>
-                                    <div class="preview-frame">
-                                        <h4>Image</h4>
-                                        <p>The head section is not visible in the browser window but contains important metadata for the document.</p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                          
-                        </div>
-                        <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div>
-            </div>
-
-            <!-- Body Section Content -->
-            <div id="body-content" class="content-section">
-                <h2>Body Section</h2>
-                <p>The body section contains the visible content of the webpage.</p>
-                
+            <!--Role of css-->
+            <div id="css-role-content" class="content-section">
+                <h2>Role of CSS in Web Development</h2>
+                <p>CSS is a cornerstone of web development, responsible for styling and laying out web pages to create visually appealing and functional user interfaces.</p>
+                <p>It enables developers to control the look and feel of a website, ensuring consistency and responsiveness across devices.</p>
+                <p>CSS enhances user engagement by improving aesthetics and usability.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Separates presentation from content, improving maintainability and scalability.</li>
+                    <li>Supports responsive design, adapting layouts for different screen sizes.</li>
+                    <li>Enables animations, transitions, and interactive effects to enhance user experience.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure CSS layouts maintain content order for screen readers.</li>
+                    <li>Use relative units (e.g., <code>rem</code>, <code>em</code>) to support text resizing for accessibility.</li>
+                    <li>Avoid hiding content with CSS in ways that prevent assistive technology access.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use CSS frameworks (e.g., Bootstrap) for rapid development, but customize to avoid bloat.</li>
+                    <li>Optimize CSS for performance by minimizing file size and reducing reflows.</li>
+                    <li>Document CSS code with comments for team collaboration.</li>
+                    <li>Test across browsers to ensure consistent rendering.</li>
+                </ul>
+            
                 <div class="code-display">
                     <div class="code-container">
-                        <h3>Body Section Structure</h3>
+                        <h3>Usage</h3>
                         <div class="code-block">
                             <pre>
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Website Header&lt;/h1&gt;
-        &lt;nav&gt;
-            &lt;a href="#"&gt;Home&lt;/a&gt;
-            &lt;a href="#"&gt;About&lt;/a&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-
-    &lt;main&gt;
-        &lt;article&gt;
-            &lt;h2&gt;Article Title&lt;/h2&gt;
-            &lt;p&gt;Article content...&lt;/p&gt;
-        &lt;/article&gt;
-        
-        &lt;aside&gt;
-            &lt;h3&gt;Related Links&lt;/h3&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/aside&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;© 2025 Website Footer&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Role of CSS&lt;/title&gt;
+                &lt;style&gt;
+                    .container {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 20px;
+                    }
+                    .header {
+                        background-color: #f0f0f0;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="header"&gt;
+                        &lt;h1&gt;Website Header&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;Content styled with CSS for layout and design.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
                             </pre>
                             <button class="copy-btn">Copy</button>
                         </div>
                     </div>
-                    
-                    <div class="preview-container">
-                        <h3>Result</h3>
-                        <div class="preview-frame">
-                            <header style="background: #f0f0f0; padding: 10px; margin-bottom: 15px;">
-                                <h1 style="margin: 0; font-size: 1.5em;">Website Header</h1>
-                                <nav style="margin-top: 10px;">
-                                    <a href="#" style="margin-right: 10px; text-decoration: none; color: #065ccc;">Home</a>
-                                    <a href="#" style="text-decoration: none; color: #065ccc;">About</a>
-                                </nav>
-                            </header>
-                            
-                            <main style="margin-bottom: 15px;">
-                                <article style="background: #f9f9f9; padding: 10px; margin-bottom: 15px;">
-                                    <h2 style="margin: 0 0 10px 0; font-size: 1.2em;">Article Title</h2>
-                                    <p style="margin: 0;">Article content...</p>
-                                </article>
-                                
-                                <aside style="background: #f9f9f9; padding: 10px;">
-                                    <h3 style="margin: 0 0 10px 0; font-size: 1.1em;">Related Links</h3>
-                                    <ul style="margin: 0; padding-left: 20px;">
-                                        <li><a href="#" style="text-decoration: none; color: #065ccc;">Link 1</a></li>
-                                    </ul>
-                                </aside>
-                            </main>
-                            
-                            <footer style="background: #f0f0f0; padding: 10px; text-align: center;">
-                                <p style="margin: 0;">© 2025 Website Footer</p>
-                            </footer>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+                            <div style="background-color: #f0f0f0; padding: 10px; text-align: center;">
+                                <h1>Website Header</h1>
+                            </div>
+                            <p>Content styled with CSS for layout and design.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-        
-
-
-            <!-- Content Sections -->
-              <!-- Semantic Containers -->
-            <div id="semantic-content" class="content-section active">
-                <h2> Semantic Containers</h2>
-                <p>HTML5 introduced a range of semantic elements to help structure web content more meaningfully.</p>
-                <p>hese elements not only improve the readability of the HTML code 
-                    but also enhance the accessibility and SEO of web pages.</p>
-                <p>Below are the various semantic containers</p>
-
-                        <!-- Explains header tag -->
-                        <h4>&lt;header&gt;  (Introductory Content/Header)</h4>
-                            <li>Represents a container for introductory content or a set of navigational links.</li>
-                            <li>It typically contains the website's logo, navigation bar, and sometimes a search form
-                            </li>
-
-                            <h5>Accessibility</h5>
-                            <li>Helps screen readers understand the structure of the page and 
-                                navigate to the main content more easily</li>
-
-                            <h5>Best Practices</h5>
-                                <li>Use &lt;header&gt; at the top of the page to group introductory content.</li>
-                                <li>Ensure that the navigation links are accessible, with proper aria-labels if necessary.</li>
-                                <li>Avoid nesting multiple &lt;header&gt; elements within each other.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-    &lt;header&gt;
-        &lt;h1&gt;Digital Leap &lt;/h1&gt;
-            &lt;nav&gt;
-            &lt;ul&gt;
-                &lt;li&gt; &lt;a href="#Home"&gt;Home &lt;/a&gt; &lt;/li&gt;
-                &lt;li&gt; &lt;a href="#about"&gt;About &lt;/a&gt; &lt;/li&gt;
-                &lt;li&gt; &lt;a href="#services"&gt;Services &lt;/a&gt; &lt;/li&gt;
-                &lt;li&gt; &lt;a href="#contact"&gt;Contact &lt;/a&gt; &lt;/li&gt;                
-            &lt;/ul&gt;  
-        &lt;/nav&gt;
-    &lt;/header&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The head section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-            <!-- Navigation bar -->
-            <div id="nnav-content" class="content-section active">
-                <h4>&lt;nav&gt;  (Navigation Links)</h4>
-                <p>The &lt;nav&gt; element defines a section of the page that contains navigation links</p>
-                <p>It is used to group links that help users navigate the website</p>               
-
-                        <!-- Explains header tag -->
-                            <br><h5>Accessibility</h5>
-                            <li>Provides a clear navigation structure, which is beneficial 
-                                for screen readers and keyboard navigation</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;nav&gt; for primary navigation menus.</li>
-                                <li>Ensure that all links are accessible, with proper aria-labels and tabindex attributes.</li>
-                                <li>Avoid nesting &lt;nav&gt; for secondary navigation or links that are not part of the main navigation..</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-   
-&lt;nav&gt;
-    &lt;ul&gt;
-        &lt;li&gt; &lt;a href="#Home"&gt;Home &lt;/a&gt; &lt;/li&gt;
-        &lt;li&gt; &lt;a href="#about"&gt;About &lt;/a&gt; &lt;/li&gt;
-        &lt;li&gt; &lt;a href="#services"&gt;Services &lt;/a&gt; &lt;/li&gt;
-        &lt;li&gt; &lt;a href="#contact"&gt;Contact &lt;/a&gt; &lt;/li&gt;                
-    &lt;/ul&gt;  
-&lt;/nav&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The head section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-            <!-- Main Section -->           
-            <div id="mmain-content" class="content-section active">
-                <h4>&lt;main&gt;  (Main Content)</h4>
-                <p>The &lt;main&gt;  element specifies the main content of the document</p>
-                <p>There should be only one &lt;main&gt; element per page, and it should not 
-                    be nested within &lt;article&gt;, &lt;aside&gt;, &lt;header&gt;, &lt;footer&gt;, or &lt;nav&gt; elements.</p>               
-
-                        <!-- Explains header tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Helps screen readers and other assistive technologies 
-                                identify the primary content of the page</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;main&gt; to wrap the primary content of the page.</li>
-                                <li>Ensure that the content within &lt;main&gt; is accessible and properly structured.</li>
-                                <li>Avoid nesting &lt;main&gt; elements with each other.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>   
-   
-&lt;main&gt;
-    &lt;h2&gt; Welcome to Our Website&lt;/h2&gt;
-    &lt;p&gt; This Is the main content of the page&lt;/p&gt;
-&lt;/main&gt;               
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-            <!-- Article Section -->           
-            <div id="aarticle-content" class="content-section active">
-                <h4>&lt;article&gt;  (Self-contained Content)</h4>
-                <p>The &lt;article&gt;  element represents a self-contained composition in a document, page, application, or site</p>
-                <p>It is suitable for content like blog posts, news articles, or forum posts.</p>               
-
-                        <!-- Explains article tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Helps in structuring content that can be independently distributed or reused.</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;article&gt;  for content that can stand alone, such as blog posts or news articles..</li>
-                                <li>Ensure that each &lt;article&gt; has a clear heading and proper structure.</li>
-                                <li>Use &lt;section&gt; elements within &ltarticle&gt; to further structure the content if necessary.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;article&gt;
-    &lt;h3&gt; Blog/ Post/ Article Tittle &lt;/h3&gt;
-    &lt;p&gt; This is the content of the blog post&lt;/p&gt;                
-&lt;/article&gt;  
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-
-            <!-- Section Section -->           
-            <div id="ssection-content" class="content-section">
-                <h4>&lt;section&gt;  (Thematic Grouping)</h4>
-                <p>The &lt;section&gt;  element represents a thematic grouping of content</p>
-                <p>It is used to group related content together, such as sections of an article or different parts of a webpage.</p>               
-
-                        <!-- Explains section tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Provides a clear structure for screen readers to navigate through different sections of the page.</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;section&gt; to group related content</li>
-                                <li>Ensure that each &lt;section&gt; has a clear heading.</li>
-                                <li>Avoid using &lt;section&gt; for styling purposes only; it should have a thematic grouping.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;section&gt;
-    &lt;h3&gt; Section Tittle&lt;/h3&gt;
-    &lt;p&gt; This is the content of the blog post&lt;/p&gt;                
-&lt;/section&gt;  
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-
-             <!-- Aside Section -->           
-             <div id="aaside-content" class="content-section">
-                <h4>&lt;aside&gt;  (Sidebar/Secondary Content)</h4>
-                <p>The &lt;aside&gt;  element represents content that is tangentially related to the main content but can be considered separate</p>
-                <p>It is often used for sidebars, advertisements, or related links.</p>               
-
-                        <!-- Explains aside tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Helps in distinguishing between the main content and supplementary content.</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;aside&gt; for content that is related but not essential to the main content.t</li>
-                                <li>Ensure that the content within &lt;aside&gt; is accessible and properly structured.</li>
-                                <li>Avoid using &lt;aside&gt; for primary content.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;aside&gt;
-    &lt;h3&gt; Content Sections&lt;/h3&gt;
-    &lt;ul&gt;
-        &lt;li&gt; &lt;a href="#section1"&gt; Header&lt;/a&gt;&lt;/li&gt;   
-        &lt;li&gt; &lt;a href="#section2"&gt; Article&lt;/a&gt;&lt;/li&gt; 
-        &lt;li&gt; &lt;a href="#section3"&gt; Sidebar&lt;/a&gt;&lt;/li&gt; 
-    &lt;/ul&gt;
-&lt;/aside&gt;  
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-
-          
-            <!-- Footer Section -->           
-            <div id="ffooter-content" class="content-section">
-                <h4>&lt;footer&gt;  (Footer Content)</h4>
-                <p>The &lt;footer&gt;  element represents the footer of a document or section, usually at the bottom of a web page.</p>
-                <p>It typically contains information about the author, copyright details, contact information, and links to related documents.</p>               
-
-                        <!-- Explains footer tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Provides a clear indication of the end of the main content and additional information.</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;footer&gt; at the bottom of the page to group footer content.</li>
-                                <li>Ensure that the content within &lt;footer&gt; is accessible and properly structured.</li>
-                                <li>Avoid using multiple &lt;footer&gt; elements within each other.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;footer&gt;
-    &lt;p&gt; &copy; 2024 Digital Leap&lt;/p&gt;
-    &lt;p&gt; Contact: +254790****45&lt;/p&gt;
-    &lt;p&gt; Email: info@example.com&lt;/p&gt;
-&lt;/footer&gt;  
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
- 
-            <!-- Search Section -->           
-            <div id="ssearch-content" class="content-section">
-                <h4>&lt;search&gt;   (Search Section – New in HTML5.3)</h4>
-                <p>The &lt;search&gt;   element represents a search section of a document.</p>
-                <p>It is used to define a search form or a search widget.</p>               
-
-                        <!-- Explains search tag -->
-                            <br><h5>Accessibility</h5>
-                            <li> Helps in identifying the search functionality of the page, 
-                                making it easier for users to find and use the search feature..</li>
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use &lt;search&gt; to define search forms or widgets.</li>
-                                <li>nsure that the search form is accessible, with proper labels and aria-labels if necessary.</li>
-                                <li>Avoid using &lt;search&gt; for non-search related content..</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;search&gt;
-    &lt;form action="/search" method="get"&gt;
-        &lt;input type="search" name="q" placeholder="Search..."&gt;
-        &lt;button type="submit"&gt;Search&lt;/button&gt;
-    &lt;/form&gt;
-&lt;/search&gt;  
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                       <!-- <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
-                        </div> -->
-            </div>
-
-             <!-- Main Section -->           
-             <div id="headings-content" class="content-section active">
-                <h4>&lt;h1&gt; to &lt;h6&gt;  (Headings)</h4>
-                <p>HTML headings are used to define the structure and hierarchy of the content on a webpage.</p>
-                <p>They range from &lt;h1&gt; to &lt;h1&gt;, with &lt;h1&gt; being the highest level and &lt;h6&gt; being the lowest.</p>
-                <p>Proper use of headings is crucial for both accessibility and SEO.</p>               
-
-                        <!-- Explains h tags -->
-                        <br><h5>Purpose</h5>
-                        <li>&lt;h1&gt;: The most important heading, typically used for the main title of the page.</li>
-                        <li>&lt;h2&gt;: Subheadings or secondary titles.</li>
-                        <li>&lt;h3&gt; to &lt;h6&gt;: Further sub headings or nested sections.</li>
-
-                  
-                            <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
-
-                            <br><h5>Accessibility</h5>
-                            <li> Headings should be used to provide a clear structure to the content.</li>
-                            <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
-
-
-                            <br><h5>Best Practices</h5>
-                                <li>Use only one &lt;h1&gt; per page, typically for the main title.</li>
-                                <li>Ensure that headings are descriptive and relevant to the content they introduce.</li>
-                                <li>Use headings to break up long blocks of text, making the content more readable.</li>
-
-                            <div class="code-display">
-                                <div class="code-container">
-                                    <h3>Usage</h3>
-                                    <div class="code-block">
-                                        <pre> 
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Example of Headings&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-            &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
-        &lt;nav&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-
-    &lt;main&gt;
-        &lt;section&gt;
-            &lt;h2&gt;About Us&lt;/h2&gt;
-                &lt;p&gt;This section provides information about our community.&lt;/p&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-            &lt;h2&gt;Our Services&lt;/h2&gt;
-                &lt;article&gt;
-                    &lt;h3&gt;Service 1&lt;/h3&gt;
-                    &lt;p&gt;Details about Service 1.&lt;/p&gt;
-                &lt;/article&gt;
-                &lt;article&gt;
-                    &lt;h3&gt;Service 2&lt;/h3&gt;
-                    &lt;p&gt;Details about Service 2.&lt;/p&gt;
-                &lt;/article&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-            &lt;h2&gt;Contact Us&lt;/h2&gt;
-            &lt;p&gt;Get in touch with us through the following methods.&lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;&amp;copy; 2025 Digital Leap&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;                                                         
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-
-                                </div>    
-                                                 
-                            </div>   
-                            <div class="preview-container">
-                                <h3>Result</h3>
-                                <div class="preview-frame">
-                                    <h4>Image</h4>
-                                    <p>The section is not visible in the browser window but contains important metadata for the document.</p>
-                                    
-                                </div>
-                            </div>                   
-                        <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Use headings in a logical order. For example, an &lt;h2&gt; should not come before an &lt;h1&gt;.</li>
-                                <li>Avoid skipping heading levels (e.g., using an &lt;h3&gt; after an &lt;h1&gt; without an &lt;h2&gt; in between).</li>
-                                <li>Avoid using headings for styling purposes only. Instead, use CSS for visual styling.</li>
-                                <li>Search engines use headings to understand the structure and content of a webpage.</li>
-                                <li>Proper use of headings can improve search engine rankings.</li>
-                            </ul>
-                        </div> 
-            </div>
-
-
-
-
             
-        </div>
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>CSS enables modular design, allowing style changes without altering HTML.</li>
+                        <li>Responsive layouts adapt to various devices using media queries and flexible units.</li>
+                        <li>Performance optimization reduces load times and improves user experience.</li>
+                        <li>Cross-browser testing ensures consistent styling across platforms.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses a container div to center content with a maximum width.</li>
+                        <li>Styles a header section with a background color and centered text using internal CSS.</li>
+                        <li>Tests the layout in multiple browsers to ensure consistent rendering.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <!-- Right Sidebar -->
-        <div class="right-sidebar">
-            <div class="sidebar-section">
-                <h3>Learning Progress</h3>
-                <div class="progress-container">
-                    <div class="progress-title">
-                        <span>HTML Basics</span>
-                        <span id="progress-percent">0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill"></div>
-                    </div>
-                    <div class="progress-percent" id="completed-topics">0 of 18 topics completed</div>
-                </div>
-            </div>
+            <!--how html work with css-->
+            <div id="html-css-integration-content" class="content-section">
+                <h2>How HTML and CSS Work Together</h2>
+                <p>HTML provides the structure and content of a webpage, while CSS defines its visual presentation and layout.</p>
+                <p>The two languages work in tandem to create functional and aesthetically pleasing websites.</p>
+                <p>CSS targets HTML elements using selectors, applying styles to enhance the user interface.</p>
             
-            <div class="sidebar-section">
-                <h3>Quick Resources</h3>
-                <div class="resource-item">
-                    <div class="resource-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="resource-info">
-                        <h4>HTML Documentation</h4>
-                        <p>Official HTML reference</p>
-                    </div>
-                </div>
-                <div class="resource-item">
-                    <div class="resource-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="resource-info">
-                        <h4>HTML Tutorials</h4>
-                        <p>Video lessons for beginners</p>
-                    </div>
-                </div>
-                <div class="resource-item">
-                    <div class="resource-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="resource-info">
-                        <h4>Code Playground</h4>
-                        <p>Practice HTML online</p>
-                    </div>
-                </div>
-            </div>
+                <h4>Purpose</h4>
+                <ul>
+                    <li>HTML defines the semantic structure, while CSS controls the visual styling.</li>
+                    <li>Combining both ensures content is both meaningful and visually appealing.</li>
+                    <li>Allows for flexible design updates without altering the HTML content.</li>
+                </ul>
             
-            <div class="sidebar-section">
-                <h3>Recent Activity</h3>
-                <div class="resource-item">
-                    <div class="resource-icon">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="resource-info">
-                        <h4>Started Learning</h4>
-                        <p>Just now</p>
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Use semantic HTML to ensure content is accessible before CSS is applied.</li>
+                    <li>Ensure CSS styles do not disrupt the logical order of content for screen readers.</li>
+                    <li>Test with CSS disabled to verify content remains usable and accessible.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use classes and IDs in HTML to target specific elements with CSS.</li>
+                    <li>Maintain a clear separation of concerns: HTML for structure, CSS for style.</li>
+                    <li>Avoid inline CSS in HTML to keep code maintainable.</li>
+                    <li>Use external stylesheets for larger projects to improve scalability.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;HTML and CSS&lt;/title&gt;
+                &lt;style&gt;
+                    .content {
+                        border: 1px solid #ccc;
+                        padding: 15px;
+                        background-color: #f9f9f9;
+                    }
+                    h2 {
+                        color: #333;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div class="content"&gt;
+                    &lt;h2&gt;Page Title&lt;/h2&gt;
+                    &lt;p&gt;This content is styled with CSS.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
                     </div>
                 </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <div style="border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9;">
+                            <h2 style="color: #333;">Page Title</h2>
+                            <p>This content is styled with CSS.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>HTML provides the structure (e.g., &lt;code&gt;&lt;div&gt;&lt;/code&gt;, &lt;code&gt;&lt;h2&gt;&lt;/code&gt;), while CSS applies styles.</li>
+                        <li>Selectors like classes (&lt;code&gt;.content&lt;/code&gt;) link CSS to specific HTML elements.</li>
+                        <li>Semantic HTML enhances accessibility and SEO, complementing CSS styling.</li>
+                        <li>Testing with and without CSS ensures robust integration.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses semantic HTML (e.g., &lt;code&gt;&lt;header&gt;&lt;/code&gt;, &lt;code&gt;&lt;main&gt;&lt;/code&gt;) for structure.</li>
+                        <li>Applies CSS styles to a specific class to style a section with borders and background color.</li>
+                        <li>Tests the page with CSS disabled to ensure content remains accessible.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+
+            <!--stylesheet-types-->
+            <div id="stylesheet-types-content" class="content-section">
+                <h2>Inline, Internal, External Stylesheets – Pros/Cons</h2>
+                <p>CSS can be applied to HTML using three methods: inline (within HTML tags), internal (within a &lt;code&gt;&lt;style&gt;&lt;/code&gt; tag), and external (in a separate .css file).</p>
+                <p>Each method has specific use cases, advantages, and disadvantages.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li><strong>Inline CSS</strong>: Applies styles directly to individual HTML elements using the &lt;code&gt;&style&lt;/code&gt;& attribute.</li>
+                    <li><strong>Internal CSS</strong>: Defines styles within a &lt;code&gt;&&lt;style&gt;&&lt;/code&gt;& tag in the HTML <code><head></code>.</li>
+                    <li><strong>External CSS</strong>: Stores styles in a separate .css file, linked to HTML via a <code><link></code> tag.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Avoid inline CSS for critical content, as it can be harder to override for accessibility needs.</li>
+                    <li>Ensure external stylesheets are accessible and load correctly to maintain consistent styling.</li>
+                    <li>Test all methods to ensure styles don’t interfere with assistive technologies.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use external stylesheets for large projects to improve maintainability and scalability.</li>
+                    <li>Limit inline CSS to quick fixes or one-off styles, as it’s hard to maintain.</li>
+                    <li>Use internal CSS for small projects or single-page applications to keep everything in one file.</li>
+                    <li>Ensure external CSS files are optimized and cached for performance.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            &lt;!-- Inline CSS --&gt;
+            &lt;p style="color: red; font-size: 16px;">Inline styled paragraph.&lt;/p&gt;
+            
+            &lt;!-- Internal CSS --&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    p {
+                        color: blue;
+                        font-size: 16px;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p>Internally styled paragraph.&lt;/p&gt;
+            &lt;/body&gt;
+            
+            &lt;!-- External CSS --&gt;
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p>Externally styled paragraph.&lt;/p&gt;
+            &lt;/body&gt;
+            
+            /* styles.css */
+            p {
+                color: green;
+                font-size: 16px;
+            }
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <p style="color: red; font-size: 16px;">Inline styled paragraph.</p>
+                        <p style="color: blue; font-size: 16px;">Internally styled paragraph.</p>
+                        <p style="color: green; font-size: 16px;">Externally styled paragraph.</p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li><strong>Inline Pros</strong>: Quick to apply, no separate file needed. <strong>Cons</strong>: Hard to maintain, overrides other styles.</li>
+                        <li><strong>Internal Pros</strong>: Contained in HTML, good for small projects. <strong>Cons</strong>: Clutters HTML, not reusable across pages.</li>
+                        <li><strong>External Pros</strong>: Reusable, maintainable, scalable. <strong>Cons</strong>: Requires separate file, additional HTTP request.</li>
+                        <li>Choose the method based on project size and maintenance needs.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses inline CSS to style one paragraph.</li>
+                        <li>Uses internal CSS to style a second paragraph.</li>
+                        <li>Uses an external CSS file to style a third paragraph.</li>
+                        <li>Compares the maintainability of each method by updating the styles.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--syntax-structure-->
+            <div id="syntax-structure-content" class="content-section">
+                <h2>Basic Syntax Structure</h2>
+                <p>CSS syntax consists of rules that define how HTML elements are styled.</p>
+                <p>Each rule includes a selector to target elements and declarations to specify styles, enclosed in curly braces.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Selectors identify which HTML elements to style.</li>
+                    <li>Declarations specify the properties (e.g., &lt;code&gt;color&lt;/code&gt;) and values (e.g., &lt;code&gt;blue&lt;/code&gt;) to apply.</li>
+                    <li>Rules are applied in a cascading manner based on specificity and order.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure selectors target elements accurately to avoid unintended styling that could affect accessibility.</li>
+                    <li>Use clear, semantic selectors to maintain readable code for assistive technologies.</li>
+                    <li>Test CSS rules to ensure they don’t disrupt content accessibility.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use consistent formatting (e.g., indentation) for readability.</li>
+                    <li>Group related selectors to reduce redundancy.</li>
+                    <li>Comment complex rules to explain their purpose.</li>
+                    <li>Avoid overly specific selectors to maintain flexibility.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;CSS Syntax&lt;/title&gt;
+                &lt;style&gt;
+                    /* Selector targets h1 elements */
+                    h1 {
+                        color: navy; /* Declaration: property and value */
+                        font-size: 24px;
+                    }
+                    /* Multiple declarations for p elements */
+                    p {
+                        font-family: Arial, sans-serif;
+                        line-height: 1.6;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;CSS Syntax Example&lt;/h1&gt;
+                &lt;p&gt;This paragraph uses CSS rules.&lt;p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <h1 style="color: navy; font-size: 24px;">CSS Syntax Example</h1>
+                        <p style="font-family: Arial, sans-serif; line-height: 1.6;">This paragraph uses CSS rules.</p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>A CSS rule includes a selector and one or more declarations.</li>
+                        <li>Declarations are written as &lt;code&gt;property: value;</code>.</li>
+                        <li>Curly braces &lt;code&gt;{}&lt;/code&gt; enclose declarations.</li>
+                        <li>Comments (e.g., &lt;code&gt;/* comment */&lt;/code&gt;) improve code clarity.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Includes a heading and paragraph.</li>
+                        <li>Uses CSS rules with selectors to style the heading (color, font-size) and paragraph (font-family, line-height).</li>
+                        <li>Adds comments to explain each rule.</li>
+                        <li>Tests the styles in a browser.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--selector-types-->
+            
+
+
+<!--notes go here-->
+
     </div>
 
     <script>
