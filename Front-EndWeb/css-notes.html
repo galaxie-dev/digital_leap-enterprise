@@ -722,7 +722,7 @@
                 </div>
             
                 <div class="preview-frame">
-                    <h4>Key Elements</h4>
+                    <h4>Key Elements</h4> 
                     <ul>
                         <li>A CSS rule includes a selector and one or more declarations.</li>
                         <li>Declarations are written as &lt;code&gt;property: value;</code>.</li>
@@ -744,7 +744,768 @@
             </div>
 
             <!--selector-types-->
+
+            <div id="selector-types-content" class="content-section">
+                <h2>Selector Types</h2>
+                <p>CSS selectors are used to target specific HTML elements for styling.</p>
+                <p>Different selector types allow precise control over which elements are styled.</p>
             
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Enable targeting of elements based on tag names, classes, IDs, attributes, or states.</li>
+                    <li>Allow grouping and combining selectors for efficient styling.</li>
+                    <li>Support dynamic styling through pseudo-classes and pseudo-elements.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Use semantic selectors to ensure styles align with content meaning.</li>
+                    <li>Avoid overly complex selectors that may confuse assistive technologies.</li>
+                    <li>Ensure pseudo-class selectors (e.g., <code>:focus</code>) enhance accessibility.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Prefer class selectors for reusable styles.</li>
+                    <li>Use ID selectors sparingly due to high specificity.</li>
+                    <li>Combine selectors efficiently to reduce CSS file size.</li>
+                    <li>Test selectors across browsers for consistency.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Selector Types</title>
+                <style>
+                    h1 { /* Element selector */
+                        color: green;
+                    }
+                    .highlight { /* Class selector */
+                        background-color: yellow;
+                    }
+                    #unique { /* ID selector */
+                        font-weight: bold;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Heading</h1>
+                <p class="highlight">Highlighted text.</p>
+                <p id="unique">Unique paragraph.</p>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <h1 style="color: green;">Heading</h1>
+                        <p style="background-color: yellow;">Highlighted text.</p>
+                        <p style="font-weight: bold;">Unique paragraph.</p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Element selectors target HTML tags (e.g., <code>h1</code>).</li>
+                        <li>Class selectors (<code>.class</code>) are reusable across multiple elements.</li>
+                        <li>ID selectors (<code>#id</code>) are unique to one element.</li>
+                        <li>Other selectors include universal, attribute, pseudo-classes, and pseudo-elements.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Includes elements styled with element, class, and ID selectors.</li>
+                        <li>Applies different styles (e.g., color, background, font-weight) to demonstrate selector usage.</li>
+                        <li>Tests the page to ensure selectors target the correct elements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--element-selectors-->
+
+            <div id="element-selectors-content" class="content-section">
+                <h2>Element Selectors (div, p)</h2>
+                <p>Element selectors target HTML elements based on their tag names, such as <code><div></code> or <code><p></code>.</p>
+                <p>They are simple and apply styles to all instances of the specified element.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Apply styles to all elements of a specific type.</li>
+                    <li>Useful for setting default styles for common elements.</li>
+                    <li>Provide a broad, low-specificity way to style elements.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure element selectors don’t override more specific styles needed for accessibility.</li>
+                    <li>Use semantic elements to maintain accessibility when applying styles.</li>
+                    <li>Test to ensure styles don’t disrupt content readability.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use element selectors for global styles, but combine with classes for specific cases.</li>
+                    <li>Avoid overuse, as they affect all instances of an element.</li>
+                    <li>Keep specificity low to allow overrides by more targeted selectors.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Element Selectors</title>
+                <style>
+                    div {
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                    }
+                    p {
+                        color: #444;
+                        font-size: 14px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div>Div content</div>
+                <p>Paragraph content</p>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <div style="border: 1px solid #ccc; padding: 10px;">Div content</div>
+                        <p style="color: #444; font-size: 14px;">Paragraph content</p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Element selectors are written as the tag name (e.g., <code>div</code>, <code>p</code>).</li>
+                        <li>They have low specificity, making them easy to override.</li>
+                        <li>Useful for setting baseline styles for elements.</li>
+                        <li>Can lead to unintended styling if not used carefully.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses element selectors to style all <code><div></code> and <code><p></code> elements.</li>
+                        <li>Applies distinct styles (e.g., border for div, color for p).</li>
+                        <li>Tests the page to ensure all elements are styled correctly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--class selectors-->
+
+            <div id="class-selectors-content" class="content-section">
+                <h2>Class Selectors (.class)</h2>
+                <p>Class selectors target HTML elements with a specific <code>class</code> attribute, prefixed with a dot (e.g., <code>.class</code>).</p>
+                <p>They are reusable and allow styling multiple elements with the same class.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Apply styles to multiple elements with the same class attribute.</li>
+                    <li>Enable reusable and modular styling.</li>
+                    <li>Provide moderate specificity, balancing flexibility and control.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Use descriptive class names to maintain clarity for accessibility tools.</li>
+                    <li>Ensure class-based styles don’t obscure content for screen readers.</li>
+                    <li>Test class styles to ensure consistent application across elements.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use meaningful class names (e.g., <code>.button</code>, <code>.highlight</code>) for clarity.</li>
+                    <li>Avoid overusing classes for single elements; use IDs if unique.</li>
+                    <li>Combine classes for flexible styling (e.g., <code>class="btn primary"</code>).</li>
+                    <li>Keep class selectors specific but not overly complex.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Class Selectors</title>
+                <style>
+                    .highlight {
+                        background-color: #ff0;
+                        padding: 5px;
+                    }
+                </style>
+            </head>
+            <body>
+                <p class="highlight">Highlighted paragraph</p>
+                <div class="highlight">Highlighted div</div>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <p style="background-color: #ff0; padding: 5px;">Highlighted paragraph</p>
+                        <div style="background-color: #ff0; padding: 5px;">Highlighted div</div>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Class selectors are written as <code>.classname</code>.</li>
+                        <li>Multiple elements can share the same class.</li>
+                        <li>Classes are reusable and have moderate specificity.</li>
+                        <li>Multiple classes can be applied to a single element.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses a class selector to style multiple elements (e.g., <code><p></code>, <code><div></code>) with the same class.</li>
+                        <li>Applies styles like background color and padding.</li>
+                        <li>Tests the page to verify all elements with the class are styled.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--id selectors-->
+
+            <div id="id-selectors-content" class="content-section">
+                <h2>ID Selectors (#id)</h2>
+                <p>ID selectors target a single HTML element with a specific <code>id</code> attribute, prefixed with a hash (e.g., <code>#id</code>).</p>
+                <p>They are unique to one element per page and have high specificity.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Apply styles to a single, unique element.</li>
+                    <li>Useful for targeting specific sections or components.</li>
+                    <li>Provide high specificity for overriding other styles.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure ID selectors don’t override accessibility-focused styles (e.g., focus states).</li>
+                    <li>Use descriptive ID names to maintain clarity for assistive technologies.</li>
+                    <li>Verify IDs are unique to avoid conflicts.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use IDs sparingly due to high specificity, which can complicate overrides.</li>
+                    <li>Ensure each ID is unique within a page.</li>
+                    <li>Prefer class selectors for reusable styles.</li>
+                    <li>Use IDs for JavaScript targeting or unique styling needs.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>ID Selectors</title>
+                <style>
+                    #main-header {
+                        color: #800080;
+                        font-size: 28px;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1 id="main-header">Main Header</h1>
+                <h1>Other Header</h1>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <h1 style="color: #800080; font-size: 28px;">Main Header</h1>
+                        <h1>Other Header</h1>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>ID selectors are written as <code>#idname</code>.</li>
+                        <li>Each ID must be unique within a page.</li>
+                        <li>IDs have high specificity, overriding most other selectors.</li>
+                        <li>Commonly used for unique elements like headers or footers.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses an ID selector to style a unique element (e.g., a header).</li>
+                        <li>Applies styles like color and font-size.</li>
+                        <li>Ensures the ID is unique and tests the styling.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--universal selectors-->
+
+            <div id="universal-selectors-content" class="content-section">
+                <h2>Universal Selectors (*)</h2>
+                <p>The universal selector (<code>*</code>) targets all elements on a page.</p>
+                <p>It is used for applying global styles but has low specificity.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Apply styles to every element, often for resetting or default styles.</li>
+                    <li>Useful for setting base properties like margins or box-sizing.</li>
+                    <li>Can be combined with other selectors for specific contexts.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Avoid using universal selectors for critical accessibility styles, as they may override specific rules.</li>
+                    <li>Test to ensure global styles don’t disrupt content readability or navigation.</li>
+                    <li>Use cautiously to avoid unintended side effects.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use for CSS resets (e.g., removing default margins) or global properties.</li>
+                    <li>Avoid overuse due to performance impact on large pages.</li>
+                    <li>Combine with specific selectors to limit scope (e.g., <code>.container *</code>).</li>
+                    <li>Test thoroughly to ensure no unintended styling.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Universal Selector</title>
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Heading</h1>
+                <p>Paragraph</p>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <h1 style="margin: 0; padding: 0; box-sizing: border-box;">Heading</h1>
+                        <p style="margin: 0; padding: 0; box-sizing: border-box;">Paragraph</p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>The universal selector is written as <code>*</code>.</li>
+                        <li>It has the lowest specificity, easily overridden.</li>
+                        <li>Commonly used in CSS resets to normalize styles.</li>
+                        <li>Can impact performance if overused on complex pages.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses the universal selector to reset margins and padding.</li>
+                        <li>Adds a specific style to one element to override the universal selector.</li>
+                        <li>Tests the page to ensure the reset applies globally.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--attribute selectors-->
+
+            <div id="attribute-selectors-content" class="content-section">
+                <h2>Attribute Selectors ([type="text"])</h2>
+                <p>Attribute selectors target elements based on their attributes or attribute values, using square brackets (e.g., <code>[type="text"]</code>).</p>
+                <p>They are useful for styling elements with specific attributes, like form inputs.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Target elements with specific attributes or values (e.g., <code>type</code>, <code>href</code>).</li>
+                    <li>Allow precise styling of elements without relying on classes or IDs.</li>
+                    <li>Support partial matching for flexible targeting.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure attribute selectors don’t disrupt accessibility-focused attributes (e.g., <code>aria-*</code>).</li>
+                    <li>Use attribute selectors to enhance form accessibility (e.g., styling required fields).</li>
+                    <li>Test to ensure styles apply correctly to targeted elements.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Use attribute selectors for elements with unique attributes (e.g., form inputs).</li>
+                    <li>Combine with other selectors for specificity (e.g., <code>input[type="text"]</code>).</li>
+                    <li>Avoid overly complex attribute selectors for performance.</li>
+                    <li>Use partial matching (e.g., <code>[class^="btn"]</code>) for flexibility.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Attribute Selectors</title>
+                <style>
+                    input[type="text"] {
+                        border: 2px solid #00f;
+                        padding: 5px;
+                    }
+                    [data-role="button"] {
+                        background-color: #008000;
+                        color: #fff;
+                        padding: 10px;
+                    }
+                </style>
+            </head>
+            <body>
+                <input type="text" placeholder="Text input">
+                <div data-role="button">Button</div>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <input type="text" placeholder="Text input" style="border: 2px solid #00f; padding: 5px;">
+                        <div style="background-color: #008000; color: #fff; padding: 10px;">Button</div>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Attribute selectors target elements with specific attributes (e.g., <code>[type="text"]</code>).</li>
+                        <li>Support exact, partial, or pattern-based matching.</li>
+                        <li>Useful for styling form elements or custom attributes.</li>
+                        <li>Have moderate specificity, depending on the selector structure.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses attribute selectors to style form inputs with <code>type="text"</code> and elements with a custom <code>data-</code> attribute.</li>
+                        <li>Applies distinct styles (e.g., border, background).</li>
+                        <li>Tests the page to ensure only targeted elements are styled.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--pseudo class selectors-->
+
+            <div id="pseudo-class-selectors-content" class="content-section">
+                <h2>Pseudo-classes (:hover, :nth-child, :focus)</h2>
+                <p>Pseudo-classes are keywords added to selectors to style elements based on their state or position (e.g., <code>:hover</code>, <code>:nth-child</code>).</p>
+                <p>They enable dynamic and interactive styling.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Style elements based on user interactions (e.g., <code>:hover</code>, <code>:focus</code>).</li>
+                    <li>Target elements based on their position or structure (e.g., <code>:nth-child</code>).</li>
+                    <li>Enhance user experience with interactive feedback.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Ensure <code>:focus</code> styles are visible for keyboard navigation.</li>
+                    <li>Use <code>:hover</code> cautiously, as it’s not applicable on touch devices.</li>
+                    <li>Test pseudo-class styles with assistive technologies to ensure compatibility.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Always define <code>:focus</code> alongside <code>:hover</code> for accessibility.</li>
+                    <li>Use <code>:nth-child</code> for consistent patterns (e.g., alternating row colors).</li>
+                    <li>Avoid complex pseudo-class chains for performance.</li>
+                    <li>Test across devices to ensure pseudo-classes behave as expected.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Pseudo-classes</title>
+                <style>
+                    a:hover {
+                        color: #ff0000;
+                        text-decoration: underline;
+                    }
+                    input:focus {
+                        border-color: #00f;
+                        outline: none;
+                    }
+                    li:nth-child(odd) {
+                        background-color: #f0f0f0;
+                    }
+                </style>
+            </head>
+            <body>
+                <a href="#">Hover me</a>
+                <input type="text" placeholder="Focus here">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <p><em>(Hover effect not shown statically)</em></p>
+                        <input type="text" placeholder="Focus here" style="border-color: #00f;">
+                        <ul>
+                            <li style="background-color: #f0f0f0;">Item 1</li>
+                            <li>Item 2</li>
+                            <li style="background-color: #f0f0f0;">Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Pseudo-classes are prefixed with a colon (e.g., <code>:hover</code>).</li>
+                        <li>Common pseudo-classes include <code>:hover</code>, <code>:focus</code>, <code>:nth-child</code>.</li>
+                        <li>They add interactivity and positional styling.</li>
+                        <li><code>:focus</code> is critical for accessibility.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses <code>:hover</code> and <code>:focus</code> to style links and inputs.</li>
+                        <li>Uses <code>:nth-child</code> to style alternating list items.</li>
+                        <li>Tests the page to ensure interactive styles work correctly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--pseudo element selector-->
+
+            <div id="pseudo-element-selectors-content" class="content-section">
+                <h2>Pseudo-elements (::before, ::after)</h2>
+                <p>Pseudo-elements allow styling of specific parts of an element or adding content before or after it (e.g., <code>::before</code>, <code>::after</code>).</p>
+                <p>They are used for decorative or structural enhancements.</p>
+            
+                <h4>Purpose</h4>
+                <ul>
+                    <li>Add content or style parts of an element without extra HTML.</li>
+                    <li>Enhance design with icons, counters, or decorative elements.</li>
+                    <li>Support complex layouts and effects.</li>
+                </ul>
+            
+                <h4>Accessibility</h4>
+                <ul>
+                    <li>Avoid using pseudo-elements for critical content, as screen readers may ignore them.</li>
+                    <li>Ensure pseudo-element styles don’t obscure accessible content.</li>
+                    <li>Test to verify pseudo-elements don’t interfere with navigation.</li>
+                </ul>
+            
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Always include the <code>content</code> property for <code>::before</code> and <code>::after</code>.</li>
+                    <li>Use pseudo-elements for decorative purposes, not essential content.</li>
+                    <li>Combine with other selectors for precise targeting.</li>
+                    <li>Test across browsers, as pseudo-element support varies.</li>
+                </ul>
+            
+                <div class="code-display">
+                    <div class="code-container">
+                        <h3>Usage</h3>
+                        <div class="code-block">
+                            <pre>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Pseudo-elements</title>
+                <style>
+                    p::before {
+                        content: "★ ";
+                        color: #ff0;
+                    }
+                    p::after {
+                        content: "!";
+                        color: #f00;
+                    }
+                </style>
+            </head>
+            <body>
+                <p>Decorated text</p>
+            </body>
+            </html>
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="preview-container">
+                    <h3>Result</h3>
+                    <div class="preview-frame">
+                        <p><span style="color: #ff0;">★ </span>Decorated text<span style="color: #f00;">!</span></p>
+                    </div>
+                </div>
+            
+                <div class="preview-frame">
+                    <h4>Key Elements</h4>
+                    <ul>
+                        <li>Pseudo-elements are written with double colons (e.g., <code>::before</code>).</li>
+                        <li>The <code>content</code> property is required for <code>::before</code> and <code>::after</code>.</li>
+                        <li>Used for adding decorative content or styling parts of an element.</li>
+                        <li>Not suitable for critical content due to accessibility limitations.</li>
+                    </ul>
+                </div>
+            
+                <div class="exercise-container">
+                    <h3>Practical Exercise</h3>
+                    <p>Create a webpage that:</p>
+                    <ul>
+                        <li>Uses <code>::before</code> and <code>::after</code> to add decorative content to a paragraph.</li>
+                        <li>Styles the pseudo-elements with colors or symbols.</li>
+                        <li>Tests the page to ensure the decorations appear correctly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--font properties-->
+
+            <div id="font-properties-content" class="content-section">
+                <h2>Font Properties</h2>
+                <p>Content for this topic is under development. It will cover CSS font properties like <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, and <code>font-style</code>.</p>
+            </div>
+            <div id="text-alignment-content" class="content-section">
+                <h2>Text Alignment</h2>
+                <p>Content for this topic is under development. It will cover properties like <code>text-align</code>, <code>text-transform</code>, and <code>text-decoration</code>.</p>
+            </div>
+            <div id="line-height-spacing-content" class="content-section">
+                <h2>Line Height and Spacing</h2>
+                <p>Content for this topic is under development. It will cover <code>line-height</code>, <code>letter-spacing</code>, and <code>word-spacing</code>.</p>
+            </div>
+            <div id="web-safe-google-fonts-content" class="content-section">
+                <h2>Web-safe Fonts vs Google Fonts</h2>
+                <p>Content for this topic is under development. It will compare web-safe fonts and Google Fonts for styling.</p>
+            </div>
+
+            <!--color formats-->
+
+            <div id="color-formats-content" class="content-section">
+                <h2>Color Formats</h2>
+                <p>Content for this topic is under development. It will cover named colors, hex, RGB, HSL, RGBA, and HSLA.</p>
+            </div>
+            <div id="background-properties-content" class="content-section">
+                <h2>Background Properties</h2>
+                <p>Content for this topic is under development. It will cover <code>background-color</code>, <code>background-image</code>, and related properties.</p>
+            </div>
+            <div id="gradients-content" class="content-section">
+                <h2>Gradients</h2>
+                <p>Content for this topic is under development. It will cover linear and radial gradients.</p>
+            </div>
+            <div id="opacity-vs-rgba-content" class="content-section">
+                <h2>Opacity vs RGBA</h2>
+                <p>Content for this topic is under development. It will compare <code>opacity</code> and RGBA for transparency.</p>
+            </div>
+
+            <!---->
+
 
 
 <!--notes go here-->
