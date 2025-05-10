@@ -60,21 +60,18 @@
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> What is JavaScript?</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="js-definition"><i style="font-size: 8px;"></i> Definition and Purpose</a></li>
-                        <li><a href="#" data-content="js-role-web"><i style="font-size: 8px;"></i> Role in Web Development</a></li>
-                        <li><a href="#" data-content="js-execution"><i style="font-size: 8px;"></i> How JS Runs in Browser</a></li>
-                        <li><a href="#" data-content="javascript-vs-java"><i style="font-size: 8px;"></i> JavaScript vs Java</a></li>
+                        <li><a href="#" data-content="js-definition"><i style="font-size: 8px;"></i> Definition and Purpose</a></li>                       
                     </ul>
                 </li>
                 
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Setup & Basics</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="code-editor"><i style="font-size: 8px;"></i> Code Editors</a></li>
-                        <li><a href="#" data-content="devtools-basics"><i style="font-size: 8px;"></i> DevTools Basics</a></li>
+                        <li><a href="#" data-content="code-editor"><i style="font-size: 8px;"></i>Basics and Introduction</a></li>
+                        <!-- <li><a href="#" data-content="devtools-basics"><i style="font-size: 8px;"></i> DevTools Basics</a></li>
                         <li><a href="#" data-content="console-logging"><i style="font-size: 8px;"></i> Console Logging</a></li>
                         <li><a href="#" data-content="script-tag"><i style="font-size: 8px;"></i> Using Script Tag</a></li>
-                        <li><a href="#" data-content="first-script"><i style="font-size: 8px;"></i> Your First JS Program</a></li>
+                        <li><a href="#" data-content="first-script"><i style="font-size: 8px;"></i> Your First JS Program</a></li> -->
                     </ul>
                 </li>
                 
@@ -237,7 +234,7 @@
         <!-- Main Content Area -->
         <div class="main-content">
             <!-- Root Element Content -->
-            <div id="js-definition" class="content-section active">
+            <div id="js-definition-content" class="content-section active">
                 <h2>What is JavaScript?</h2>
                 <p>JavaScript is a high-level, interpreted programming language that runs in web 
                     browsers and allows developers to make web pages interactive. 
@@ -259,13 +256,13 @@
 
                     <!-- Explains how js runs -->
                     <br>
-                    <h4>How JavaScript runs in a browser</h4>
-                        <ol>
-                            <li>The browser downloads an HTML file.</li>
-                            <li>It reads &lt;script&gt; tags and loads the associated JavaScript.</li>
-                            <li>A built-in engine like V8 (Chrome) or SpiderMonkey (Firefox) executes the code.</li>
-                            <li>JS interacts with the DOM (Document Object Model) and BOM (Browser Object Model).</li>                            
-                        </ol><br>
+                <h4>How JavaScript runs in a browser</h4>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li>The browser downloads an HTML file.</li>
+                        <li>It reads &lt;script&gt; tags and loads the associated JavaScript.</li>
+                        <li>A built-in engine like V8 (Chrome) or SpiderMonkey (Firefox) executes the code.</li>
+                        <li>JS interacts with the DOM (Document Object Model) and BOM (Browser Object Model).</li>                            
+                    </ol><br>
 
                     <h4>You can implement JavaScript in two main ways:</h4>
                     <ol>
@@ -280,7 +277,7 @@
                                 <pre>
 
 &lt;script&gt;
-    alert("Welcom to Javascript")
+    alert("Welcome to Javascript")
 &lt;/script&gt;
                                 </pre>
                                 <button class="copy-btn">Copy</button>                          
@@ -301,50 +298,8 @@
                             </div>
                         </div>
                     
-                    <!-- body section -->
-                    <br><h4>&lt;body&gt;  Section</h4>
-                    <li>Contains all visible page content</li>
-                    <li>Where you place headings, paragraphs, images, etc.
-                        <div class="code-display">
-                            <div class="code-container">                               
-                                <div class="code-block">
-                                    <pre>
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;  
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                            </div>                         
-                        </div>
-                
-                <div class="code-display">
-                    <div class="code-container">
-                        <h3>Sample HTML Document Structure</h3>
-                        <div class="code-block">
-                            <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, <br>    initial-scale=1.0"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                            </pre>
-                            <button class="copy-btn">Copy</button>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+                    <!-- body section -->      
+            
                 <div class="preview-container">
                     <h3>Result</h3>
                     <div class="preview-frame">
@@ -356,32 +311,44 @@
 
             </div>
 
-            <!-- Head Section and tag Content -->
-            <div id="head-content" class="content-section">
-                <h2>&lt;head&gt;  Section (Document Metadata)</h2>
-                <p>The head section contains metadata and links to external resources.</p>
-                <p>Also contains non-visible page information </p>
 
-                        <!-- Explains head tag -->
-                        <h4>&lt;meta&gt;  tag</h4>
-                            <li>Contains metadata about the HTML document, such as character set, 
-                                description, keywords, author, and viewport settings.</li>
-                            <li>Provides information to browsers and search engines, 
-                                helping with page rendering and SEO.
-                            </li>
+
+
+            <!-- Set ups and basics -->
+            <div id="code-editor-content" class="content-section">
+                <h3>Setup & Basics</h3>
+                <h4>Code Editors</h4>
+                <p>A code editor is a software used to write and edit code. It provides features that help developers write code more efficiently.</p>
+                <p>✅ Popular Code Editors:</p>
+                    <li><strong>Visual Studio Code (VS Code)</strong> – Free, powerful, supports extensions.</li>
+                    <li><strong>Atom</strong> – Open-source from GitHub.</li>
+                    <li><strong>Sublime Text</strong> – Lightweight and fast.</li>
+                    <li><strong>Programiz</strong> - Online text editor.</li>
+
+                        <!--Developer tools -->
+                        <br><h4>Developer Tools (DevTools)</h4>
+                        <p>Developer Tools are built into modern web browsers to help you debug and test your websites directly in the browser.</p>
+
+                        <p><strong>🔍 How to Open DevTools:</strong></p>
+                            <li><strong>Chrome:</strong>Right-click → Inspect or press F12 / Ctrl + Shift + I</li>
+                            <li><strong>Firefox:</strong> Right-click → Inspect Element</li>
+                            <li><strong>Edge:</strong> Same as Chrome</li>
+
+                         <!--tabs in dev tools -->
+                        <br><p><strong>📁 Key Tabs in DevTools:</strong></p>
+                            <li><strong>Elements:</strong>Inspect and modify HTML/CSS live.</li>
+                            <li><strong>Console:</strong> Run JavaScript and see output/errors.</li>
+                            <li><strong>Sources:</strong> Debug JavaScript using breakpoints.</li>
+                            <li><strong>Network:</strong> View loaded files, check performance, inspect XHR requests.</li>
+                            <li><strong>Application:</strong>Check local storage, cookies, service workers, etc.</li>
+
                             <div class="code-display">
                                 <div class="code-container">
-                                    <h3>Head Section Elements</h3>
+                                 <h5>Example</h5>
                                     <div class="code-block">
                                         <pre>
     
-    &lt;head&gt;
-        &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-        &lt;meta name="description" content="Brief description of the page"&gt;
-        &lt;meta name="keywords" content="HTML, CSS, Javascript"&gt;
-        &lt;meta name="auther" content="Evans Osumba"&gt;
-        &lt;meta name="viewport" content="width=device-width, <br>         initial-scale=1.0"&gt;      
-    &lt;/head&gt;
+console.log("Hello from DevTools Console!");
                                         </pre>
                                         <button class="copy-btn">Copy</button>
                                     </div>
@@ -390,18 +357,51 @@
                               
                             </div>
 
-                        <h4>&lt;title&gt;  tag</h4>
-                            <li>Defines the title of the HTML document, which
-                                 is displayed in the browser's title bar or tab</li>
-                            <li>Important for SEO as it provides a concise description of the page's content</li>
+                                   <!--Console Logging -->
+                        <br><h4>Console Logging</h4>
+                        <p>The console is a tool in DevTools where developers can print messages, debug values, and track errors.</p>
+
+                        <p><strong>📝 Common Methods::</strong></p>
+                        <table style="width: 100%; border-collapse: collapse; background-color: #2b2b2b; color: #fff;">
+                            <thead>
+                                <tr>
+                                    <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">METHOD</th>
+                                    <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">DESCRIPTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.log()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Outputs general messages</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.warn()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Shows a warning message</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.error()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Displays an error</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.info()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Info-level logging</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.table()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Displays data in table format</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                 
                         <div class="code-display">
-                            <div class="code-container">                                  
+                            <div class="code-container"> <br>
+                                <h5>💡 Usage:</h5>                                 
                                 <div class="code-block">
                                     <pre>
 
-&lt;head&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-&lt;/head&gt;
+console.log("This is a log message");
+console.warn("This is a warning");
+console.error("This is an error!");
                                     </pre>
                                     <button class="copy-btn">Copy</button>
                                 </div>
@@ -409,95 +409,271 @@
                             
                         </div>
 
-                        <h4>&lt;link&gt;  tag</h4>
-                            <li>Used to link external resources to the HTML document, such 
-                                as stylesheets, icons, and other documents.</li>
-                                <li>Helps in defining the relationship between the current 
-                                    document and an external resource.</li>
-                            <div class="code-display">
-                                <div class="code-container">                                  
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;head&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;link rel="icon" href="favicon.ico"&gt;
-&lt;/head&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        <h4>&lt;style&gt;&lt;/style&gt;  tag</h4>
-                            <li>Defines CSS styles within the HTML document, 
-                                allowing for the styling of elements on the page.</li>
-                            <li>Can be used to embed CSS directly within the HTML file, 
-                                useful for small projects or inline styling.</li>
-                                <div class="code-display">
-                                    <div class="code-container">                                  
-                                        <div class="code-block">
-                                            <pre>
-        
-&lt;head&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-        body{
-            font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-                                            </pre>
-                                            <button class="copy-btn">Copy</button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
+                        <!-- Using the Script tag -->
+                        <br><h4>📜 Using Script Tag</h4>
+                        <p>JavaScript is typically embedded or linked in HTML using the &lt;script&gt; tag.</p>
                         <div class="code-display">
                             <div class="code-container">
-                                <h3>Head Section Elements</h3>
+                                <h5>Inline Script:</h5>
                                 <div class="code-block">
-                                    <pre>
+                                <pre>
 
-&lt;head&gt;
-    &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-    &lt;meta name="description" content="A brief description of the page"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-    &lt;/style&gt;
-    &lt;base href="https://example.com/"&gt;
-&lt;/head&gt;
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                                <div class="preview-container">
-                                    <h3>Result</h3>
-                                    <div class="preview-frame">
-                                        <h4>Image</h4>
-                                        <p>The head section is not visible in the browser window but contains important metadata for the document.</p>
-                                        
-                                    </div>
+&lt;script&gt;
+    alert("Welcome to DigitalLeap!")
+&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
                                 </div>
                             </div>
-                          
                         </div>
-                        <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
+
+                        <div class="code-display">
+                            <div class="code-container">
+                                <h5>External Script:</h5>
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js"&gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div><br>
+
+                        
+                        <h5>Best Practices</h5>
+                        <li>Avoid too much inline JavaScript.</li>
+                        <li>Keep JS in separate .js files for better maintainability.</li>
+                        <li>Use defer or async attributes when needed:</li>
+                        <div class="code-display">
+                            <div class="code-container">                       
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js" defer&gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- UFirst JS code -->
+                         <!-- <div id="first-script-content"> -->
+                        <br><h4>🧪 Your First JS Program</h4>
+                        <p>Let’s create a simple program that shows an alert and logs a message to the console.</p><br>
+
+                        <h5>Setps</h5>
+                        <ol>
+                            <li>Create a file named main.js</li>
+                            <li>Write the following code:</li>
+                       
+                        <div class="code-display">
+                            <div class="code-container">                             
+                                <div class="code-block">
+                                <pre>
+
+// This is your first JavaScript program
+alert("Welcome to DigitalLeap!");
+
+console.log("DigitalLeap says hello from the console.");
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div>
+                        <li>Link it in your HTML:</li>
+                        <div class="code-display">
+                            <div class="code-container">                             
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js" &gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div>
+                    </ol>
+                        
+                <h5>✅ Expected Output:</h5>
+                <li>An alert box with "Welcome to DigitalLeap!"</li>
+                <li>A message in the browser console.</li><br>
+
+                <h5>🧠 Concepts :</h5>
+                <li>Aletr PopUps</li>
+                <li>Console output.</li>
+                <li>Basic Syntax</li>
+                <li>Script Linking</li>    
+            <!-- </div>                   -->
+    
+
             </div>
+
+
+
+
+
+            <!-- Variables and data types -->
+             <!-- var, let, and const -->
+            <div id="var-let-const-content" class="content-section">                
+                <h4>var, let, and const</h4>
+                <p>These are the three keywords used to declare variables in JavaScript. Each has different scope , hoisting , and reassignment behavior.</p>
+                <p>In JavaScript, variables are used to store data values.</p><br>
+
+                <!-- Var -->
+                <h5>✅ var</h5>
+                    <li>Function-scoped or globally scoped if declared outside of any function.</li>
+                    <li>Hoisted (moved to the top of their scope).</li>
+                    <li>Can be redeclared/re-assigned and updated.</li>
+                    <div class="code-display">
+                        <div class="code-container">
+                         <h5>Example</h5>
+                            <div class="code-block">
+                                <pre>
+
+var x = 10; // Number
+var x = 20; // redeclaration allowed
+var message = "Hello, world!"; // String
+var number = 42; // Number
+var isTrue = true; // Boolean
+var list = [1, 2, 3]; // Array
+var person = {name: "Evans", age: 22}; // Object
+                                </pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+                    <h5>Best Practice:</h5>
+                    <li>💡 Not recommended for use in modern JS due to issues with scoping and hoisting. </li>
+           
+
+                <!-- Let -->
+                <br><br>
+                <h5>✅ let</h5>
+                <li>Back-scoped.</li>
+                <li>Not hoisted (inaccessible before declaration — Temporal Dead Zone).</li>
+                <li>Can be redeclared/re-assigned and updated.</li>
+                <div class="code-display">
+                    <div class="code-container">
+                     <h5>Example</h5>
+                        <div class="code-block">
+                            <pre>
+
+let y = 10;
+y = 20; // allowed
+let y = 30; // error: Identifier 'y' has already been declared
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+
+                    </div>
+                  
+                </div>
+                <h5>Best Practice:</h5>
+                <li>💡 Best choice when variable value needs to change.</li>
+
+                
+                <!-- const -->
+                <br><br>
+                <h5>✅ const</h5>
+                <li>Back-scoped.</li>
+                <li>Not hoisted (inaccessible before declaration — Temporal Dead Zone).</li>
+                <li>Cannot be redeclared or re-assigned.</li>
+                <div class="code-display">
+                    <div class="code-container">
+                     <h5>Example</h5>
+                        <div class="code-block">
+                            <pre>
+
+const z = 10;
+z = 20; // error: Assignment to constant variable
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+
+                    </div>
+                  
+                </div>
+                <h5>Best Practice:</h5>
+                <li>💡 Use this when the variable should not change (e.g., constants, references).</li>                      
+    
+
+            </div>
+
+
+            <!-- Primitive Data types -->
+            <div id="primitive-types-content" class="content-section">                
+                <h4>Primitive Data Types</h4>
+                <p>Primitive data types are the most basic data types and they include:</p>
+                <table style="width: 100%; border-collapse: collapse; background-color: #2b2b2b; color: #fff;">
+                    <thead>
+                        <tr>
+                            <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">TYPE</th>
+                            <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">DESCRIPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">string</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents textual data created with double quotes, single quotes
+                                or backticks <br>(e.g.,"Hello", 'DigitalLeap', `JavaScript`)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">number</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents numeric values including integers and floating-point numbers <br>(e.g., 25, 3.14)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">boolean</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents logical entities with two values: true or false.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">null</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents an intentional absence of any object value. Has one value: <br>Example: var y = null;</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">undefined</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;"> A type that has only one value, undefined, which is the value of variables that 
+                                have been declared but not initialized. <br>Example: var x; console.log(x); // undefined</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">bigint</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">For representing very large integers with arbitrary precision <br>(e.g., 100n)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">symbol</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Unique identifiers for object properties (used internally by JS). <br>Example: var sym = Symbol('description');</td>
+                        </tr>
+                    </tbody>
+                </table><br>           
+
+         
+                    <div class="code-display">
+                        <div class="code-container">
+                         <h5>Examples</h5>
+                            <div class="code-block">
+                                <pre>
+
+let name = "DigitalLeap"; // string
+let age = 25; // number
+let isMember = true; // boolean
+let user = null; // null
+let value; // undefined
+let bigNum = 9007199254740991n; // bigint
+let sym = Symbol("id"); // symbol
+                                </pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+                  
+    
+
+            </div>
+
 
             <!-- Body Section Content -->
             <div id="body-content" class="content-section">
