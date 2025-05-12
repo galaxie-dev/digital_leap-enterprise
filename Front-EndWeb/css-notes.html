@@ -3439,6 +3439,4292 @@
     </div>
 </div>
 
+<!--Float Layout-->
+<div id="float-layout" class="content-section">
+    <h2>Legacy Layout Technique Using Float</h2>
+    <p>The <code>float</code> property, historically used for layout, positions elements to the left or right, allowing content to wrap around them.</p>
+    <p>While largely replaced by Flexbox and Grid, floats are still relevant for specific use cases like text wrapping around images.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create multi-column layouts or wrap text around images.</li>
+        <li>Position elements outside the normal flow while allowing wrapping.</li>
+        <li>Support older browsers or legacy codebases.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure floated elements don’t disrupt content flow or readability.</li>
+        <li>Test layouts for responsiveness to avoid overlap or clipping.</li>
+        <li>Verify floated interactive elements remain focusable.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>float: left</code> or <code>right</code> for specific layout needs.</li>
+        <li>Apply <code>clear</code> or clearfix to manage float-related issues.</li>
+        <li>Prefer Flexbox or Grid for modern layouts unless floats are required.</li>
+        <li>Test across browsers for consistent rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Float Layout Example</title>
+                        <style>
+                            .float-left {
+                                float: left;
+                                width: 100px;
+                                margin-right: 10px;
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            .content {
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="float-left">Floated Element</div>
+                        <div class="content">Content wraps around the floated element.</div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="float: left; width: 100px; margin-right: 10px; background: lightblue; padding: 10px;">Floated Element</div>
+            <div style="background: lightgray; padding: 10px;">Content wraps around the floated element.</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>float: left</code>/<code>right</code>: Moves element, allows wrapping.</li>
+            <li>Floated elements are partially removed from normal flow.</li>
+            <li>Requires clearing to prevent layout issues.</li>
+            <li>Best for text wrapping, not complex layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>float</code> to wrap text around an image or div.</li>
+            <li>Ensures proper clearing for subsequent content.</li>
+            <li>Tests layout for responsiveness and accessibility.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Clear Property-->
+<div id="clear-property" class="content-section">
+    <h2>Clear Property</h2>
+    <p>The <code>clear</code> property prevents elements from appearing next to floated elements, forcing them below.</p>
+    <p>Values include <code>left</code>, <code>right</code>, and <code>both</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Ensure elements appear below floated content, maintaining layout integrity.</li>
+        <li>Fix issues where non-floated content wraps unexpectedly.</li>
+        <li>Support legacy float-based layouts.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Verify cleared elements maintain logical content flow.</li>
+        <li>Test for overlap or clipping in responsive designs.</li>
+        <li>Ensure cleared interactive elements remain accessible.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>clear: both</code> for elements following any floated content.</li>
+        <li>Combine with clearfix for parent containers of floated children.</li>
+        <li>Avoid overusing <code>clear</code> in modern layouts with Flexbox/Grid.</li>
+        <li>Test across browsers for consistent behavior.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Clear Property Example</title>
+                        <style>
+                            .float-left {
+                                float: left;
+                                width: 100px;
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            .clear {
+                                clear: both;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="float-left">Floated Element</div>
+                        <div>Content wraps around float.</div>
+                        <div class="clear">Cleared Element</div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="float: left; width: 100px; background: lightblue; padding: 10px;">Floated Element</div>
+            <div>Content wraps around float.</div>
+            <div style="clear: both; background: lightgray; padding: 10px;">Cleared Element</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>clear: left</code>/<code>right</code>: Clears specific float direction.</li>
+            <li><code>clear: both</code>: Clears all floats, most common.</li>
+            <li>Applied to non-floated elements after floats.</li>
+            <li>Essential for float-based layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>float</code> for a layout with multiple elements.</li>
+            <li>Applies <code>clear</code> to position content below floats.</li>
+            <li>Tests for accessibility and responsive behavior.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Clearfix Hack-->
+<div id="clearfix-hack" class="content-section">
+    <h2>Clearfix Hack</h2>
+    <p>The clearfix hack ensures a parent container fully contains its floated children, preventing collapse.</p>
+    <p>It uses a pseudo-element to clear floats without additional markup.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Fix parent container collapse caused by floated children.</li>
+        <li>Maintain layout integrity in float-based designs.</li>
+        <li>Support legacy layouts without extra HTML elements.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure clearfix doesn’t disrupt content flow or semantics.</li>
+        <li>Test for proper rendering in responsive designs.</li>
+        <li>Verify interactive elements remain accessible.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Apply clearfix to parent containers of floated elements.</li>
+        <li>Use modern alternatives (Flexbox/Grid) for new projects.</li>
+        <li>Test clearfix behavior across browsers.</li>
+        <li>Document clearfix usage in legacy codebases.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Clearfix Hack Example</title>
+                        <style>
+                            .clearfix::after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
+                            .float-left {
+                                float: left;
+                                width: 100px;
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            .container {
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container clearfix">
+                            <div class="float-left">Floated Element 1</div>
+                            <div class="float-left">Floated Element 2</div>
+                        </div>
+                        <div>Content after container.</div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="background: lightgray; padding: 10px;">
+                <div style="float: left; width: 100px; background: lightblue; padding: 10px;">Floated Element 1</div>
+                <div style="float: left; width: 100px; background: lightblue; padding: 10px;">Floated Element 2</div>
+                <div style="content: ''; display: table; clear: both;"></div>
+            </div>
+            <div>Content after container.</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Uses <code>::after</code> pseudo-element to clear floats.</li>
+            <li>Prevents parent collapse without extra markup.</li>
+            <li>Works in all modern browsers.</li>
+            <li>Legacy technique, less needed with Flexbox/Grid.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses a container with floated children and applies clearfix.</li>
+            <li>Ensures the container fully contains floats.</li>
+            <li>Tests for accessibility and responsive rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Flexbox Overview-->
+<div id="flexbox-overview" class="content-section">
+    <h2>Introduction to Flexbox</h2>
+    <p>Flexbox is a CSS layout model for arranging items in a single dimension (row or column) with flexible sizing and alignment.</p>
+    <p>It simplifies responsive design and dynamic content arrangement.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create flexible, responsive layouts with minimal code.</li>
+        <li>Align and distribute items within a container efficiently.</li>
+        <li>Handle dynamic content sizes and orientations.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure flex layouts maintain logical content order for screen readers.</li>
+        <li>Test for touch target sizes in flexed interactive elements.</li>
+        <li>Verify responsiveness across screen sizes.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use Flexbox for one-dimensional layouts (rows or columns).</li>
+        <li>Combine with media queries for responsive designs.</li>
+        <li>Test flex properties for browser compatibility.</li>
+        <li>Document flex usage for maintainability.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Flexbox Overview Example</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: flex; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>display: flex</code>: Enables flexbox layout.</li>
+            <li>Items align along a main axis, with flexible sizing.</li>
+            <li>Supports responsive, dynamic layouts.</li>
+            <li>Replaces older float-based layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses Flexbox to arrange items in a row.</li>
+            <li>Adjusts layout for responsiveness with media queries.</li>
+            <li>Tests for accessibility and rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Flex Container-->
+<div id="flex-container" class="content-section">
+    <h2>Flex Container: Display: Flex</h2>
+    <p>The <code>display: flex</code> property turns an element into a flex container, enabling its children to use flexbox properties.</p>
+    <p>It defines a flexible layout context for child items.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Establish a flexbox layout for child elements.</li>
+        <li>Control alignment, direction, and distribution of items.</li>
+        <li>Create responsive, one-dimensional layouts.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure flex container maintains logical content order.</li>
+        <li>Test for touch target accessibility in flexed items.</li>
+        <li>Verify responsiveness across devices.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>display: flex</code> on parent elements only.</li>
+        <li>Combine with flex properties like <code>justify-content</code> and <code>align-items</code>.</li>
+        <li>Test for browser compatibility and fallbacks.</li>
+        <li>Avoid overuse in simple layouts better suited for block/inline.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Flex Container Example</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                justify-content: space-between;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: flex; justify-content: space-between; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>display: flex</code>: Creates flex container.</li>
+            <li>Children become flex items with flexible behavior.</li>
+            <li>Enables properties like <code>flex-direction</code>, <code>justify-content</code>.</li>
+            <li>Foundation for flexbox layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>display: flex</code> to create a flex container.</li>
+            <li>Arranges child items with basic flex properties.</li>
+            <li>Tests for accessibility and responsiveness.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Main Axis vs Cross Axis-->
+<div id="main-cross-axis" class="content-section">
+    <h2>Main Axis vs Cross Axis</h2>
+    <p>In Flexbox, the main axis is the primary direction of item arrangement, while the cross axis is perpendicular to it.</p>
+    <p>The main axis is defined by <code>flex-direction</code>, affecting alignment properties.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Understand how flex items are aligned and distributed.</li>
+        <li>Control layout orientation (row or column).</li>
+        <li>Apply axis-specific properties like <code>justify-content</code> and <code>align-items</code>.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure axis changes don’t disrupt logical content order.</li>
+        <li>Test for readability and touch targets in both axes.</li>
+        <li>Verify responsiveness for axis-based layouts.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>flex-direction</code> to define the main axis (row or column).</li>
+        <li>Apply <code>justify-content</code> for main axis alignment, <code>align-items</code> for cross axis.</li>
+        <li>Test axis behavior with varying content sizes.</li>
+        <li>Document axis usage for complex layouts.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Main vs Cross Axis Example</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around; /* Main axis */
+                                align-items: center; /* Cross axis */
+                                background: lightgray;
+                                padding: 10px;
+                                height: 150px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; background: lightgray; padding: 10px; height: 150px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Main axis: Defined by <code>flex-direction</code> (row or column).</li>
+            <li>Cross axis: Perpendicular to main axis.</li>
+            <li><code>justify-content</code>: Aligns along main axis.</li>
+            <li><code>align-items</code>: Aligns along cross axis.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses Flexbox with <code>flex-direction: row</code> and <code>column</code>.</li>
+            <li>Applies <code>justify-content</code> and <code>align-items</code> for both axes.</li>
+            <li>Tests for accessibility and responsiveness.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Flex Direction-->
+<div id="flex-direction" class="content-section">
+    <h2>Flex-Direction</h2>
+    <p>The <code>flex-direction</code> property defines the main axis direction for flex items.</p>
+    <p>Values include <code>row</code>, <code>row-reverse</code>, <code>column</code>, and <code>column-reverse</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Control whether items are arranged horizontally or vertically.</li>
+        <li>Reverse item order for specific layouts.</li>
+        <li>Create flexible, responsive layouts.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>row-reverse</code> or <code>column-reverse</code> maintains logical content order.</li>
+        <li>Test for readability and navigation in all directions.</li>
+        <li>Verify responsiveness across devices.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>row</code> for horizontal layouts, <code>column</code> for vertical.</li>
+        <li>Apply <code>reverse</code> sparingly to avoid confusion.</li>
+        <li>Combine with media queries for responsive direction changes.</li>
+        <li>Test for consistent rendering across browsers.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Flex Direction Example</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                flex-direction: column;
+                                background: lightgray;
+                                padding: 10px;
+                                height: 200px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: flex; flex-direction: column; background: lightgray; padding: 10px; height: 200px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+   cientes de <code>flex-direction</code> para mantener un orden lógico del contenido.</li>
+        <li>Prueba la responsividad en diferentes tamaños de pantalla.</li>
+        <li>Verifica que los elementos interactivos permanezcan accesibles.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>justify-content: space-between</code> o <code>space-around</code> para distribuir elementos uniformemente.</li>
+        <li>Combina con <code>align-items</code> para un control completo del diseño.</li>
+        <li>Prueba diferentes valores para optimizar el espacio.</li>
+        <li>Usa media queries para ajustar la distribución en diseños responsivos.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Justify-Content</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                justify-content: space-around;
+                                background: lightgray;
+                                padding: 10px;
+                                height: 100px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: flex; justify-content: space-around; background: lightgray; padding: 10px; height: 100px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>flex-start</code>: Alinea elementos al inicio del eje principal.</li>
+            <li><code>center</code>: Centra elementos en el eje principal.</li>
+            <li><code>space-between</code>: Espacio igual entre elementos, sin espacio en los extremos.</li>
+            <li><code>space-around</code>: Espacio igual alrededor de cada elemento.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>justify-content</code> con diferentes valores (e.g., <code>center</code>, <code>space-between</code>).</li>
+            <li>Ajuste la distribución para un diseño responsivo.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Align Items-->
+<div id="align-items" class="content-section">
+    <h2>Align-Items</h2>
+    <p>La propiedad <code>align-items</code> controla la alineación de los elementos flex en el eje transversal dentro de un contenedor flex.</p>
+    <p>Los valores incluyen <code>stretch</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, y <code>baseline</code>.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Alinear elementos verticalmente (en <code>flex-direction: row</code>) u horizontalmente (en <code>flex-direction: column</code>).</li>
+        <li>Crear diseños visualmente equilibrados.</li>
+        <li>Adaptarse a diferentes tamaños y contenidos de elementos.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que la alineación no afecte la legibilidad del contenido.</li>
+        <li>Prueba los objetivos táctiles para elementos interactivos alineados.</li>
+        <li>Verifica que la alineación sea consistente en diseños responsivos.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>align-items: center</code> para centrar elementos en el eje transversal.</li>
+        <li>Aplica <code>stretch</code> para que los elementos ocupen todo el espacio disponible.</li>
+        <li>Combina con <code>justify-content</code> para un control completo del diseño.</li>
+        <li>Prueba en diferentes navegadores para asegurar consistencia.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Align-Items</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                align-items: center;
+                                background: lightgray;
+                                padding: 10px;
+                                height: 150px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: flex; align-items: center; background: lightgray; padding: 10px; height: 150px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>stretch</code>: Elementos ocupan todo el espacio en el eje transversal.</li>
+            <li><code>center</code>: Centra elementos en el eje transversal.</li>
+            <li><code>flex-start</code>/<code>flex-end</code>: Alinea al inicio o final del eje transversal.</li>
+            <li>Funciona junto con <code>flex-direction</code> para determinar la alineación.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>align-items</code> con diferentes valores (e.g., <code>center</code>, <code>stretch</code>).</li>
+            <li>Combine con <code>flex-direction</code> para probar diferentes alineaciones.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Flex Wrap-->
+<div id="flex-wrap" class="content-section">
+    <h2>Flex-Wrap</h2>
+    <p>La propiedad <code>flex-wrap</code> controla si los elementos flex se ajustan en una sola línea o se envuelven en múltiples líneas.</p>
+    <p>Los valores incluyen <code>nowrap</code>, <code>wrap</code>, y <code>wrap-reverse</code>.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Permitir que los elementos flex se envuelvan para diseños responsivos.</li>
+        <li>Evitar desbordamiento en contenedores con muchos elementos.</li>
+        <li>Controlar el orden de las líneas envueltas.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que los elementos envueltos mantengan un orden lógico.</li>
+        <li>Prueba la legibilidad en diseños envueltos en pantallas pequeñas.</li>
+        <li>Verifica que los elementos interactivos permanezcan accesibles.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>flex-wrap: wrap</code> para diseños responsivos con múltiples elementos.</li>
+        <li>Evita <code>nowrap</code> si los elementos pueden desbordar el contenedor.</li>
+        <li>Prueba <code>wrap-reverse</code> para casos específicos, pero úsalo con precaución.</li>
+        <li>Combina con media queries para ajustar el comportamiento del envoltorio.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Flex-Wrap</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                flex-wrap: wrap;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                                width: 100px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                            <div class="item">Item 4</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: flex; flex-wrap: wrap; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px; width: 100px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px; width: 100px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px; width: 100px;">Item 3</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px; width: 100px;">Item 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>nowrap</code>: Elementos en una sola línea, pueden desbordar.</li>
+            <li><code>wrap</code>: Elementos se envuelven en múltiples líneas.</li>
+            <li><code>wrap-reverse</code>: Invierte el orden de las líneas envueltas.</li>
+            <li>Esencial para diseños responsivos con muchos elementos.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>flex-wrap: wrap</code> para un contenedor con múltiples elementos.</li>
+            <li>Compare <code>nowrap</code> y <code>wrap</code> en diferentes tamaños de pantalla.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Flex Grow, Shrink, Basis-->
+<div id="flex-grow-shrink-basis" class="content-section">
+    <h2>Flex-Grow, Flex-Shrink, Flex-Basis</h2>
+    <p>Las propiedades <code>flex-grow</code>, <code>flex-shrink</code>, y <code>flex-basis</code> controlan cómo los elementos flex se expanden, encogen, y definen su tamaño base.</p>
+    <p>Estas propiedades permiten un control preciso sobre el comportamiento de los elementos en un contenedor flex.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li><code>flex-grow</code>: Define cuánto puede crecer un elemento en relación con otros.</li>
+        <li><code>flex-shrink</code>: Define cuánto puede encoger un elemento en relación con otros.</li>
+        <li><code>flex-basis</code>: Establece el tamaño base de un elemento antes de crecer o encoger.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que los elementos que crecen o encogen mantengan la legibilidad.</li>
+        <li>Prueba los objetivos táctiles para elementos interactivos.</li>
+        <li>Verifica que el diseño sea responsivo en diferentes tamaños de pantalla.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>flex-grow: 1</code> para que los elementos ocupen el espacio disponible uniformemente.</li>
+        <li>Establece <code>flex-shrink: 0</code> para evitar que los elementos se reduzcan demasiado.</li>
+        <li>Define <code>flex-basis</code> con valores como <code>auto</code> o porcentajes para flexibilidad.</li>
+        <li>Prueba combinaciones para optimizar diseños responsivos.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Flex-Grow, Shrink, Basis</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item1 {
+                                flex-grow: 1;
+                                flex-shrink: 0;
+                                flex-basis: 100px;
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                            .item2 {
+                                flex-grow: 2;
+                                flex-shrink: 1;
+                                flex-basis: 100px;
+                                background: lightgreen;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item1">Item 1 (Grow: 1)</div>
+                            <div class="item2">Item 2 (Grow: 2)</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: flex; background: lightgray; padding: 10px;">
+                <div style="flex-grow: 1; flex-shrink: 0; flex-basis: 100px; background: lightblue; padding: 10px; margin: 5px;">Item 1 (Grow: 1)</div>
+                <div style="flex-grow: 2; flex-shrink: 1; flex-basis: 100px; background: lightgreen; padding: 10px; margin: 5px;">Item 2 (Grow: 2)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>flex-grow</code>: Proporción de crecimiento respecto al espacio disponible.</li>
+            <li><code>flex-shrink</code>: Proporción de reducción cuando el espacio es limitado.</li>
+            <li><code>flex-basis</code>: Tamaño inicial antes de ajustes.</li>
+            <li>Propiedades clave para diseños dinámicos y responsivos.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>flex-grow</code>, <code>flex-shrink</code>, y <code>flex-basis</code> para diferentes elementos.</li>
+            <li>Pruebe el comportamiento en contenedores de diferentes tamaños.</li>
+            <li>Verifique la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Order, Align-Self-->
+<div id="order-align-self" class="content-section">
+    <h2>Order, Align-Self</h2>
+    <p>Las propiedades <code>order</code> y <code>align-self</code> permiten un control granular sobre el orden y la alineación de elementos flex individuales.</p>
+    <p><code>order</code> cambia la secuencia visual, mientras que <code>align-self</code> anula la alineación del eje transversal para un elemento.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li><code>order</code>: Reordena elementos flex sin alterar el HTML.</li>
+        <li><code>align-self</code>: Personaliza la alineación de un elemento en el eje transversal.</li>
+        <li>Crear diseños flexibles con excepciones específicas.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que <code>order</code> no afecte el orden lógico para lectores de pantalla.</li>
+        <li>Prueba la legibilidad y accesibilidad de elementos con <code>align-self</code>.</li>
+        <li>Verifica que los diseños sean responsivos.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>order</code> con moderación para evitar confusión en el mantenimiento.</li>
+        <li>Aplica <code>align-self</code> para excepciones específicas en lugar de <code>align-items</code>.</li>
+        <li>Prueba en diferentes navegadores para asegurar consistencia.</li>
+        <li>Documenta el uso de <code>order</code> para claridad.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Order y Align-Self</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                align-items: flex-start;
+                                background: lightgray;
+                                padding: 10px;
+                                height: 150px;
+                            }
+                            .item1 {
+                                order: 2;
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                            .item2 {
+                                order: 1;
+                                align-self: center;
+                                background: lightgreen;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                            .item3 {
+                                order: 3;
+                                background: lightcoral;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item1">Item 1 (Order: 2)</div>
+                            <div class="item2">Item 2 (Order: 1, Align-Self: Center)</div>
+                            <div class="item3">Item 3 (Order: 3)</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: flex; align-items: flex-start; background: lightgray; padding: 10px; height: 150px;">
+                <div style="order: 2; background: lightblue; padding: 10px; margin: 5px;">Item 1 (Order: 2)</div>
+                <div style="order: 1; align-self: center; background: lightgreen; padding: 10px; margin: 5px;">Item 2 (Order: 1, Align-Self: Center)</div>
+                <div style="order: 3; background: lightcoral; padding: 10px; margin: 5px;">Item 3 (Order: 3)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>order</code>: Cambia el orden visual (por defecto 0).</li>
+            <li><code>align-self</code>: Anula <code>align-items</code> para un elemento específico.</li>
+            <li>Útil para ajustes específicos en diseños flex.</li>
+            <li>Mantén la accesibilidad al usar <code>order</code>.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>order</code> para reordenar elementos flex.</li>
+            <li>Aplique <code>align-self</code> a un elemento para una alineación personalizada.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Grid Overview-->
+<div id="grid-overview" class="content-section">
+    <h2>Introducción a CSS Grid</h2>
+    <p>CSS Grid es un sistema de diseño bidimensional que permite crear diseños complejos con filas y columnas.</p>
+    <p>Es ideal para diseños de página completos y estructuras de cuadrícula responsivas.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Crear diseños de cuadrícula precisos y flexibles.</li>
+        <li>Controlar la colocación de elementos en dos dimensiones.</li>
+        <li>Simplificar diseños responsivos con menos código.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que el orden de la cuadrícula no afecte la lógica del contenido para lectores de pantalla.</li>
+        <li>Prueba los objetivos táctiles para elementos interactivos en la cuadrícula.</li>
+        <li>Verifica la responsividad en diferentes tamaños de pantalla.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa Grid para diseños bidimensionales, Flexbox para unidimensionales.</li>
+        <li>Define cuadrículas explícitas con <code>grid-template</code> para claridad.</li>
+        <li>Combina con media queries para diseños responsivos.</li>
+        <li>Prueba la compatibilidad con navegadores y usa fallbacks si es necesario.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Introducción a CSS Grid</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                            <div class="item">Item 4</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+                <div style="background: lightblue; padding: 10px;">Item 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>display: grid</code>: Activa el diseño de cuadrícula.</li>
+            <li>Permite control bidimensional con filas y columnas.</li>
+            <li>Soporta diseños responsivos y complejos.</li>
+            <li>Reemplaza técnicas de diseño más antiguas como floats.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use CSS Grid para crear un diseño de dos columnas.</li>
+            <li>Ajuste la cuadrícula para responsividad con media queries.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Grid Container-->
+<div id="grid-container" class="content-section">
+    <h2>Grid Container: Display: Grid</h2>
+    <p>La propiedad <code>display: grid</code> convierte un elemento en un contenedor de cuadrícula, habilitando propiedades de diseño de cuadrícula para sus hijos.</p>
+    <p>Es la base para crear diseños de cuadrícula bidimensionales.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Establecer un contexto de cuadrícula para elementos hijos.</li>
+        <li>Controlar la colocación de filas y columnas.</li>
+        <li>Crear diseños complejos y responsivos.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que el contenedor de cuadrícula mantenga el orden lógico del contenido.</li>
+        <li>Prueba los objetivos táctiles para elementos interactivos.</li>
+        <li>Verifica la responsividad en diferentes dispositivos.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>display: grid</code> en elementos padre para definir la estructura de la cuadrícula.</li>
+        <li>Combina con <code>grid-template</code> para especificar filas y columnas.</li>
+        <li>Prueba la compatibilidad con navegadores y usa fallbacks si es necesario.</li>
+        <li>Evita el uso excesivo en diseños simples que podrían usar Flexbox.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Grid Container</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>display: grid</code>: Crea un contenedor de cuadrícula.</li>
+            <li>Hijos se convierten en elementos de la cuadrícula.</li>
+            <li>Habilita propiedades como <code>grid-template-columns</code> y <code>gap</code>.</li>
+            <li>Base para diseños de cuadrícula bidimensionales.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>display: grid</code> para crear un contenedor de cuadrícula.</li>
+            <li>Defina una estructura simple de filas y columnas.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Rows and Columns-->
+<div id="rows-columns" class="content-section">
+    <h2>Definiendo Filas y Columnas</h2>
+    <p>Las propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code> definen el tamaño y número de columnas y filas en un contenedor de cuadrícula.</p>
+    <p>Permiten un control preciso sobre la estructura de la cuadrícula.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Especificar el diseño de la cuadrícula con tamaños fijos o flexibles.</li>
+        <li>Crear diseños complejos con filas y columnas personalizadas.</li>
+        <li>Apoyar diseños responsivos con unidades como <code>fr</code>.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que la estructura de la cuadrícula mantenga el orden lógico del contenido.</li>
+        <li>Prueba la legibilidad en diferentes tamaños de pantalla.</li>
+        <li>Verifica que los elementos interactivos sean accesibles.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>fr</code> para proporciones flexibles, <code>px</code> o <code>%</code> para tamaños fijos.</li>
+        <li>Define filas y columnas explícitamente para claridad.</li>
+        <li>Combina con <code>gap</code> para espaciado consistente.</li>
+        <li>Prueba la responsividad con media queries.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Filas y Columnas</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr 2fr;
+                                grid-template-rows: 100px 100px;
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                            <div class="item">Item 4</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr 2fr; grid-template-rows: 100px 100px; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+                <div style="background: lightblue; padding: 10px;">Item 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>grid-template-columns</code>: Define el tamaño y número de columnas.</li>
+            <li><code>grid-template-rows</code>: Define el tamaño y número de filas.</li>
+            <li>Unidades como <code>fr</code>, <code>px</code>, <code>%</code> ofrecen flexibilidad.</li>
+            <li>Base para diseños de cuadrícula estructurados.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Defina una cuadrícula con <code>grid-template-columns</code> y <code>grid-template-rows</code>.</li>
+            <li>Use diferentes unidades (e.g., <code>fr</code>, <code>px</code>) para las dimensiones.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Fr Unit-->
+<div id="fr-unit" class="content-section">
+    <h2>Fr Unit</h2>
+    <p>La unidad <code>fr</code> (fraction) en CSS Grid representa una fracción del espacio disponible en el contenedor de la cuadrícula.</p>
+    <p>Es ideal para crear diseños flexibles y proporcionales.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Distribuir el espacio disponible proporcionalmente entre filas o columnas.</li>
+        <li>Crear diseños responsivos sin tamaños fijos.</li>
+        <li>Simplificar la asignación de espacio en cuadrículas.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que los elementos con <code>fr</code> mantengan la legibilidad.</li>
+        <li>Prueba la responsividad en diferentes tamaños de pantalla.</li>
+        <li>Verifica que los elementos interactivos sean accesibles.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>fr</code> para proporciones relativas (e.g., <code>1fr 2fr</code>).</li>
+        <li>Combina con <code>minmax()</code> para establecer límites de tamaño.</li>
+        <li>Prueba el comportamiento con diferentes cantidades de contenido.</li>
+        <li>Evita depender únicamente de <code>fr</code> para tamaños críticos.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Fr Unit</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr 2fr 1fr;
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>fr</code>: Divide el espacio disponible proporcionalmente.</li>
+            <li>Ejemplo: <code>1fr 2fr</code> da el doble de espacio a la segunda columna.</li>
+            <li>Flexible y responsivo para diseños dinámicos.</li>
+            <li>Funciona con <code>grid-template</code> para definir la estructura.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use la unidad <code>fr</code> para definir columnas de diferentes proporciones.</li>
+            <li>Combine con <code>minmax()</code> para establecer límites.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Repeat Function-->
+<div id="repeat-function" class="content-section">
+    <h2>Función Repeat()</h2>
+    <p>La función <code>repeat()</code> en CSS Grid simplifica la definición de patrones repetitivos de filas o columnas.</p>
+    <p>Es útil para crear cuadrículas con muchas pistas sin escribir código redundante.</p>
+
+    <h4>Propósito</h4>
+    <ul>
+        <li>Definir múltiples filas o columnas con un solo valor repetido.</li>
+        <li>Simplificar la sintaxis de cuadrículas grandes o complejas.</li>
+        <li>Apoyar diseños responsivos con patrones consistentes.</li>
+    </ul>
+
+    <h4>Accesibilidad</h4>
+    <ul>
+        <li>Asegúrate de que las cuadrículas repetidas mantengan el orden lógico del contenido.</li>
+        <li>Prueba la legibilidad y los objetivos táctiles en la cuadrícula.</li>
+        <li>Verifica la responsividad en diferentes tamaños de pantalla.</li>
+    </ul>
+
+    <h4>Mejores Prácticas</h4>
+    <ul>
+        <li>Usa <code>repeat()</code> con <code>fr</code> o tamaños fijos para patrones uniformes.</li>
+        <li>Combina con <code>auto-fit</code> o <code>auto-fill</code> para cuadrículas responsivas.</li>
+        <li>Prueba el comportamiento con diferentes cantidades de contenido.</li>
+        <li>Documenta patrones repetitivos para claridad.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Uso</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Ejemplo de Repeat Function</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                            <div class="item">Item 4</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Resultado</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+                <div style="background: lightblue; padding: 10px;">Item 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Elementos Clave</h4>
+        <ul>
+            <li><code>repeat(n, size)</code>: Repite <code>n</code> pistas de tamaño <code>size</code>.</li>
+            <li><code>auto-fit</code>/<code>auto-fill</code>: Ajusta pistas dinámicamente para responsividad.</li>
+            <li>Simplifica la definición de cuadrículas grandes.</li>
+            <li>Funciona con <code>fr</code>, <code>px</code>, y otras unidades.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Ejercicio Práctico</h3>
+        <p>Crea una página web que:</p>
+        <ul>
+            <li>Use <code>repeat()</code> para definir una cuadrícula con múltiples columnas.</li>
+            <li>Incorpore <code>auto-fit</code> o <code>auto-fill</code> para responsividad.</li>
+            <li>Pruebe la accesibilidad y el renderizado.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Grid Gap, Grid Auto Flow-->
+<div id="grid-gap-auto-flow" class="content-section">
+    <h2>Grid-Gap, Grid-Auto-Flow</h2>
+    <p>The <code>grid-gap</code> (or <code>gap</code>) property sets the spacing between grid tracks, while <code>grid-auto-flow</code> controls how items are automatically placed in the grid.</p>
+    <p>These properties enhance grid layouts by managing spacing and item placement efficiently.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>grid-gap</code>: Adds consistent spacing between rows and columns.</li>
+        <li><code>grid-auto-flow</code>: Determines automatic placement (e.g., <code>row</code>, <code>column</code>, <code>dense</code>).</li>
+        <li>Simplify responsive grid designs with automatic flow and spacing.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>grid-gap</code> maintains readable content spacing.</li>
+        <li>Test <code>grid-auto-flow: dense</code> to avoid disrupting logical content order for screen readers.</li>
+        <li>Verify responsive behavior across screen sizes.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>gap</code> (shorthand for <code>row-gap</code> and <code>column-gap</code>) for simplicity.</li>
+        <li>Apply <code>grid-auto-flow: row</code> for default row-based placement.</li>
+        <li>Use <code>dense</code> cautiously to prevent visual confusion.</li>
+        <li>Test gap and flow behavior with varying content amounts.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Grid Gap and Auto Flow Example</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 15px;
+                                grid-auto-flow: row;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; grid-auto-flow: row; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>gap</code>: Sets spacing between grid tracks (e.g., <code>15px</code>).</li>
+            <li><code>grid-auto-flow: row</code>: Places items in rows by default.</li>
+            <li><code>grid-auto-flow: dense</code>: Fills gaps for compact layouts.</li>
+            <li>Enhances grid usability and aesthetics.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>gap</code> to space grid items.</li>
+            <li>Applies <code>grid-auto-flow: row</code> and <code>dense</code> to compare placement.</li>
+            <li>Tests accessibility and responsive rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Grid Lines, Areas, and Naming-->
+<div id="grid-lines-areas" class="content-section">
+    <h2>Grid Lines, Areas, and Naming</h2>
+    <p>Grid lines and areas allow precise placement of items in a CSS Grid, with naming for clarity and maintainability.</p>
+    <p>Lines are numbered boundaries, and areas are named regions for placing content.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Position items using numbered grid lines or named areas.</li>
+        <li>Simplify complex layouts with intuitive naming.</li>
+        <li>Enhance code readability and maintainability.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure named areas maintain logical content order for screen readers.</li>
+        <li>Test item placement for readability and touch target accessibility.</li>
+        <li>Verify responsiveness with named areas and lines.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>grid-template-areas</code> for clear, visual layout definitions.</li>
+        <li>Name lines with <code>[name]</code> syntax for precise control.</li>
+        <li>Test layouts with varying content to ensure stability.</li>
+        <li>Document named areas and lines for team collaboration.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Grid Lines and Areas Example</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: [start] 1fr [middle] 1fr [end];
+                                grid-template-rows: [top] 100px [bottom] 100px;
+                                grid-template-areas: 
+                                    "header header"
+                                    "main sidebar";
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .header { grid-area: header; background: lightblue; padding: 10px; }
+                            .main { grid-area: main; background: lightgreen; padding: 10px; }
+                            .sidebar { grid-area: sidebar; background: lightcoral; padding: 10px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="header">Header</div>
+                            <div class="main">Main</div>
+                            <div class="sidebar">Sidebar</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 100px 100px; grid-template-areas: 'header header' 'main sidebar'; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="grid-area: header; background: lightblue; padding: 10px;">Header</div>
+                <div style="grid-area: main; background: lightgreen; padding: 10px;">Main</div>
+                <div style="grid-area: sidebar; background: lightcoral; padding: 10px;">Sidebar</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Grid lines: Numbered or named boundaries for item placement.</li>
+            <li><code>grid-template-areas</code>: Defines named regions for layout.</li>
+            <li>Named lines: Use <code>[name]</code> for reusable references.</li>
+            <li>Improves layout clarity and flexibility.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>grid-template-areas</code> to define a layout with named regions.</li>
+            <li>Places items using grid lines or named areas.</li>
+            <li>Tests accessibility and responsive rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Responsive Grids with Media Queries-->
+<div id="responsive-grids" class="content-section">
+    <h2>Responsive Grids with Media Queries</h2>
+    <p>Responsive grids adapt to different screen sizes using CSS Grid combined with media queries.</p>
+    <p>Media queries adjust grid properties like columns, rows, or gaps for optimal layouts.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create grids that adapt to various devices and screen sizes.</li>
+        <li>Optimize user experience with flexible, responsive layouts.</li>
+        <li>Simplify responsive design with Grid’s powerful features.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure responsive grids maintain logical content order.</li>
+        <li>Test readability and touch targets across breakpoints.</li>
+        <li>Verify accessibility at different screen sizes.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>minmax()</code> and <code>auto-fit</code> for flexible, responsive columns.</li>
+        <li>Apply media queries to adjust <code>grid-template-columns</code> or <code>gap</code>.</li>
+        <li>Test layouts across common breakpoints (e.g., 576px, 768px).</li>
+        <li>Use mobile-first or desktop-first approaches consistently.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Responsive Grid Example</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            @media (max-width: 600px) {
+                                .container {
+                                    grid-template-columns: 1fr;
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>auto-fit</code>/<code>minmax()</code>: Creates flexible, responsive columns.</li>
+            <li>Media queries: Adjust grid structure for specific screen sizes.</li>
+            <li>Ensures optimal layout across devices.</li>
+            <li>Combines Grid’s power with responsive design principles.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses a responsive grid with <code>auto-fit</code> and <code>minmax()</code>.</li>
+            <li>Applies media queries to adjust the grid for mobile and desktop.</li>
+            <li>Tests accessibility and rendering across breakpoints.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Mobile-First Approach-->
+<div id="mobile-first" class="content-section">
+    <h2>Mobile-First Approach</h2>
+    <p>The mobile-first approach designs for smaller screens by default, then progressively adds styles for larger screens using media queries.</p>
+    <p>It prioritizes performance and simplicity for mobile users.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Optimize layouts for mobile devices with minimal CSS.</li>
+        <li>Improve performance by loading only necessary styles initially.</li>
+        <li>Ensure a solid base for responsive design.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure mobile layouts maintain readable text and touch targets.</li>
+        <li>Test navigation and focus order on small screens.</li>
+        <li>Verify accessibility across devices and screen sizes.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Start with base styles for mobile (no media queries).</li>
+        <li>Use <code>min-width</code> media queries to add styles for larger screens.</li>
+        <li>Keep mobile styles lean to reduce load times.</li>
+        <li>Test across common mobile devices and breakpoints.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Mobile-First Example</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            @media (min-width: 768px) {
+                                .container {
+                                    grid-template-columns: repeat(2, 1fr);
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Base styles: Designed for mobile without media queries.</li>
+            <li><code>min-width</code>: Adds styles for larger screens.</li>
+            <li>Performance-focused: Reduces initial CSS for mobile.</li>
+            <li>Scales progressively for desktop layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses a mobile-first approach with a single-column layout.</li>
+            <li>Adds a multi-column grid for larger screens via <code>min-width</code> media queries.</li>
+            <li>Tests accessibility and rendering across devices.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Media Queries-->
+<div id="media-queries" class="content-section">
+    <h2>Media Queries</h2>
+    <p>Media queries apply CSS styles based on device characteristics like screen width, height, or orientation.</p>
+    <p>They are essential for creating responsive designs that adapt to various devices.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Adjust layouts, typography, and spacing for different screen sizes.</li>
+        <li>Support responsive design with conditional styling.</li>
+        <li>Enhance user experience across devices.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure media queries maintain readable text and touch targets.</li>
+        <li>Test content order and navigation at different breakpoints.</li>
+        <li>Verify accessibility for users with varying devices or zoom levels.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>min-width</code> for mobile-first or <code>max-width</code> for desktop-first.</li>
+        <li>Define clear breakpoints based on content needs, not arbitrary device sizes.</li>
+        <li>Keep media queries organized and avoid excessive nesting.</li>
+        <li>Test across common devices and screen resolutions.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Media Queries Example</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                flex-direction: column;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                            @media (min-width: 768px) {
+                                .container {
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: flex; flex-direction: column; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px; margin: 5px;">Item 2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>@media</code>: Defines conditions for applying styles.</li>
+            <li><code>min-width</code>/<code>max-width</code>: Common for responsive breakpoints.</li>
+            <li>Supports features like orientation, resolution, etc.</li>
+            <li>Core tool for responsive design.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses media queries to adjust a layout for mobile and desktop.</li>
+            <li>Applies <code>min-width</code> for a mobile-first approach.</li>
+            <li>Tests accessibility and rendering across breakpoints.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Breakpoints and Device Sizes-->
+<div id="breakpoints" class="content-section">
+    <h2>Breakpoints and Device Sizes</h2>
+    <p>Breakpoints are specific screen sizes in media queries where layouts change to accommodate different devices.</p>
+    <p>They are based on content needs and common device sizes (e.g., mobile, tablet, desktop).</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Adapt layouts for optimal display on various devices.</li>
+        <li>Ensure usability and readability across screen sizes.</li>
+        <li>Support responsive design with targeted style changes.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure breakpoints maintain readable text and touch targets.</li>
+        <li>Test navigation and content order at each breakpoint.</li>
+        <li>Verify accessibility for users with different devices or zoom settings.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Choose breakpoints based on content, not fixed device sizes (e.g., 576px, 768px, 992px).</li>
+        <li>Use <code>min-width</code> for mobile-first breakpoints.</li>
+        <li>Test breakpoints with real devices and browser tools.</li>
+        <li>Document breakpoints for consistency across the project.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Breakpoints Example</title>
+                        <style>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 10px;
+                                background: lightgray;
+                                padding: 10px;
+                            }
+                            .item {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            @media (min-width: 576px) {
+                                .container {
+                                    grid-template-columns: repeat(2, 1fr);
+                                }
+                            }
+                            @media (min-width: 992px) {
+                                .container {
+                                    grid-template-columns: repeat(3, 1fr);
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                            <div class="item">Item 3</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px; background: lightgray; padding: 10px;">
+                <div style="background: lightblue; padding: 10px;">Item 1</div>
+                <div style="background: lightblue; padding: 10px;">Item 2</div>
+                <div style="background: lightblue; padding: 10px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Breakpoints: Common sizes like 576px (mobile), 768px (tablet), 992px (desktop).</li>
+            <li>Content-driven: Adjust based on layout needs, not device presets.</li>
+            <li>Tested with real devices for accuracy.</li>
+            <li>Integral to responsive design workflows.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Defines breakpoints at 576px and 992px for a grid layout.</li>
+            <li>Adjusts columns and spacing at each breakpoint.</li>
+            <li>Tests accessibility and rendering across devices.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Fluid Layouts Using Percentages and Relative Units-->
+<div id="fluid-layouts" class="content-section">
+    <h2>Fluid Layouts Using Percentages and Relative Units</h2>
+    <p>Fluid layouts use percentages and relative units (e.g., <code>vw</code>, <code>vh</code>, <code>rem</code>, <code>%</code>) to create designs that scale smoothly across screen sizes.</p>
+    <p>They adapt dynamically to viewport or parent dimensions.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create layouts that resize proportionally with the viewport or container.</li>
+        <li>Ensure consistent appearance across devices without fixed sizes.</li>
+        <li>Support responsive design with minimal media queries.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure fluid layouts maintain readable text and touch targets.</li>
+        <li>Test for overflow or clipping on small screens.</li>
+        <li>Verify accessibility with browser zoom and varying devices.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>%</code> for widths relative to parent containers.</li>
+        <li>Apply <code>vw</code>/<code>vh</code> for viewport-based sizing, with fallbacks.</li>
+        <li>Use <code>rem</code> for typography to scale with root font size.</li>
+        <li>Test fluid layouts with <code>max-width</code> to prevent excessive stretching.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Fluid Layouts Example</title>
+                        <style>
+                            .container {
+                                width: 90%;
+                                max-width: 1200px;
+                                margin: 0 auto;
+                                background: lightgray;
+                                padding: 1rem;
+                            }
+                            .item {
+                                width: 100%;
+                                background: lightblue;
+                                padding: 10px;
+                                margin-bottom: 10px;
+                            }
+                            @media (min-width: 768px) {
+                                .item {
+                                    width: 48%;
+                                    display: inline-block;
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="item">Item 1</div>
+                            <div class="item">Item 2</div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 90%; max-width: 1200px; margin: 0 auto; background: lightgray; padding: 1rem;">
+                <div style="width: 100%; background: lightblue; padding: 10px; margin-bottom: 10px;">Item 1</div>
+                <div style="width: 100%; background: lightblue; padding: 10px; margin-bottom: 10px;">Item 2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>%</code>: Scales relative to parent container.</li>
+            <li><code>vw</code>/<code>vh</code>: Scales with viewport dimensions.</li>
+            <li><code>rem</code>/<code>em</code>: Scales with font sizes for consistency.</li>
+            <li><code>max-width</code>: Prevents layouts from becoming too wide.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>%</code> and <code>rem</code> for a fluid layout.</li>
+            <li>Includes <code>max-width</code> to constrain the container.</li>
+            <li>Tests accessibility and rendering across screen sizes.</li>
+        </ul>
+    </div>
+</div>
+
+<!--2D Transforms-->
+<div id="2d-transforms" class="content-section">
+    <h2>2D Transforms</h2>
+    <p>The <code>transform</code> property applies 2D transformations like <code>translate</code>, <code>scale</code>, <code>rotate</code>, and <code>skew</code> to elements, altering their appearance without affecting the document flow.</p>
+    <p>These are used for visual effects like moving, resizing, or rotating elements.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create dynamic visual effects for user interactions.</li>
+        <li>Position or reshape elements without changing layout.</li>
+        <li>Enhance UI with subtle animations or transformations.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure transforms don’t obscure content or reduce readability.</li>
+        <li>Test for usability with assistive technologies during transformations.</li>
+        <li>Avoid excessive transforms that may cause motion sensitivity issues.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>translate</code> for movement, <code>scale</code> for resizing, <code>rotate</code> for rotation, and <code>skew</code> for distortion.</li>
+        <li>Combine with <code>transition</code> for smooth effects.</li>
+        <li>Test across browsers for consistent rendering.</li>
+        <li>Use sparingly to avoid performance issues on low-end devices.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>2D Transforms Example</title>
+                        <style>
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                margin: 20px;
+                                transform: translate(50px, 50px) scale(1.2) rotate(45deg) skew(10deg);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 100px; height: 100px; background: lightblue; margin: 20px; transform: translate(50px, 50px) scale(1.2) rotate(45deg) skew(10deg);"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>translate(x, y)</code>: Moves element along X and Y axes.</li>
+            <li><code>scale(x, y)</code>: Resizes element horizontally and vertically.</li>
+            <li><code>rotate(angle)</code>: Rotates element by specified angle.</li>
+            <li><code>skew(x-angle, y-angle)</code>: Distorts element along axes.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Applies <code>translate</code>, <code>scale</code>, <code>rotate</code>, and <code>skew</code> to an element.</li>
+            <li>Tests the effect with a hover interaction.</li>
+            <li>Ensures accessibility and smooth rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--3D Transforms-->
+<div id="3d-transforms" class="content-section">
+    <h2>3D Transforms</h2>
+    <p>3D transforms extend 2D transforms with depth, using properties like <code>translate3d</code>, <code>scale3d</code>, <code>rotate3d</code>, and <code>perspective</code> to create three-dimensional effects.</p>
+    <p>They require a 3D rendering context and are ideal for immersive visuals.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create visually engaging 3D effects for UI elements.</li>
+        <li>Simulate depth and perspective in web designs.</li>
+        <li>Enhance interactivity with dynamic transformations.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Avoid 3D effects that obscure content or cause motion discomfort.</li>
+        <li>Test with assistive technologies to ensure functionality.</li>
+        <li>Provide fallbacks for browsers with limited 3D support.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>perspective</code> to define the 3D space depth.</li>
+        <li>Apply <code>transform-style: preserve-3d</code> for nested 3D elements.</li>
+        <li>Test performance, as 3D transforms can be resource-intensive.</li>
+        <li>Use sparingly to maintain usability and accessibility.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>3D Transforms Example</title>
+                        <style>
+                            .container {
+                                perspective: 600px;
+                            }
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                margin: 50px;
+                                transform: rotate3d(1, 1, 0, 45deg);
+                                transform-style: preserve-3d;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="box"></div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="perspective: 600px;">
+                <div style="width: 100px; height: 100px; background: lightblue; margin: 50px; transform: rotate3d(1, 1, 0, 45deg); transform-style: preserve-3d;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>translate3d(x, y, z)</code>: Moves element in 3D space.</li>
+            <li><code>rotate3d(x, y, z, angle)</code>: Rotates around a 3D axis.</li>
+            <li><code>scale3d(x, y, z)</code>: Scales in three dimensions.</li>
+            <li><code>perspective</code>: Sets depth for 3D effect.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>rotate3d</code> and <code>perspective</code> for a 3D effect.</li>
+            <li>Triggers the transform on hover or click.</li>
+            <li>Tests accessibility and performance.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Transition Basics-->
+<div id="transition-basics" class="content-section">
+    <h2>Transition Basics</h2>
+    <p>The <code>transition</code> property creates smooth changes between CSS property states, using <code>transition-property</code>, <code>transition-duration</code>, and <code>transition-timing-function</code> (e.g., <code>ease-in-out</code>).</p>
+    <p>It’s ideal for hover effects or state changes.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Add smooth animations to property changes like color or size.</li>
+        <li>Enhance user experience with subtle feedback.</li>
+        <li>Simplify animation without keyframes.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Avoid transitions that cause motion sickness or distract users.</li>
+        <li>Ensure transitioned elements remain readable and accessible.</li>
+        <li>Test with reduced motion preferences (<code>prefers-reduced-motion</code>).</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Specify <code>transition-property</code> to target specific properties.</li>
+        <li>Use <code>transition-duration</code> between 0.2s–0.5s for subtle effects.</li>
+        <li>Apply <code>ease-in-out</code> for natural timing.</li>
+        <li>Test across browsers for consistent behavior.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Transition Basics Example</title>
+                        <style>
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                transition-property: background-color, transform;
+                                transition-duration: 0.3s;
+                                transition-timing-function: ease-in-out;
+                            }
+                            .box:hover {
+                                background-color: lightcoral;
+                                transform: scale(1.2);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 100px; height: 100px; background: lightblue; transition-property: background-color, transform; transition-duration: 0.3s; transition-timing-function: ease-in-out;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>transition-property</code>: Specifies properties to transition.</li>
+            <li><code>transition-duration</code>: Sets animation length.</li>
+            <li><code>transition-timing-function</code>: Defines speed curve (e.g., <code>ease-in-out</code>).</li>
+            <li>Simple way to animate CSS changes.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses transitions for <code>background-color</code> and <code>transform</code> on hover.</li>
+            <li>Applies <code>ease-in-out</code> with a 0.3s duration.</li>
+            <li>Tests accessibility and smooth rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Transition Shorthand-->
+<div id="transition-shorthand" class="content-section">
+    <h2>Transition Shorthand</h2>
+    <p>The <code>transition</code> shorthand combines <code>transition-property</code>, <code>transition-duration</code>, <code>transition-timing-function</code>, and <code>transition-delay</code> into a single declaration.</p>
+    <p>It simplifies code for multiple transitions.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Streamline transition definitions for cleaner CSS.</li>
+        <li>Apply multiple transitions efficiently.</li>
+        <li>Enhance UI with smooth, concise animations.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure transitions don’t interfere with readability or usability.</li>
+        <li>Test with <code>prefers-reduced-motion</code> to respect user preferences.</li>
+        <li>Verify transitioned elements remain focusable.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use shorthand: <code>transition: property duration timing-function delay</code>.</li>
+        <li>Specify multiple transitions with commas for different properties.</li>
+        <li>Keep durations short (0.2s–0.5s) for responsiveness.</li>
+        <li>Test for browser compatibility and performance.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Transition Shorthand Example</title>
+                        <style>
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                transition: background-color 0.3s ease-in-out, transform 0.5s ease;
+                            }
+                            .box:hover {
+                                background-color: lightcoral;
+                                transform: rotate(45deg);
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 100px; height: 100px; background: lightblue; transition: background-color 0.3s ease-in-out, transform 0.5s ease;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Shorthand syntax: <code>property duration timing-function delay</code>.</li>
+            <li>Multiple transitions: Separate with commas.</li>
+            <li>Reduces code verbosity for complex effects.</li>
+            <li>Supports all transition properties in one line.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses transition shorthand for multiple properties on hover.</li>
+            <li>Includes different durations and timing functions.</li>
+            <li>Tests accessibility and rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Keyframes @keyframes-->
+<div id="keyframes-intro" class="content-section">
+    <h2>Keyframes @keyframes</h2>
+    <p>The <code>@keyframes</code> rule defines a sequence of styles for CSS animations, specifying how properties change over time.</p>
+    <p>It’s used with the <code>animation</code> property to create complex animations.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create custom animations beyond simple transitions.</li>
+        <li>Define multi-step or looping animations for dynamic effects.</li>
+        <li>Enhance UI with engaging visual feedback.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Avoid animations that cause motion sickness or distraction.</li>
+        <li>Respect <code>prefers-reduced-motion</code> with simplified alternatives.</li>
+        <li>Ensure animated elements remain readable and focusable.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Define keyframes with <code>from</code>/<code>to</code> or percentage steps (e.g., <code>0%</code>, <code>100%</code>).</li>
+        <li>Use descriptive keyframe names for clarity.</li>
+        <li>Test performance, as complex animations can impact rendering.</li>
+        <li>Combine with <code>animation</code> properties for control.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Keyframes Example</title>
+                        <style>
+                            @keyframes bounce {
+                                0% { transform: translateY(0); }
+                                50% { transform: translateY(-20px); }
+                                100% { transform: translateY(0); }
+                            }
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                animation: bounce 1s infinite;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <style>
+                @keyframes bounce {
+                    0% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                    100% { transform: translateY(0); }
+                }
+            </style>
+            <div style="width: 100px; height: 100px; background: lightblue; animation: bounce 1s infinite;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>@keyframes</code>: Defines animation steps.</li>
+            <li>Percentage steps: Control property changes at specific points.</li>
+            <li>Applied via <code>animation</code> property.</li>
+            <li>Enables complex, multi-step animations.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Defines a <code>@keyframes</code> animation for a moving element.</li>
+            <li>Applies it with the <code>animation</code> property.</li>
+            <li>Tests accessibility and performance.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Animation Properties-->
+<div id="animation-properties" class="content-section">
+    <h2>Animation Properties</h2>
+    <p>CSS animation properties like <code>animation-name</code>, <code>animation-duration</code>, <code>animation-timing-function</code>, <code>animation-delay</code>, <code>animation-iteration-count</code>, <code>animation-direction</code>, <code>animation-fill-mode</code>, and <code>animation-play-state</code> control how <code>@keyframes</code> animations behave.</p>
+    <p>They provide fine-grained control over animation execution.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Customize animation behavior, timing, and repetition.</li>
+        <li>Create dynamic, interactive UI effects.</li>
+        <li>Enhance user engagement with controlled animations.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>prefers-reduced-motion</code> to simplify animations for sensitive users.</li>
+        <li>Ensure animations don’t obscure content or disrupt focus.</li>
+        <li>Test with assistive technologies for compatibility.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>animation-name</code> to link to specific <code>@keyframes</code>.</li>
+        <li>Set <code>animation-duration</code> and <code>animation-delay</code> for timing control.</li>
+        <li>Apply <code>animation-fill-mode: forwards</code> to retain final state.</li>
+        <li>Test <code>animation-play-state</code> for pause/resume functionality.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Animation Properties Example</title>
+                        <style>
+                            @keyframes slide {
+                                from { transform: translateX(0); }
+                                to { transform: translateX(100px); }
+                            }
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                animation-name: slide;
+                                animation-duration: 2s;
+                                animation-timing-function: ease-in-out;
+                                animation-delay: 0.5s;
+                                animation-iteration-count: 2;
+                                animation-direction: alternate;
+                                animation-fill-mode: forwards;
+                            }
+                            .box:hover {
+                                animation-play-state: paused;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <style>
+                @keyframes slide {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(100px); }
+                }
+            </style>
+            <div style="width: 100px; height: 100px; background: lightblue; animation: slide 2s ease-in-out 0.5s 2 alternate forwards;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>animation-name</code>: Links to <code>@keyframes</code>.</li>
+            <li><code>animation-iteration-count</code>: Sets repetition (e.g., <code>infinite</code>).</li>
+            <li><code>animation-direction</code>: Controls playback direction (e.g., <code>alternate</code>).</li>
+            <li><code>animation-fill-mode</code>: Defines state before/after animation.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses multiple animation properties for a keyframe animation.</li>
+            <li>Includes <code>animation-play-state</code> for pause on hover.</li>
+            <li>Tests accessibility and performance.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Combining Animations for Effects-->
+<div id="combine-animations" class="content-section">
+    <h2>Combining Animations for Effects</h2>
+    <p>Combining multiple <code>@keyframes</code> animations or animations with transitions creates complex, layered effects for engaging UI.</p>
+    <p>This technique enhances visual storytelling and interactivity.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create sophisticated animations by layering effects.</li>
+        <li>Enhance user engagement with dynamic, multi-part animations.</li>
+        <li>Combine transitions for subtle changes with animations for bold effects.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Provide <code>prefers-reduced-motion</code> alternatives to simplify effects.</li>
+        <li>Ensure combined animations don’t obscure content or cause discomfort.</li>
+        <li>Test with assistive technologies for usability.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use multiple <code>animation</code> declarations for layered effects.</li>
+        <li>Combine with <code>transition</code> for hover or state changes.</li>
+        <li>Optimize performance by limiting complex animations.</li>
+        <li>Test across devices for smooth rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Combined Animations Example</title>
+                        <style>
+                            @keyframes pulse {
+                                0% { transform: scale(1); }
+                                50% { transform: scale(1.2); }
+                                100% { transform: scale(1); }
+                            }
+                            @keyframes fade {
+                                0% { opacity: 1; }
+                                50% { opacity: 0.5; }
+                                100% { opacity: 1; }
+                            }
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                animation: pulse 2s infinite, fade 3s infinite;
+                                transition: background-color 0.3s ease;
+                            }
+                            .box:hover {
+                                background-color: lightcoral;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <style>
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.2); }
+                    100% { transform: scale(1); }
+                }
+                @keyframes fade {
+                    0% { opacity: 1; }
+                    50% { opacity: 0.5; }
+                    100% { opacity: 1; }
+                }
+            </style>
+            <div style="width: 100px; height: 100px; background: lightblue; animation: pulse 2s infinite, fade 3s infinite; transition: background-color 0.3s ease;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Multiple animations: Apply via comma-separated <code>animation</code> values.</li>
+            <li>Transitions: Add for state changes like hover.</li>
+            <li>Creates rich, layered visual effects.</li>
+            <li>Requires careful optimization for performance.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Combines two <code>@keyframes</code> animations for an element.</li>
+            <li>Adds a <code>transition</code> for a hover effect.</li>
+            <li>Tests accessibility and performance.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Declaring and Using Variables-->
+<div id="declare-use-vars" class="content-section">
+    <h2>Declaring and Using Variables</h2>
+    <p>CSS custom properties (variables) are declared with <code>--variable-name</code> and used with <code>var(--variable-name)</code>, enabling reusable values across stylesheets.</p>
+    <p>They simplify maintenance and dynamic theming.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Centralize reusable values like colors or sizes.</li>
+        <li>Support dynamic theming and responsive designs.</li>
+        <li>Reduce repetition and improve maintainability.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure variables for colors maintain sufficient contrast.</li>
+        <li>Test variable-driven styles for readability across themes.</li>
+        <li>Verify fallback values for browsers with limited support.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Declare variables in <code>:root</code> for global scope.</li>
+        <li>Use descriptive names (e.g., <code>--primary-color</code>).</li>
+        <li>Provide fallback values in <code>var()</code> for robustness.</li>
+        <li>Test dynamic updates with JavaScript or media queries.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>CSS Variables Example</title>
+                        <style>
+                            :root {
+                                --primary-color: lightblue;
+                                --padding: 10px;
+                            }
+                            .box {
+                                background: var(--primary-color, #add8e6);
+                                padding: var(--padding);
+                                width: 100px;
+                                height: 100px;
+                            }
+                            @media (prefers-color-scheme: dark) {
+                                :root {
+                                    --primary-color: darkblue;
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="background: lightblue; padding: 10px; width: 100px; height: 100px;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>--variable-name</code>: Declares a custom property.</li>
+            <li><code>var(--variable-name)</code>: Uses the variable value.</li>
+            <li><code>:root</code>: Global scope for variables.</li>
+            <li>Enables theming and maintainable CSS.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Declares CSS variables for colors and spacing.</li>
+            <li>Uses variables in multiple elements.</li>
+            <li>Tests dynamic updates with media queries or JavaScript.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Scoping Variables-->
+<div id="scope-variables" class="content-section">
+    <h2>Scoping Variables</h2>
+    <p>CSS custom properties (variables) can be defined globally (in <code>:root</code>) or locally (within specific selectors), allowing flexible scoping for different contexts.</p>
+    <p>Global variables are accessible everywhere, while local variables override them in specific scopes.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Define reusable values globally or for specific components.</li>
+        <li>Enable modular theming by scoping variables to elements.</li>
+        <li>Improve maintainability with context-specific styles.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure scoped variables maintain sufficient contrast for readability.</li>
+        <li>Test local overrides to avoid unintended visual issues.</li>
+        <li>Verify fallback values for robust accessibility.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>:root</code> for global variables like colors or typography.</li>
+        <li>Define local variables in component selectors for specific styling.</li>
+        <li>Document variable scopes to clarify usage for teams.</li>
+        <li>Test scoped variables with dynamic updates (e.g., via JavaScript).</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Scoping Variables Example</title>
+                        <style>
+                            :root {
+                                --main-color: lightblue;
+                                --padding: 10px;
+                            }
+                            .container {
+                                --main-color: lightcoral;
+                                background: var(--main-color);
+                                padding: var(--padding);
+                            }
+                            .box {
+                                background: var(--main-color);
+                                padding: var(--padding);
+                                margin: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="box">Local Scope</div>
+                        </div>
+                        <div class="box">Global Scope</div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="background: lightcoral; padding: 10px;">
+                <div style="background: lightcoral; padding: 10px; margin: 10px;">Local Scope</div>
+            </div>
+            <div style="background: lightblue; padding: 10px; margin: 10px;">Global Scope</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Global scope: Defined in <code>:root</code>, accessible everywhere.</li>
+            <li>Local scope: Defined in selectors, overrides global variables.</li>
+            <li>Enables modular and context-specific styling.</li>
+            <li>Supports dynamic theming with scoped overrides.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Defines global variables in <code>:root</code>.</li>
+            <li>Overrides variables locally in a component.</li>
+            <li>Tests accessibility and dynamic updates.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Benefits Over Preprocessor Variables-->
+<div id="vars-vs-preprocessors" class="content-section">
+    <h2>Benefits Over Preprocessor Variables</h2>
+    <p>CSS custom properties (variables) offer advantages over preprocessor variables (e.g., Sass, Less) due to their native CSS nature, dynamic updates, and scoping capabilities.</p>
+    <p>They integrate seamlessly with the browser’s rendering engine.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Enable dynamic style updates via JavaScript or media queries.</li>
+        <li>Support cascading and scoping natively in CSS.</li>
+        <li>Reduce reliance on build tools for variable management.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure dynamic variable updates maintain contrast and readability.</li>
+        <li>Test variable fallbacks for browsers with partial support.</li>
+        <li>Verify accessibility during theme changes or dynamic updates.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use CSS variables for dynamic theming over static preprocessor variables.</li>
+        <li>Leverage scoping for modular designs, unlike preprocessor globals.</li>
+        <li>Combine with preprocessor variables for hybrid workflows if needed.</li>
+        <li>Test performance and compatibility across browsers.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>CSS Variables vs Preprocessors Example</title>
+                        <style>
+                            :root {
+                                --main-color: lightblue;
+                            }
+                            .box {
+                                background: var(--main-color, #add8e6);
+                                padding: 10px;
+                                width: 100px;
+                                height: 100px;
+                            }
+                            @media (prefers-color-scheme: dark) {
+                                :root {
+                                    --main-color: darkblue;
+                                }
+                            }
+                            /* JavaScript can update: document.documentElement.style.setProperty('--main-color', 'lightcoral'); */
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="background: lightblue; padding: 10px; width: 100px; height: 100px;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Dynamic updates: CSS variables can change at runtime (e.g., via JavaScript).</li>
+            <li>Scoping: Supports global and local scopes, unlike preprocessor globals.</li>
+            <li>Native CSS: No build step required, unlike Sass/Less.</li>
+            <li>Cascading: Inherits and overrides like regular CSS properties.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses CSS variables for theming with dynamic updates.</li>
+            <li>Compares with static preprocessor-like values.</li>
+            <li>Tests accessibility and runtime changes.</li>
+        </ul>
+    </div>
+</div>
+
+<!--CSS Filters-->
+<div id="css-filters" class="content-section">
+    <h2>CSS Filters</h2>
+    <p>The <code>filter</code> property applies graphical effects like <code>blur</code>, <code>brightness</code>, <code>contrast</code>, <code>grayscale</code>, and more to elements, altering their visual appearance.</p>
+    <p>Filters are useful for image manipulation or UI enhancements.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Enhance visuals with effects like blurring or color adjustments.</li>
+        <li>Create hover effects or dynamic image styling.</li>
+        <li>Reduce reliance on image editing software for simple effects.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure filters don’t reduce text readability or contrast.</li>
+        <li>Test with assistive technologies to avoid usability issues.</li>
+        <li>Provide fallbacks for browsers with limited filter support.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use filters like <code>blur(5px)</code> or <code>grayscale(100%)</code> for subtle effects.</li>
+        <li>Combine with <code>transition</code> for smooth filter changes.</li>
+        <li>Test performance, as filters can be resource-intensive.</li>
+        <li>Avoid overuse to maintain clarity and accessibility.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>CSS Filters Example</title>
+                        <style>
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                filter: blur(2px) brightness(120%) grayscale(50%);
+                                transition: filter 0.3s ease;
+                            }
+                            .box:hover {
+                                filter: none;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 100px; height: 100px; background: lightblue; filter: blur(2px) brightness(120%) grayscale(50%); transition: filter 0.3s ease;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>blur(px)</code>: Applies a Gaussian blur.</li>
+            <li><code>brightness(%)</code>: Adjusts light intensity.</li>
+            <li><code>contrast(%)</code>: Modifies color contrast.</li>
+            <li><code>grayscale(%)</code>: Converts to grayscale.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Applies multiple filters to an element or image.</li>
+            <li>Uses <code>transition</code> for smooth filter changes on hover.</li>
+            <li>Tests accessibility and performance.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Mix Blend Modes-->
+<div id="mix-blend-modes" class="content-section">
+    <h2>Mix Blend Mode</h2>
+    <p>The <code>mix-blend-mode</code> property defines how an element’s content blends with its background, using modes like <code>multiply</code>, <code>screen</code>, <code>overlay</code>, etc.</p>
+    <p>It creates visually rich effects for layered content.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create complex visual effects by blending elements with backgrounds.</li>
+        <li>Enhance design with artistic layering techniques.</li>
+        <li>Apply dynamic effects for interactive UI.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure blend modes maintain readable text and sufficient contrast.</li>
+        <li>Test with assistive technologies to avoid usability issues.</li>
+        <li>Provide fallbacks for browsers with limited support.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use modes like <code>multiply</code> or <code>overlay</code> for subtle effects.</li>
+        <li>Test blend modes with different background colors or images.</li>
+        <li>Avoid overuse to prevent visual clutter.</li>
+        <li>Combine with <code>transition</code> for smooth blending changes.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Mix Blend Mode Example</title>
+                        <style>
+                            .container {
+                                width: 150px;
+                                height: 150px;
+                                background: lightcoral;
+                                position: relative;
+                            }
+                            .box {
+                                width: 100px;
+                                height: 100px;
+                                background: lightblue;
+                                mix-blend-mode: multiply;
+                                position: absolute;
+                                top: 25px;
+                                left: 25px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="box"></div>
+                        </div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 150px; height: 150px; background: lightcoral; position: relative;">
+                <div style="width: 100px; height: 100px; background: lightblue; mix-blend-mode: multiply; position: absolute; top: 25px; left: 25px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>multiply</code>: Darkens by multiplying colors.</li>
+            <li><code>screen</code>: Lightens by inverting and multiplying.</li>
+            <li><code>overlay</code>: Combines multiply and screen based on background.</li>
+            <li>Blends element with its background or parent.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>mix-blend-mode</code> to blend an element with its background.</li>
+            <li>Tests different blend modes (e.g., <code>multiply</code>, <code>screen</code>).</li>
+            <li>Ensures accessibility and visual clarity.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Background Blend Modes-->
+<div id="background-blend-modes" class="content-section">
+    <h2>Background Blend Mode</h2>
+    <p>The <code>background-blend-mode</code> property defines how an element’s background layers (e.g., images, colors) blend together, using modes like <code>multiply</code>, <code>screen</code>, or <code>overlay</code>.</p>
+    <p>It’s ideal for creating textured or artistic background effects.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Blend multiple background images or colors for unique effects.</li>
+        <li>Enhance visual design with layered background styling.</li>
+        <li>Create dynamic backgrounds without external image editing.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure blended backgrounds don’t reduce text readability.</li>
+        <li>Test contrast ratios for overlaid content.</li>
+        <li>Provide fallbacks for browsers with limited support.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use modes like <code>multiply</code> or <code>soft-light</code> for subtle blending.</li>
+        <li>Test with multiple background layers for desired effects.</li>
+        <li>Ensure foreground content remains legible over blended backgrounds.</li>
+        <li>Combine with <code>transition</code> for dynamic blending changes.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Background Blend Mode Example</title>
+                        <style>
+                            .box {
+                                width: 200px;
+                                height: 200px;
+                                background: url('https://via.placeholder.com/200') no-repeat, lightblue;
+                                background-blend-mode: overlay;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="box"></div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 200px; height: 200px; background: url('https://via.placeholder.com/200') no-repeat, lightblue; background-blend-mode: overlay;"></div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>multiply</code>: Darkens background layers.</li>
+            <li><code>screen</code>: Lightens background layers.</li>
+            <li><code>overlay</code>: Combines multiply and screen effects.</li>
+            <li>Blends multiple background layers within an element.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>background-blend-mode</code> with multiple background layers.</li>
+            <li>Tests different blend modes for visual effects.</li>
+            <li>Ensures accessibility with readable foreground content.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Embedding SVG in HTML-->
+<div id="embed-svg-html" class="content-section">
+    <h2>Embedding SVG in HTML</h2>
+    <p>Scalable Vector Graphics (SVG) can be embedded in HTML using the <code>&lt;svg&gt;</code> tag, <code>&lt;img&gt;</code>, or inline via <code>&lt;object&gt;</code> or <code>&lt;embed&gt;</code>.</p>
+    <p>SVGs are resolution-independent and stylable with CSS.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Create scalable, lightweight graphics for icons or illustrations.</li>
+        <li>Enable CSS and JavaScript interactions with SVG elements.</li>
+        <li>Support responsive designs with vector-based graphics.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code> in SVGs for screen reader support.</li>
+        <li>Ensure SVGs have proper ARIA attributes if interactive.</li>
+        <li>Test visibility and usability across devices.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use inline <code>&lt;svg&gt;</code> for full CSS/JavaScript control.</li>
+        <li>Embed via <code>&lt;img&gt;</code> for simple, non-interactive SVGs.</li>
+        <li>Optimize SVGs to reduce file size using tools like SVGO.</li>
+        <li>Include fallback images for older browsers.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Embedding SVG Example</title>
+                    </head>
+                    <body>
+                        <svg width="100" height="100" aria-label="Circle icon">
+                            <title>Circle</title>
+                            <desc>A blue circle</desc>
+                            <circle cx="50" cy="50" r="40" fill="lightblue"/>
+                        </svg>
+                        <img src="circle.svg" alt="Circle image" width="100" height="100">
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <svg width="100" height="100" aria-label="Circle icon">
+                <title>Circle</title>
+                <desc>A blue circle</desc>
+                <circle cx="50" cy="50" r="40" fill="lightblue"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Inline <code>&lt;svg&gt;</code>: Fully stylable and interactive.</li>
+            <li><code>&lt;img&gt;</code>: Simple embedding, limited interactivity.</li>
+            <li><code>&lt;title&gt;</code>/<code>&lt;desc&gt;</code>: Improves accessibility.</li>
+            <li>Scalable and resolution-independent graphics.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Embeds an SVG inline and via <code>&lt;img&gt;</code>.</li>
+            <li>Includes accessibility features like <code>&lt;title&gt;</code> and ARIA.</li>
+            <li>Tests rendering and accessibility across browsers.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Styling SVG with CSS-->
+<div id="style-svg-css" class="content-section">
+    <h2>Styling SVG with CSS</h2>
+    <p>SVGs can be styled with CSS properties like <code>fill</code>, <code>stroke</code>, <code>stroke-width</code>, and more, applied via inline styles, external CSS, or SVG attributes.</p>
+    <p>This enables dynamic and responsive SVG styling.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Customize SVG appearance with CSS for consistent design.</li>
+        <li>Create interactive effects like hover or animations.</li>
+        <li>Integrate SVGs seamlessly into web designs.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure styled SVGs maintain visibility and contrast.</li>
+        <li>Test with screen readers to verify accessibility features.</li>
+        <li>Avoid styling that obscures SVG content or functionality.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use CSS for <code>fill</code> and <code>stroke</code> to style SVG shapes.</li>
+        <li>Apply <code>transition</code> for smooth style changes on interaction.</li>
+        <li>Use CSS custom properties for reusable SVG styles.</li>
+        <li>Test across browsers for consistent rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Styling SVG Example</title>
+                        <style>
+                            .circle {
+                                fill: lightblue;
+                                stroke: darkblue;
+                                stroke-width: 2;
+                                transition: fill 0.3s ease;
+                            }
+                            .circle:hover {
+                                fill: lightcoral;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <svg width="100" height="100" aria-label="Styled circle">
+                            <circle class="circle" cx="50" cy="50" r="40"/>
+                        </svg>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <svg width="100" height="100" aria-label="Styled circle">
+                <circle style="fill: lightblue; stroke: darkblue; stroke-width: 2; transition: fill 0.3s ease;" cx="50" cy="50" r="40"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>fill</code>: Sets the interior color of SVG shapes.</li>
+            <li><code>stroke</code>/<code>stroke-width</code>: Defines outline color and thickness.</li>
+            <li>CSS transitions: Enable smooth SVG style changes.</li>
+            <li>Supports dynamic and interactive SVG styling.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Styles an SVG with <code>fill</code>, <code>stroke</code>, and <code>transition</code>.</li>
+            <li>Applies hover effects to change SVG appearance.</li>
+            <li>Tests accessibility and rendering.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Using Icon Libraries-->
+<div id="icon-libraries" class="content-section">
+    <h2>Using Icon Libraries</h2>
+    <p>Icon libraries like Font Awesome, Material Icons, or Feather Icons provide pre-designed SVG or font-based icons for web projects, simplifying icon integration.</p>
+    <p>They offer consistent, customizable icons for UI design.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Add professional, scalable icons without custom design.</li>
+        <li>Enhance UI with consistent iconography.</li>
+        <li>Support styling and interactivity with CSS or JavaScript.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use ARIA attributes (e.g., <code>aria-label</code>) for icon accessibility.</li>
+        <li>Ensure icons have descriptive text for screen readers.</li>
+        <li>Test visibility and contrast for styled icons.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use SVG-based libraries for better scalability and styling.</li>
+        <li>Load only needed icons to optimize performance.</li>
+        <li>Style icons with CSS for consistency with design system.</li>
+        <li>Include fallbacks for browsers with limited support.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Icon Libraries Example</title>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                        <style>
+                            .icon {
+                                font-size: 2rem;
+                                color: lightblue;
+                                transition: color 0.3s ease;
+                            }
+                            .icon:hover {
+                                color: lightcoral;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <i class="fas fa-star icon" aria-label="Star icon"></i>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <i style="font-size: 2rem; color: lightblue; transition: color 0.3s ease;" class="fas fa-star" aria-label="Star icon"></i>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>SVG/font icons: Scalable and stylable via CSS.</li>
+            <li>Libraries: Font Awesome, Material Icons, etc., provide ready-to-use icons.</li>
+            <li>ARIA attributes: Enhance accessibility for screen readers.</li>
+            <li>Customizable with CSS for color, size, and transitions.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses an icon library like Font Awesome for SVG icons.</li>
+            <li>Styles icons with CSS and adds hover effects.</li>
+            <li>Tests accessibility with ARIA and screen readers.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Semantic HTML + CSS-->
+<div id="semantic-html-css" class="content-section">
+    <h2>Semantic HTML + CSS</h2>
+    <p>Semantic HTML uses meaningful elements (e.g., <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) to convey structure and purpose, enhanced by CSS for styling without compromising accessibility.</p>
+    <p>It ensures content is understandable by screen readers and other assistive technologies.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Improve accessibility by providing clear document structure.</li>
+        <li>Enhance SEO with meaningful markup.</li>
+        <li>Allow CSS to style content without altering its semantic meaning.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use semantic elements to define roles (e.g., <code>&lt;main&gt;</code> for primary content).</li>
+        <li>Ensure CSS doesn’t hide or obscure semantic elements for screen readers.</li>
+        <li>Test with assistive technologies to verify structure and navigation.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Choose semantic elements over generic <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>.</li>
+        <li>Use ARIA landmarks (e.g., <code>role="navigation"</code>) only when semantics are insufficient.</li>
+        <li>Style with CSS to enhance, not replace, semantic meaning.</li>
+        <li>Validate HTML to ensure proper nesting and semantics.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Semantic HTML Example</title>
+                        <style>
+                            nav {
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            main {
+                                margin: 20px;
+                            }
+                            footer {
+                                background: lightgray;
+                                padding: 10px;
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                        <main>
+                            <article>
+                                <h1>Welcome</h1>
+                                <p>This is the main content.</p>
+                            </article>
+                        </main>
+                        <footer>
+                            <p>&copy; 2025 Example</p>
+                        </footer>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <nav style="background: lightblue; padding: 10px;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <main style="margin: 20px;">
+                <article>
+                    <h1>Welcome</h1>
+                    <p>This is the main content.</p>
+                </article>
+            </main>
+            <footer style="background: lightgray; padding: 10px; text-align: center;">
+                <p>&copy; 2025 Example</p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Semantic tags: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+            <li>CSS: Enhances visual design without altering meaning.</li>
+            <li>Accessibility: Clear structure for screen readers.</li>
+            <li>SEO: Improves content discoverability.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses semantic HTML elements for a blog layout.</li>
+            <li>Applies CSS to style the semantic structure.</li>
+            <li>Tests accessibility with a screen reader.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Focus States and Keyboard Navigation-->
+<div id="focus-keyboard-nav" class="content-section">
+    <h2>Focus States and Keyboard Navigation</h2>
+    <p>Focus states and keyboard navigation ensure interactive elements (e.g., links, buttons) are accessible via keyboard, with clear visual indicators using CSS <code>:focus</code> and <code>:focus-visible</code>.</p>
+    <p>This is critical for users relying on keyboards or assistive devices.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Enable navigation for keyboard-only users.</li>
+        <li>Provide clear visual feedback for focused elements.</li>
+        <li>Enhance accessibility for users with motor or visual impairments.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure all interactive elements are focusable (e.g., via <code>tabindex</code>).</li>
+        <li>Use high-contrast focus styles for visibility.</li>
+        <li>Test keyboard navigation with screen readers and assistive devices.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Style <code>:focus</code> and <code>:focus-visible</code> with outlines or borders.</li>
+        <li>Avoid removing default focus outlines without replacements.</li>
+        <li>Use <code>tabindex="0"</code> for non-interactive elements needing focus.</li>
+        <li>Test focus order to ensure logical navigation.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Focus States Example</title>
+                        <style>
+                            button {
+                                background: lightblue;
+                                padding: 10px;
+                                border: 2px solid transparent;
+                                transition: border 0.2s ease;
+                            }
+                            button:focus, button:focus-visible {
+                                outline: none;
+                                border: 2px solid darkblue;
+                            }
+                            a {
+                                color: darkblue;
+                                text-decoration: none;
+                            }
+                            a:focus, a:focus-visible {
+                                outline: 3px solid lightcoral;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <button>Click Me</button>
+                        <a href="#">Link</a>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <button style="background: lightblue; padding: 10px; border: 2px solid transparent; transition: border 0.2s ease;">Click Me</button>
+            <a href="#" style="color: darkblue; text-decoration: none;">Link</a>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>:focus</code>/<code>:focus-visible</code>: Styles for focused elements.</li>
+            <li>Keyboard navigation: Ensures tab order and focusability.</li>
+            <li>High-contrast outlines: Improves visibility for users.</li>
+            <li>Logical focus order: Matches visual layout.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Styles focus states for buttons and links with <code>:focus-visible</code>.</li>
+            <li>Ensures keyboard navigation with logical tab order.</li>
+            <li>Tests accessibility with keyboard and screen reader.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Contrast and Readability-->
+<div id="contrast-readability" class="content-section">
+    <h2>Contrast and Readability</h2>
+    <p>Contrast and readability in CSS involve ensuring sufficient color contrast between text and backgrounds, using appropriate font sizes and spacing for legibility.</p>
+    <p>This is essential for users with visual impairments or low-vision conditions.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Ensure text is legible for all users, including those with visual impairments.</li>
+        <li>Meet WCAG (Web Content Accessibility Guidelines) contrast requirements.</li>
+        <li>Enhance user experience with clear, readable content.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Aim for WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text).</li>
+        <li>Use tools like contrast checkers to verify ratios.</li>
+        <li>Test readability across devices, lighting conditions, and zoom levels.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use high-contrast colors (e.g., dark text on light backgrounds).</li>
+        <li>Set font sizes to at least 16px for body text.</li>
+        <li>Apply adequate line spacing (e.g., <code>line-height: 1.5</code>).</li>
+        <li>Avoid low-contrast combinations like light gray on white.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Contrast and Readability Example</title>
+                        <style>
+                            body {
+                                background: #fff;
+                                color: #333;
+                                font-size: 16px;
+                                line-height: 1.5;
+                            }
+                            .highlight {
+                                background: darkblue;
+                                color: white;
+                                padding: 10px;
+                                font-size: 18px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <p>This is a readable paragraph with good contrast.</p>
+                        <p class="highlight">Highlighted text with high contrast.</p>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="background: #fff; color: #333; font-size: 16px; line-height: 1.5;">
+                <p>This is a readable paragraph with good contrast.</p>
+                <p style="background: darkblue; color: white; padding: 10px; font-size: 18px;">Highlighted text with high contrast.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Contrast ratio: 4.5:1 for normal text, 3:1 for large text (WCAG AA).</li>
+            <li>Font size: Minimum 16px for readability.</li>
+            <li>Line spacing: <code>line-height: 1.5</code> for legibility.</li>
+            <li>Tested with contrast tools and user feedback.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses high-contrast colors for text and backgrounds.</li>
+            <li>Applies readable font sizes and line spacing.</li>
+            <li>Tests contrast ratios with a WCAG-compliant tool.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Avoiding Invisible Text or Off-Screen Elements-->
+<div id="invisible-text" class="content-section">
+    <h2>Avoiding Invisible Text or Off-Screen Elements</h2>
+    <p>Invisible text or off-screen elements must be carefully managed to remain accessible to screen readers and avoid confusing users, using techniques like <code>clip-path</code> or visually hidden classes.</p>
+    <p>Improper handling can break accessibility for assistive technology users.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Hide content visually while keeping it accessible to screen readers.</li>
+        <li>Prevent off-screen elements from disrupting navigation or focus.</li>
+        <li>Ensure hidden content is intentionally accessible when needed.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>.visually-hidden</code> class for text meant for screen readers.</li>
+        <li>Avoid <code>display: none</code> or <code>visibility: hidden</code> for accessible content.</li>
+        <li>Test off-screen elements to ensure they don’t interfere with focus order.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Apply <code>clip-path: inset(100%)</code> or <code>position: absolute</code> for visually hidden content.</li>
+        <li>Ensure off-screen elements are focusable only when intended.</li>
+        <li>Use ARIA attributes (e.g., <code>aria-hidden="true"</code>) for non-accessible hidden content.</li>
+        <li>Test with screen readers to verify hidden content behavior.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Invisible Text Example</title>
+                        <style>
+                            .visually-hidden {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                padding: 0;
+                                margin: -1px;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+                                border: 0;
+                            }
+                            .off-screen {
+                                position: absolute;
+                                left: -9999px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Main Heading</h1>
+                        <span class="visually-hidden">Screen reader only: Welcome message</span>
+                        <div class="off-screen" aria-hidden="true">This is not accessible</div>
+                    </body>
+                    </html>
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <h1>Main Heading</h1>
+            <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Screen reader only: Welcome message</span>
+            <div style="position: absolute; left: -9999px;" aria-hidden="true">This is not accessible</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>.visually-hidden</code>: Hides content visually but keeps it accessible.</li>
+            <li><code>aria-hidden="true"</code>: Removes content from assistive technologies.</li>
+            <li>Off-screen positioning: Avoids focus or navigation issues.</li>
+            <li>Ensures intentional accessibility for hidden content.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses a <code>.visually-hidden</code> class for screen reader content.</li>
+            <li>Hides non-accessible content with <code>aria-hidden</code>.</li>
+            <li>Tests accessibility with a screen reader.</li>
+        </ul>
+    </div>
+</div>
       <!---->
 
 
