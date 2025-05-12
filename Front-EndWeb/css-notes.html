@@ -2263,6 +2263,1182 @@
     </div>
 </div>
 
+<!--Box Model Components-->
+<div id="box-model-components-content" class="content-section">
+    <h2>Understanding Content, Padding, Border, Margin</h2>
+    <p>The CSS Box Model defines elements as boxes with four key components: content, padding, border, and margin, which determine size and spacing.</p>
+    <p>Each component plays a specific role in an element's layout and interaction with other elements.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><strong>Content</strong>: Holds the element’s text, images, or other media.</li>
+        <li><strong>Padding</strong>: Creates space between content and border for visual clarity.</li>
+        <li><strong>Border</strong>: Surrounds padding, adding visible or stylistic edges.</li>
+        <li><strong>Margin</strong>: Provides outer spacing to separate elements.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure padding doesn’t reduce touch target sizes for interactive elements.</li>
+        <li>Use margins to prevent elements from overlapping or crowding.</li>
+        <li>Test layouts for responsiveness to maintain component integrity.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Define explicit content dimensions (e.g., width, height) for consistency.</li>
+        <li>Use padding to enhance readability and aesthetics.</li>
+        <li>Apply borders sparingly to avoid visual clutter.</li>
+        <li>Test margins for consistent spacing across devices.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Box Model Components&lt;/title&gt;
+                        &lt;style&gt;
+                            div {
+                                width: 200px;
+                                height: 100px;
+                                padding: 15px;
+                                border: 3px solid navy;
+                                margin: 20px;
+                                background-color: lightgray;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div&gt;Box Model Components&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="width: 200px; height: 100px; padding: 15px; border: 3px solid navy; margin: 20px; background-color: lightgray;">Box Model Components</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>width</code>/<code>height</code>: Define content area size.</li>
+            <li><code>padding</code>: Adds inner spacing, extends element size.</li>
+            <li><code>border</code>: Surrounds padding, adds to total size.</li>
+            <li><code>margin</code>: Creates outer spacing, doesn’t affect element size.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Styles a div with specific content dimensions, padding, border, and margin.</li>
+            <li>Ensures the components are visually distinct (e.g., colored border, background).</li>
+            <li>Tests the layout for accessibility and responsiveness.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Box Sizing-->
+<div id="box-sizing-content" class="content-section">
+    <h2>Box-Sizing: Content-Box vs Border-Box</h2>
+    <p>The <code>box-sizing</code> property controls how an element’s total width and height are calculated, affecting content, padding, and border.</p>
+    <p><code>content-box</code> and <code>border-box</code> are the two main values, each with distinct sizing behaviors.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>content-box</code>: Width/height apply to content only; padding and border add to total size.</li>
+        <li><code>border-box</code>: Width/height include content, padding, and border for predictable sizing.</li>
+        <li>Simplify layout calculations and ensure consistent element sizes.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>border-box</code> to prevent unexpected size increases that may break layouts.</li>
+        <li>Ensure elements remain accessible with consistent sizing across devices.</li>
+        <li>Test for overflow issues when using <code>content-box</code>.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Apply <code>box-sizing: border-box</code> globally for easier size management.</li>
+        <li>Use <code>content-box</code> only for specific cases requiring content-only sizing.</li>
+        <li>Test layouts with both values to understand their impact.</li>
+        <li>Include fallbacks for older browsers with limited <code>box-sizing</code> support.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Box Sizing Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .content-box {
+                                box-sizing: content-box;
+                                width: 200px;
+                                padding: 20px;
+                                border: 5px solid green;
+                                margin: 10px;
+                                background-color: lightyellow;
+                            }
+                            .border-box {
+                                box-sizing: border-box;
+                                width: 200px;
+                                padding: 20px;
+                                border: 5px solid blue;
+                                margin: 10px;
+                                background-color: lightcoral;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="content-box"&gt;Content-Box Example&lt;/div&gt;
+                        &lt;div class="border-box"&gt;Border-Box Example&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+
+
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="box-sizing: content-box; width: 200px; padding: 20px; border: 5px solid green; margin: 10px; background-color: lightyellow;">Content-Box Example</div>
+            <div style="box-sizing: border-box; width: 200px; padding: 20px; border: 5px solid blue; margin: 10px; background-color: lightcoral;">Border-Box Example</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>content-box</code>: Total size = content + padding + border.</li>
+            <li><code>border-box</code>: Total size = width/height (includes padding, border).</li>
+            <li><code>border-box</code> simplifies responsive design.</li>
+            <li>Global <code>* { box-sizing: border-box; }</code> is common practice.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Compares two divs: one with <code>content-box</code>, one with <code>border-box</code>.</li>
+            <li>Uses identical width, padding, and border values for both.</li>
+            <li>Tests the visual and functional differences in layout.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Margin Collapsing-->
+<div id="margin-collapsing-content" class="content-section">
+    <h2>Margin Collapsing</h2>
+    <p>Margin collapsing occurs when vertical margins of adjacent block-level elements combine into a single margin, equal to the larger of the two.</p>
+    <p>This behavior applies only to vertical margins, not horizontal, and occurs under specific conditions.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Prevent excessive vertical spacing between elements for cleaner layouts.</li>
+        <li>Ensure consistent spacing in content stacks (e.g., paragraphs, headings).</li>
+        <li>Optimize visual hierarchy without manual margin adjustments.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure collapsed margins don’t cause elements to overlap or misalign.</li>
+        <li>Test spacing for readability, especially in dense content areas.</li>
+        <li>Avoid relying solely on collapsing for critical spacing needs.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Understand collapsing conditions: adjacent block elements, no padding/border separation.</li>
+        <li>Use padding or borders to prevent unwanted collapsing.</li>
+        <li>Test layouts to confirm margins behave as expected.</li>
+        <li>Document margin collapsing in complex layouts to avoid confusion.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Margin Collapsing Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .box1 {
+                                margin-bottom: 30px;
+                                background-color: lightgreen;
+                                padding: 10px;
+                            }
+                            .box2 {
+                                margin-top: 20px;
+                                background-color: lightpink;
+                                padding: 10px;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="box1"&gt;Box 1 (30px bottom margin)&lt;/div&gt;
+                        &lt;div class="box2"&gt;Box 2 (20px top margin)&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="margin-bottom: 30px; background-color: lightgreen; padding: 10px;">Box 1 (30px bottom margin)</div>
+            <div style="margin-top: 20px; background-color: lightpink; padding: 10px;">Box 2 (20px top margin)</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>Margins collapse to the larger value (e.g., 30px instead of 30px + 20px).</li>
+            <li>Collapsing occurs between adjacent block elements without separation.</li>
+            <li>Padding, borders, or inline content prevent collapsing.</li>
+            <li>Parent-child margins may also collapse under specific conditions.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Stacks two divs with different vertical margins to demonstrate collapsing.</li>
+            <li>Adds a third div with padding or border to prevent collapsing.</li>
+            <li>Tests the layout to observe margin behavior differences.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Shorthand Values for Padding/Margin-->
+<div id="shorthand-values-content" class="content-section">
+    <h2>Shorthand Values for Padding/Margin</h2>
+    <p>Shorthand properties for <code>padding</code> and <code>margin</code> allow setting all sides (top, right, bottom, left) in a single declaration.</p>
+    <p>These properties reduce code verbosity and improve maintainability.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Simplify CSS by combining multiple padding/margin values.</li>
+        <li>Ensure consistent spacing with fewer lines of code.</li>
+        <li>Enhance readability and maintainability of stylesheets.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure shorthand values don’t accidentally reduce touch target sizes.</li>
+        <li>Test shorthand margins for proper spacing in responsive designs.</li>
+        <li>Verify shorthand padding maintains content readability.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use 1–4 value syntax (e.g., <code>padding: 10px 20px</code>) for clarity.</li>
+        <li>Apply consistent units (e.g., px, rem) across shorthand declarations.</li>
+        <li>Test shorthand values to avoid unintended spacing issues.</li>
+        <li>Combine with <code>box-sizing: border-box</code> for predictable layouts.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Shorthand Padding/Margin&lt;/title&gt;
+                        &lt;style&gt;
+                            .box {
+                                padding: 10px 20px 15px 25px; /* top, right, bottom, left */
+                                margin: 20px 10px; /* top/bottom, left/right */
+                                background-color: lightblue;
+                                border: 2px solid black;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="box"&gt;Shorthand Example&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="padding: 10px 20px 15px 25px; margin: 20px 10px; background-color: lightblue; border: 2px solid black;">Shorthand Example</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li>1 value: Applies to all sides (e.g., <code>padding: 10px</code>).</li>
+            <li>2 values: Top/bottom, left/right (e.g., <code>margin: 20px 10px</code>).</li>
+            <li>3 values: Top, left/right, bottom.</li>
+            <li>4 values: Top, right, bottom, left (clockwise).</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses shorthand <code>padding</code> and <code>margin</code> for a div.</li>
+            <li>Applies different values for each side using 2–4 value syntax.</li>
+            <li>Tests the layout for visual consistency and responsiveness.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Display Property-->
+<div id="display-property-content" class="content-section">
+    <h2>Display: Block, Inline, Inline-Block, None</h2>
+    <p>The <code>display</code> property controls how an element is rendered in the layout, affecting its flow and interaction with other elements.</p>
+    <p>Common values include <code>block</code>, <code>inline</code>, <code>inline-block</code>, and <code>none</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>block</code>: Takes full width, starts on a new line (e.g., div, p).</li>
+        <li><code>inline</code>: Flows within text, no width/height settings (e.g., span, a).</li>
+        <li><code>inline-block</code>: Inline flow but allows width/height (e.g., buttons).</li>
+        <li><code>none</code>: Removes element from layout entirely.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>display: none</code> doesn’t hide critical content from screen readers.</li>
+        <li>Use <code>inline-block</code> for touch-friendly elements with proper sizing.</li>
+        <li>Test layouts for semantic correctness with different display values.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>block</code> for structural elements, <code>inline</code> for text-level elements.</li>
+        <li>Apply <code>inline-block</code> for elements needing inline flow with dimensions.</li>
+        <li>Avoid <code>display: none</code> for content that should remain accessible.</li>
+        <li>Test across browsers for consistent rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Display Property Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .block { display: block; background: lightblue; margin: 5px; }
+                            .inline { display: inline; background: lightgreen; margin: 5px; }
+                            .inline-block { display: inline-block; width: 100px; background: lightcoral; margin: 5px; }
+                            .none { display: none; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="block"&gt;Block Element&lt;/div&gt;
+                        &lt;span class="inline"&gt;Inline Element&lt;/span&gt;
+                        &lt;div class="inline-block"&gt;Inline-Block Element&lt;/div&gt;
+                        &lt;div class="none"&gt;Hidden Element&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="display: block; background: lightblue; margin: 5px;">Block Element</div>
+            <span style="display: inline; background: lightgreen; margin: 5px;">Inline Element</span>
+            <div style="display: inline-block; width: 100px; background: lightcoral; margin: 5px;">Inline-Block Element</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>block</code>: Full-width, new line, supports all box model properties.</li>
+            <li><code>inline</code>: No width/height, flows with text.</li>
+            <li><code>inline-block</code>: Inline flow with block-like sizing.</li>
+            <li><code>none</code>: Removes element from rendering and layout.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>block</code>, <code>inline</code>, and <code>inline-block</code> for different elements.</li>
+            <li>Hides an element with <code>display: none</code>.</li>
+            <li>Tests the layout for visual and accessibility consistency.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Visibility Property-->
+<div id="visibility-property-content" class="content-section">
+    <h2>Visibility: Visible, Hidden, Collapse</h2>
+    <p>The <code>visibility</code> property controls whether an element is visible while still occupying space in the layout.</p>
+    <p>Values include <code>visible</code>, <code>hidden</code>, and <code>collapse</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>visible</code>: Element is fully visible (default).</li>
+        <li><code>hidden</code>: Element is invisible but reserves space.</li>
+        <li><code>collapse</code>: Hides table rows/columns, removing space (mainly for tables).</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>visibility: hidden</code> doesn’t hide critical content from screen readers.</li>
+        <li>Test <code>collapse</code> for table layouts to maintain data integrity.</li>
+        <li>Verify hidden elements don’t disrupt navigation or focus order.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>visibility: hidden</code> for toggling visibility without affecting layout.</li>
+        <li>Apply <code>collapse</code> only for table elements to avoid unexpected behavior.</li>
+        <li>Combine with transitions for smooth visibility effects.</li>
+        <li>Test across browsers for consistent rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Visibility Property Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .visible { visibility: visible; background: lightblue; padding: 10px; margin: 5px; }
+                            .hidden { visibility: hidden; background: lightgreen; padding: 10px; margin: 5px; }
+                            table { border-collapse: collapse; }
+                            .collapse { visibility: collapse; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="visible"&gt;Visible Element&lt;/div&gt;
+                        &lt;div class="hidden"&gt;Hidden Element&lt;/div&gt;
+                        &lt;table border="1"&gt;
+                            &lt;tr&gt;&lt;td&gt;Row 1&lt;/td&gt;&lt;/tr&gt;
+                            &lt;tr class="collapse"&gt;&lt;td&gt;Row 2 (Collapsed)&lt;/td&gt;&lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="visibility: visible; background: lightblue; padding: 10px; margin: 5px;">Visible Element</div>
+            <div style="visibility: hidden; background: lightgreen; padding: 10px; margin: 5px;">Hidden Element</div>
+            <table style="border-collapse: collapse;" border="1">
+                <tr><td>Row 1</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>visible</code>: Default, element is fully rendered.</li>
+            <li><code>hidden</code>: Invisible but occupies space.</li>
+            <li><code>collapse</code>: Removes space for table rows/columns.</li>
+            <li>Unlike <code>display: none</code>, <code>hidden</code> preserves layout.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>visibility: hidden</code> to hide an element while preserving space.</li>
+            <li>Applies <code>visibility: collapse</code> to a table row.</li>
+            <li>Tests accessibility and layout consistency.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Display vs Visibility-->
+<div id="display-vs-visibility-content" class="content-section">
+    <h2>Difference Between Display: None and Visibility: Hidden</h2>
+    <p>Both <code>display: none</code> and <code>visibility: hidden</code> hide elements, but they differ in layout impact and rendering.</p>
+    <p>Understanding their differences is key to choosing the right property for specific use cases.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>display: none</code>: Removes element from layout, no space reserved.</li>
+        <li><code>visibility: hidden</code>: Hides element but reserves its space.</li>
+        <li>Control visibility for dynamic interfaces or conditional content.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>display: none</code> doesn’t hide content needed by screen readers.</li>
+        <li>Test <code>visibility: hidden</code> for focusable elements to avoid navigation issues.</li>
+        <li>Verify hidden elements don’t disrupt content flow or semantics.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>display: none</code> for elements that should not affect layout (e.g., modals).</li>
+        <li>Apply <code>visibility: hidden</code> for toggling visibility without reflow.</li>
+        <li>Combine with CSS transitions for smooth effects (works better with <code>visibility</code>).</li>
+        <li>Test both properties for performance and rendering consistency.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Display vs Visibility Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .display-none { display: none; background: lightblue; padding: 10px; margin: 5px; }
+                            .visibility-hidden { visibility: hidden; background: lightgreen; padding: 10px; margin: 5px; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="display-none"&gt;Display: None (No Space)&lt;/div&gt;
+                        &lt;div class="visibility-hidden"&gt;Visibility: Hidden (Space Reserved)&lt;/div&gt;
+                        &lt;p&gt;Paragraph after hidden elements.&lt;/p&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="visibility: hidden; background: lightgreen; padding: 10px; margin: 5px;">Visibility: Hidden (Space Reserved)</div>
+            <p>Paragraph after hidden elements.</p>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>display: none</code>: No rendering, no space, no accessibility.</li>
+            <li><code>visibility: hidden</code>: Invisible, space reserved, potentially accessible.</li>
+            <li><code>display: none</code> causes layout reflow, <code>visibility</code> does not.</li>
+            <li>Use based on whether space reservation is needed.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Compares <code>display: none</code> and <code>visibility: hidden</code> on two elements.</li>
+            <li>Observes layout differences with surrounding content.</li>
+            <li>Tests accessibility and rendering behavior.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Absolute Units-->
+<div id="absolute-units-content" class="content-section">
+    <h2>Absolute Units: px, pt</h2>
+    <p>Absolute units in CSS are fixed measurements that do not scale with other elements or viewport properties.</p>
+    <p>Common absolute units include <code>px</code> (pixels) and <code>pt</code> (points).</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>px</code>: Standard for screen-based designs, roughly 1/96 inch.</li>
+        <li><code>pt</code>: Used in print stylesheets, 1pt = 1/72 inch.</li>
+        <li>Provide precise control for fixed-size elements.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Avoid small <code>px</code> values for text to ensure readability.</li>
+        <li>Test absolute units in high-DPI displays for clarity.</li>
+        <li>Ensure layouts using <code>pt</code> are consistent in print outputs.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>px</code> for consistent sizing in web interfaces.</li>
+        <li>Apply <code>pt</code> for print stylesheets or specific design needs.</li>
+        <li>Combine with relative units for responsive designs.</li>
+        <li>Test across devices for rendering accuracy.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Absolute Units Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .px { font-size: 16px; padding: 10px; background: lightblue; margin: 5px; }
+                            .pt { font-size: 12pt; padding: 10px; background: lightgreen; margin: 5px; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="px"&gt;Pixel (16px) Example&lt;/div&gt;
+                        &lt;div class="pt"&gt;Point (12pt) Example&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="font-size: 16px; padding: 10px; background: lightblue; margin: 5px;">Pixel (16px) Example</div>
+            <div style="font-size: 12pt; padding: 10px; background: lightgreen; margin: 5px;">Point (12pt) Example</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>px</code>: Device-dependent, widely used for screens.</li>
+            <li><code>pt</code>: Fixed, ideal for print or precise sizing.</li>
+            <li>Absolute units don’t scale with parent or viewport.</li>
+            <li>Use sparingly for responsive designs.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>px</code> for font and padding sizes.</li>
+            <li>Applies <code>pt</code> to a print-specific element.</li>
+            <li>Tests rendering on screen and print outputs.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Relative Units-->
+<div id="relative-units-content" class="content-section">
+    <h2>Relative Units: em, rem, %, vw, vh, vmin, vmax</h2>
+    <p> porre units scale relative to other properties, such as parent elements, root elements, or the viewport.</p>
+    <p>Common relative units include <code>em</code>, <code>rem</code>, <code>%</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, and <code>vmax</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>em</code>: Scales relative to parent’s font-size.</li>
+        <li><code>rem</code>: Scales relative to root (html) font-size.</li>
+        <li><code>%</code>: Scales relative to parent’s dimensions.</li>
+        <li><code>vw</code>/<code>vh</code>: Scales relative to viewport width/height (1vw = 1% of viewport width).</li>
+        <li><code>vmin</code>/<code>vmax</code>: Scales relative to smaller/larger viewport dimension.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>rem</code> for font sizes to respect user-defined browser settings.</li>
+        <li>Ensure <code>vw</code>/<code>vh</code> don’t cause overflow or unreadable text.</li>
+        <li>Test relative units for scalability across devices and zoom levels.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>rem</code> for consistent, scalable typography.</li>
+        <li>Apply <code>em</code> for component-specific sizing relative to parent.</li>
+        <li>Use <code>vw</code>/<code>vh</code> for full-screen layouts, with fallbacks.</li>
+        <li>Test <code>%</code> for fluid layouts within containers.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Relative Units Example&lt;/title&gt;
+                        &lt;style&gt;
+                            html { font-size: 16px; }
+                            .em { font-size: 1.5em; padding: 1em; background: lightblue; margin: 5px; }
+                            .rem { font-size: 1.5rem; padding: 1rem; background: lightgreen; margin: 5px; }
+                            .vw { width: 50vw; background: lightcoral; padding: 10px; margin: 5px; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="em"&gt;EM Example (1.5em)&lt;/div&gt;
+                        &lt;div class="rem"&gt;REM Example (1.5rem)&lt;/div&gt;
+                        &lt;div class="vw"&gt;VW Example (50vw)&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="font-size: 1.5em; padding: 1em; background: lightblue; margin: 5px;">EM Example (1.5em)</div>
+            <div style="font-size: 1.5rem; padding: 1rem; background: lightgreen; margin: 5px;">REM Example (1.5rem)</div>
+            <div style="width coul50vw; background: lightcoral; padding: 10px; margin: 5px;">VW Example (50vw)</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>em</code>: Compounds with nested elements, use cautiously.</li>
+            <li><code>rem</code>: Predictable, based on root font-size.</li>
+            <li><code>vw</code>/<code>vh</code>: Ideal for responsive, viewport-based designs.</li>
+            <li><code>vmin</code>/<code>vmax</code>: Useful for adaptive layouts.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>rem</code> for typography and <code>em</code> for padding.</li>
+            <li>Applies <code>vw</code> or <code>vh</code> for a full-width/height section.</li>
+            <li>Tests scalability and accessibility across devices.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Unit Use Cases-->
+<div id="unit-use-cases-content" class="content-section">
+    <h2>When to Use Which Unit</h2>
+    <p>Choosing the right CSS unit depends on the design goal, context, and responsiveness requirements.</p>
+    <p>Absolute and relative units serve different purposes in web design.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><strong>Absolute Units</strong>: Fixed sizes for consistent, non-scaling elements.</li>
+        <li><strong>Relative Units</strong>: Scalable sizes for responsive, adaptive layouts.</li>
+        <li>Ensure designs are flexible and accessible across devices.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Use <code>rem</code> for fonts to support user zoom and browser settings.</li>
+        <li>Avoid small absolute units for text to ensure readability.</li>
+        <li>Test units for consistency in responsive and high-DPI displays.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>px</code> for fixed-size UI elements (e.g., borders, icons).</li>
+        <li>Apply <code>rem</code> for typography and spacing in scalable designs.</li>
+        <li>Use <code>vw</code>/<code>vh</code> for viewport-based layouts, with fallbacks.</li>
+        <li>Test unit combinations for performance and rendering.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Unit Use Cases Example&lt;/title&gt;
+                        &lt;style&gt;
+                            html { font-size: 16px; }
+                            .text { font-size: 1.2rem; margin: 1rem; }
+                            .border { border: 2px solid black; padding: 10px; }
+                            .viewport { width: 80vw; background: lightcoral; padding: 1rem; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="text"&gt;REM for Text (1.2rem)&lt;/div&gt;
+                        &lt;div class="border"&gt;PX for Border (2px)&lt;/div&gt;
+                        &lt;div class="viewport"&gt;VW for Width (80vw)&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="font-size: 1.2rem; margin: 1rem;">REM for Text (1.2rem)</div>
+            <div style="border: 2px solid black; padding: 10px;">PX for Border (2px)</div>
+            <div style="width: 80vw; background: lightcoral; padding: 1rem;">VW for Width (80vw)</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>px</code>: Precise, non-scaling UI elements.</li>
+            <li><code>rem</code>/<code>em</code>: Scalable typography and spacing.</li>
+            <li><code>vw</code>/<code>vh</code>: Viewport-driven layouts.</li>
+            <li>Choose units based on context and scalability needs.</li>
+        </ul>
+    </div>
+
+    <div class "exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>px</code> for fixed borders, <code>rem</code> for text, and <code>vw</code> for layout.</li>
+            <li>Combines units for a responsive design.</li>
+            <li>Tests accessibility and rendering across devices.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Position Types-->
+<div id="position-types-content" class="content-section">
+    <h2>Position: Static, Relative, Absolute, Fixed, Sticky</h2>
+    <p>The <code>position</code> property controls how an element is positioned in the document flow.</p>
+    <p>Values include <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, and <code>sticky</code>.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>static</code>: Default, follows normal flow.</li>
+        <li><code>relative</code>: Offset from its normal position, stays in flow.</li>
+        <li><code>absolute</code>: Removed from flow, positioned relative to nearest positioned ancestor.</li>
+        <li><code>fixed</code>: Positioned relative to viewport, stays in place on scroll.</li>
+        <li><code>sticky</code>: Toggles between relative and fixed based on scroll.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure <code>absolute</code> or <code>fixed</code> elements don’t obscure content.</li>
+        <li>Test <code>sticky</code> for consistent behavior across browsers.</li>
+        <li>Verify focusable elements remain accessible with positioning.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>relative</code> for minor offsets within the flow.</li>
+        <li>Apply <code>absolute</code> with a positioned parent for precise control.</li>
+        <li>Use <code>fixed</code> for persistent UI elements (e.g., navbars).</li>
+        <li>Test <code>sticky</code> for compatibility and scroll behavior.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Position Types Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .relative { position: relative; top: 10px; left: 20px; background: lightblue; padding: 10px; }
+                            .absolute { position: absolute; top: 50px; left: 50px; background: lightgreen; padding: 10px; }
+                            .fixed { position: fixed; bottom: 10px; right: 10px; background: lightcoral; padding: 10px; }
+                            .container { position: relative; height: 200px; background: lightgray; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="container"&gt;
+                            &lt;div class="relative"&gt;Relative Position&lt;/div&gt;
+                            &lt;div class="absolute"&gt;Absolute Position&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="fixed"&gt;Fixed Position&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="position: relative; height: 200px; background: lightgray;">
+                <div style="position: relative; top: 10px; left: 20px; background: lightblue; padding: 10px;">Relative Position</div>
+                <div style="position: absolute; top: 50px; left: 50px; background: lightgreen; padding: 10px;">Absolute Position</div>
+            </div>
+            <div style="position: fixed; bottom: 10px; right: 10px; background: lightcoral; padding: 10px;">Fixed Position</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>static</code>: Normal flow, no positioning.</li>
+            <li><code>relative</code>: Offsets without affecting other elements.</li>
+            <li><code>absolute</code>: Requires positioned ancestor for context.</li>
+            <li><code>fixed</code>/<code>sticky</code>: Viewport or scroll-based positioning.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>relative</code>, <code>absolute</code>, and <code>fixed</code> positioning.</li>
+            <li>Includes a <code>sticky</code> header if supported.</li>
+            <li>Tests accessibility and rendering across browsers.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Z-Index and Stacking Context-->
+<div id="z-index-stacking-content" class="content-section">
+    <h2>Z-Index and Stacking Context</h2>
+    <p>The <code>z-index</code> property controls the stacking order of positioned elements along the z-axis.</p>
+    <p>Stacking context determines how elements overlap, influenced by <code>z-index</code> and other properties.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li><code>z-index</code>: Sets stacking order for positioned elements (higher values appear on top).</li>
+        <li>Stacking context: Created by properties like <code>position</code>, <code>opacity</code>, or <code>transform</code>.</li>
+        <li>Manage overlapping elements in complex layouts.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure high <code>z-index</code> elements don’t obscure interactive content.</li>
+        <li>Test stacking order for focusable elements to maintain navigation.</li>
+        <li>Verify overlaps don’t hide critical content from screen readers.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>z-index</code> only for <code>position: relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>.</li>
+        <li>Keep <code>z-index</code> values manageable (e.g., 1–100) to avoid conflicts.</li>
+        <li>Understand stacking context to predict overlap behavior.</li>
+        <li>Test across browsers for consistent stacking.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Z-Index Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .box1 { position: absolute; top: 20px; left: 20px; z-index: 10; background: lightblue; padding: 10px; }
+                            .box2 { position: absolute; top: 40px; left: 40px; z-index: 20; background: lightgreen; padding: 10px; }
+                            .box3 { position: absolute; top: 60px; left: 60px; z-index: 5; background: lightcoral; padding: 10px; }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="box1"&gt;Z-Index: 10&lt;/div&gt;
+                        &lt;div class="box2"&gt;Z-Index: 20&lt;/div&gt;
+                        &lt;div class="box3"&gt;Z-Index: 5&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="position: absolute; top: 20px; left: 20px; z-index: 10; background: lightblue; padding: 10px;">Z-Index: 10</div>
+            <div style="position: absolute; top: 40px; left: 40px; z-index: 20; background: lightgreen; padding: 10px;">Z-Index: 20</div>
+            <div style="position: absolute; top: 60px; left: 60px; z-index: 5; background: lightcoral; padding: 10px;">Z-Index: 5</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>z-index</code>: Higher values stack on top.</li>
+            <li>Stacking context: Created by positioned elements or certain properties.</li>
+            <li>Non-positioned elements follow document order.</li>
+            <li>Child elements inherit parent’s stacking context.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Uses <code>z-index</code> to stack three overlapping elements.</li>
+            <li>Creates a new stacking context with a positioned parent.</li>
+            <li>Tests stacking order and accessibility.</li>
+        </ul>
+    </div>
+</div>
+
+<!--Centering Elements with Positioning-->
+<div id="centering-elements-content" class="content-section">
+    <h2>Centering Elements with Positioning</h2>
+    <p>Positioning techniques, combined with other CSS properties, allow precise centering of elements horizontally and vertically.</p>
+    <p>Common methods include absolute positioning, flexbox, and grid.</p>
+
+    <h4>Purpose</h4>
+    <ul>
+        <li>Center elements within a container or viewport for balanced designs.</li>
+        <li>Use positioning for precise control in complex layouts.</li>
+        <li>Create visually appealing, user-friendly interfaces.</li>
+    </ul>
+
+    <h4>Accessibility</h4>
+    <ul>
+        <li>Ensure centered elements remain focusable and navigable.</li>
+        <li>Test centering for responsiveness across screen sizes.</li>
+        <li>Verify centered content is not obscured by overlaps.</li>
+    </ul>
+
+    <h4>Best Practices</h4>
+    <ul>
+        <li>Use <code>position: absolute</code> with <code>top: 50%</code>, <code>left: 50%</code>, and <code>transform</code> for pixel-perfect centering.</li>
+        <li>Apply flexbox or grid for simpler, responsive centering.</li>
+        <li>Test centering methods for browser compatibility.</li>
+        <li>Use fallbacks for older browsers if needed.</li>
+    </ul>
+
+    <div class="code-display">
+        <div class="code-container">
+            <h3>Usage</h3>
+            <div class="code-block">
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Centering Elements Example&lt;/title&gt;
+                        &lt;style&gt;
+                            .container { position: relative; height: 200px; background: lightgray; }
+                            .absolute-center {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background: lightblue;
+                                padding: 10px;
+                            }
+                            .flex-center {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 200px;
+                                background: lightgreen;
+                                margin-top: 10px;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="container"&gt;
+                            &lt;div class="absolute-center"&gt;Absolute Centered&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="flex-center"&gt;Flexbox Centered&lt;/div&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <h3>Result</h3>
+        <div class="preview-frame">
+            <div style="position: relative; height: 200px; background: lightgray;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: lightblue; padding: 10px;">Absolute Centered</div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; height: 200px; background: lightgreen; margin-top: 10px;">Flexbox Centered</div>
+        </div>
+    </div>
+
+    <div class="preview-frame">
+        <h4>Key Elements</h4>
+        <ul>
+            <li><code>absolute</code> with <code>transform</code>: Precise, works for fixed sizes.</li>
+            <li>Flexbox: Simple, responsive, handles dynamic content.</li>
+            <li>Grid: Similar to flexbox, ideal for complex layouts.</li>
+            <li>Choose method based on layout and browser support.</li>
+        </ul>
+    </div>
+
+    <div class="exercise-container">
+        <h3>Practical Exercise</h3>
+        <p>Create a webpage that:</p>
+        <ul>
+            <li>Centers an element using <code>position: absolute</code> and <code>transform</code>.</li>
+            <li>Centers another using flexbox or grid.</li>
+            <li>Tests responsiveness and accessibility.</li>
+        </ul>
+    </div>
+</div>
+
       <!---->
 
 
