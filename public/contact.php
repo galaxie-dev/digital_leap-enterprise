@@ -1,9 +1,49 @@
+<?php
+// Start PHP session to maintain state across pages
+session_start();
+
+$servername = "localhost";
+$username = "root";  // Default for XAMPP
+$password = "";      // Default for XAMPP, but use your password if set
+$dbname = "digital_leap";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Form submission handler (example)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Process form data here
+    $name = $conn->real_escape_string($_POST['name'] ?? '');
+    $email = $conn->real_escape_string($_POST['email'] ?? '');
+    $subject = $conn->real_escape_string($_POST['subject'] ?? '');
+    $message = $conn->real_escape_string($_POST['message'] ?? '');
+  
+
+    // SQL to insert data into the join_us table
+    $sql = "INSERT INTO contact_us (name, email, subject, message) VALUES ('$name','$email','$subject','$message')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Query submitted successfully!');</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Digital Leap | About</title>
+    <title>Digital leap | Contact us</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -19,10 +59,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/bootst.css" rel="stylesheet">
-    <link href="css/about.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/bootst.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
 </head>
 
 <body>
@@ -45,11 +85,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.php" class="nav-item nav-link">Blog</a>
                 <a href="courses.php" class="nav-item nav-link">Courses</a>                         
-               
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                
+                <a href="contact.php" class="nav-item nav-link active">Contact</a>
             </div>
             <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -62,9 +102,8 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Our Blog</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Contact Us</h1>
                     
-                 
                 </div>
             </div>
         </div>
@@ -72,14 +111,12 @@
     <!-- Header End -->
 
 
-   
-   
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Westlands, Nairobi, Kenya</p>
@@ -92,8 +129,7 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-            
-
+          
             </div>
         </div>
         <div class="container">
@@ -104,7 +140,7 @@
 
                                                 Designed By <a class="border-bottom" href="https://evansosumba.vercel.app" target="_blank">Galaxie-dev</a> | 2025
                     </div>
-                 
+                  
                 </div>
             </div>
         </div>
@@ -119,13 +155,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/easing.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/easing.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
