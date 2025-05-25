@@ -53,8 +53,8 @@ session_start();
                 <a href="about.php" class="nav-item nav-link">Blog</a>
                 <a href="courses.php" class="nav-item nav-link">Courses</a>                         
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-                <a href="join_now.php" class="nav-item nav-link">Join Now</a>
-                <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                <!-- <a href="join_now.php" class="nav-item nav-link">Join Now</a>
+                <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
             </div>
             
         </div>

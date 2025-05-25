@@ -54,7 +54,7 @@ session_start();
                 <a href="courses.php" class="nav-item nav-link">Courses</a>                         
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
                 <a href="join_now.php" class="nav-item nav-link">Join Now</a>
-                <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Log In<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
             
         </div>
@@ -136,10 +136,13 @@ session_start();
                     <p class="mb-4">Our mission is to empower individuals—especially students, early-career professionals, 
                         and self-taught developers—with the skills, knowledge, and support they need to thrive in the digital 
                         world. Whether you're into software development, UI/UX design, data, networking, or digital 
-                        entrepreneurship, you'll find valuable conversations, free resources, mentorship, and motivation right here.
-                    </p>
-                    <p class="mb-4">In this space, we:
-                    </p>
+                        entrepreneurship, you'll find valuable conversations, free resources, mentorship, and motivation right here.   
+                </div>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">In this space, we:</h1>                   
+                    <p class="mb-4"> </p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Share learning resources, tutorials, and job/internship opportunities
@@ -163,6 +166,13 @@ session_start();
                         contribute, and stay ahead in the tech ecosystem. Let’s level up together!</p>
              
                 </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="images/businessman-working-laptop.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -172,6 +182,11 @@ session_start();
         <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">What we offer</h6>
+                    <h1 class="mb-5">Why Digital Leap</h1>
+                </div>
+
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
