@@ -9,13 +9,13 @@
 
     </style>
 
-<link href="../css/animate.min.css" rel="stylesheet">
-<link href="../css/owl.carousel.min.css" rel="stylesheet">
-<link href="../css/bootst.css" rel="stylesheet">
-<link href="../css/about.css" rel="stylesheet">
+<link href="../../css/animate.min.css" rel="stylesheet">
+<link href="../../css/owl.carousel.min.css" rel="stylesheet">
+<link href="../../css/bootst.css" rel="stylesheet">
+<link href="../../css/about.css" rel="stylesheet">
 
 <!-- Specific for notes sections -->
-<link href="../css/notes.css" rel="stylesheet">
+<link href="../../css/notes.css" rel="stylesheet">
 
    <!-- Google Web Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="opacity: 50%;">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Digital Leap - Advanced Javascript</h2>
+                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Digital Leap - Javascript</h2>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -56,221 +56,250 @@
                     <option value="js-notes.html">JavaScript COURSE</option>
                 </select>  
                 
+                
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Introduction to the DOM</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> What is JavaScript?</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="what-is-dom"><i style="font-size: 8px;"></i> What is the DOM?</a></li>
-                        <li><a href="#" data-content="select-elements"><i style="font-size: 8px;"></i> Selecting Elements</a></li>
-                        <li><a href="#" data-content="dom-tree-traversal"><i style="font-size: 8px;"></i> Traversing the DOM Tree</a></li>
+                        <li><a href="#" data-content="js-definition"><i style="font-size: 8px;"></i> Definition and Purpose</a></li>                       
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Manipulating Elements</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Setup & Basics</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="change-text-content"><i style="font-size: 8px;"></i> Changing Text & Content</a></li>
-                        <li><a href="#" data-content="modify-attributes"><i style="font-size: 8px;"></i> Modifying Attributes</a></li>
-                        <li><a href="#" data-content="add-remove-elements"><i style="font-size: 8px;"></i> Adding/Removing Elements</a></li>
-                        <li><a href="#" data-content="class-list"><i style="font-size: 8px;"></i> ClassList API</a></li>
+                        <li><a href="#" data-content="code-editor"><i style="font-size: 8px;"></i>Basics and Introduction</a></li>
+                        <!-- <li><a href="#" data-content="devtools-basics"><i style="font-size: 8px;"></i> DevTools Basics</a></li>
+                        <li><a href="#" data-content="console-logging"><i style="font-size: 8px;"></i> Console Logging</a></li>
+                        <li><a href="#" data-content="script-tag"><i style="font-size: 8px;"></i> Using Script Tag</a></li>
+                        <li><a href="#" data-content="first-script"><i style="font-size: 8px;"></i> Your First JS Program</a></li> -->
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Styling Elements</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Variables & Data Types</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="inline-styling"><i style="font-size: 8px;"></i> Inline Styling</a></li>
-                        <li><a href="#" data-content="toggle-class"><i style="font-size: 8px;"></i> Toggling Classes</a></li>
-                        <li><a href="#" data-content="computed-style"><i style="font-size: 8px;"></i> getComputedStyle</a></li>
+                        <li><a href="#" data-content="var-let-const"><i style="font-size: 8px;"></i> var, let, const</a></li>
+                        <li><a href="#" data-content="primitive-types"><i style="font-size: 8px;"></i> Primitive Data Types</a></li>
+                        <li><a href="#" data-content="type-coercion"><i style="font-size: 8px;"></i> Type Coercion & Conversion</a></li>
+                        <li><a href="#" data-content="typeof-operator"><i style="font-size: 8px;"></i> typeof Operator</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Events & Listeners</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Operators</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="event-types"><i style="font-size: 8px;"></i> Event Types</a></li>
-                        <li><a href="#" data-content="add-event-listener"><i style="font-size: 8px;"></i> addEventListener</a></li>
-                        <li><a href="#" data-content="event-propagation"><i style="font-size: 8px;"></i> Event Propagation</a></li>
-                        <li><a href="#" data-content="event-delegation"><i style="font-size: 8px;"></i> Event Delegation</a></li>
-                        <li><a href="#" data-content="prevent-default"><i style="font-size: 8px;"></i> preventDefault & stopPropagation</a></li>
+                        <li><a href="#" data-content="arithmetic-operators"><i style="font-size: 8px;"></i> Arithmetic Operators</a></li>
+                        <li><a href="#" data-content="assignment-operators"><i style="font-size: 8px;"></i> Assignment Operators</a></li>
+                        <li><a href="#" data-content="comparison-operators"><i style="font-size: 8px;"></i> Comparison Operators</a></li>
+                        <li><a href="#" data-content="logical-operators"><i style="font-size: 8px;"></i> Logical Operators</a></li>
+                        <li><a href="#" data-content="ternary-operator"><i style="font-size: 8px;"></i> Ternary Operator</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Forms & Validation</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Conditionals</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="form-access"><i style="font-size: 8px;"></i> Accessing Form Elements</a></li>
-                        <li><a href="#" data-content="submit-form"><i style="font-size: 8px;"></i> Handling Form Submission</a></li>
-                        <li><a href="#" data-content="validate-inputs"><i style="font-size: 8px;"></i> Input Validation</a></li>
-                        <li><a href="#" data-content="form-data"><i style="font-size: 8px;"></i> FormData Object</a></li>
+                        <li><a href="#" data-content="if-else"><i style="font-size: 8px;"></i> if, else if, else</a></li>
+                        <li><a href="#" data-content="switch-statement"><i style="font-size: 8px;"></i> switch Statement</a></li>
+                        <li><a href="#" data-content="truthy-falsy"><i style="font-size: 8px;"></i> Truthy and Falsy Values</a></li>
+                        <li><a href="#" data-content="short-circuit"><i style="font-size: 8px;"></i> Short-Circuit Evaluation</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Timers & Intervals</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Loops</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="settimeout"><i style="font-size: 8px;"></i> setTimeout</a></li>
-                        <li><a href="#" data-content="setinterval"><i style="font-size: 8px;"></i> setInterval</a></li>
-                        <li><a href="#" data-content="clear-timers"><i style="font-size: 8px;"></i> Clearing Timers</a></li>
+                        <li><a href="#" data-content="for-loop"><i style="font-size: 8px;"></i> for Loop</a></li>
+                        <li><a href="#" data-content="while-loop"><i style="font-size: 8px;"></i> while Loop</a></li>
+                        <li><a href="#" data-content="do-while"><i style="font-size: 8px;"></i> do...while Loop</a></li>
+                        <li><a href="#" data-content="loop-control"><i style="font-size: 8px;"></i> break & continue</a></li>
+                        <li><a href="#" data-content="for-of"><i style="font-size: 8px;"></i> for...of Loop</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>LocalStorage & SessionStorage</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Functions</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="storage-basics"><i style="font-size: 8px;"></i> Storage Basics</a></li>
-                        <li><a href="#" data-content="store-retrieve-data"><i style="font-size: 8px;"></i> Storing & Retrieving Data</a></li>
-                        <li><a href="#" data-content="todo-app-example"><i style="font-size: 8px;"></i> Example: Todo App</a></li>
+                        <li><a href="#" data-content="function-declaration"><i style="font-size: 8px;"></i> Function Declaration</a></li>
+                        <li><a href="#" data-content="function-expression"><i style="font-size: 8px;"></i> Function Expression</a></li>
+                        <li><a href="#" data-content="arrow-functions"><i style="font-size: 8px;"></i> Arrow Functions</a></li>
+                        <li><a href="#" data-content="parameters-arguments"><i style="font-size: 8px;"></i> Parameters & Arguments</a></li>
+                        <li><a href="#" data-content="return-values"><i style="font-size: 8px;"></i> Return Values</a></li>
+                        <li><a href="#" data-content="scope-js"><i style="font-size: 8px;"></i> Scope (Function, Block, Global)</a></li>
+                        <li><a href="#" data-content="iife"><i style="font-size: 8px;"></i> IIFE</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Error Handling</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Arrays</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="try-catch-finally"><i style="font-size: 8px;"></i> try...catch...finally</a></li>
-                        <li><a href="#" data-content="throw-custom-errors"><i style="font-size: 8px;"></i> Throwing Custom Errors</a></li>
-                        <li><a href="#" data-content="debugging-js"><i style="font-size: 8px;"></i> Debugging Techniques</a></li>
+                        <li><a href="#" data-content="array-create-access"><i style="font-size: 8px;"></i> Creating and Accessing Arrays</a></li>
+                        <li><a href="#" data-content="array-methods"><i style="font-size: 8px;"></i> push, pop, shift, unshift</a></li>
+                        <li><a href="#" data-content="slice-splice"><i style="font-size: 8px;"></i> slice and splice</a></li>
+                        <li><a href="#" data-content="map-filter-reduce"><i style="font-size: 8px;"></i> map, filter, reduce</a></li>
+                        <li><a href="#" data-content="foreach-includes"><i style="font-size: 8px;"></i> forEach, includes</a></li>
+                        <li><a href="#" data-content="spread-operator"><i style="font-size: 8px;"></i> Spread Operator</a></li>
+                        <li><a href="#" data-content="array-destructuring"><i style="font-size: 8px;"></i> Array Destructuring</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Regular Expressions</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Objects</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="regex-patterns"><i style="font-size: 8px;"></i> Regex Patterns</a></li>
-                        <li><a href="#" data-content="flags-character-sets"><i style="font-size: 8px;"></i> Flags & Character Sets</a></li>
-                        <li><a href="#" data-content="regex-methods"><i style="font-size: 8px;"></i> test(), match(), replace()</a></li>
+                        <li><a href="#" data-content="object-literals"><i style="font-size: 8px;"></i> Object Literals</a></li>
+                        <li><a href="#" data-content="access-object-properties"><i style="font-size: 8px;"></i> Accessing Properties</a></li>
+                        <li><a href="#" data-content="methods-this"><i style="font-size: 8px;"></i> Methods and this Keyword</a></li>
+                        <li><a href="#" data-content="constructor-objects"><i style="font-size: 8px;"></i> Constructor Functions</a></li>
+                        <li><a href="#" data-content="object-destructuring"><i style="font-size: 8px;"></i> Object Destructuring</a></li>
+                        <li><a href="#" data-content="optional-chaining"><i style="font-size: 8px;"></i> Optional Chaining</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Functional Programming</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Strings</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="pure-functions"><i style="font-size: 8px;"></i> Pure Functions</a></li>
-                        <li><a href="#" data-content="immutability"><i style="font-size: 8px;"></i> Immutability</a></li>
-                        <li><a href="#" data-content="higher-order-functions"><i style="font-size: 8px;"></i> Higher Order Functions</a></li>
-                        <li><a href="#" data-content="currying-composition"><i style="font-size: 8px;"></i> Currying & Composition</a></li>
+                        <li><a href="#" data-content="string-basics"><i style="font-size: 8px;"></i> String Basics</a></li>
+                        <li><a href="#" data-content="template-literals"><i style="font-size: 8px;"></i> Template Literals</a></li>
+                        <li><a href="#" data-content="tagged-templates"><i style="font-size: 8px;"></i> Tagged Templates</a></li>
+                        <li><a href="#" data-content="string-methods"><i style="font-size: 8px;"></i> Common String Methods</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Closures & Scope Chain</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Dates & Time</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="closure-basics"><i style="font-size: 8px;"></i> Closure Basics</a></li>
-                        <li><a href="#" data-content="private-data"><i style="font-size: 8px;"></i> Private Data with Closures</a></li>
-                        <li><a href="#" data-content="module-pattern"><i style="font-size: 8px;"></i> Module Pattern</a></li>
+                        <li><a href="#" data-content="date-object"><i style="font-size: 8px;"></i> Date Object</a></li>
+                        <li><a href="#" data-content="formatting-dates"><i style="font-size: 8px;"></i> Formatting Dates</a></li>
+                        <li><a href="#" data-content="time-calculations"><i style="font-size: 8px;"></i> Time Calculations</a></li>
+                        <li><a href="#" data-content="intl-api"><i style="font-size: 8px;"></i> Intl API</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Prototypes & Inheritance</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> ES6+ Features</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="prototype-chain"><i style="font-size: 8px;"></i> Prototype Chain</a></li>
-                        <li><a href="#" data-content="constructor-functions"><i style="font-size: 8px;"></i> Constructor Functions</a></li>
-                        <li><a href="#" data-content="es6-class-under-hood"><i style="font-size: 8px;"></i> ES6 Class Under the Hood</a></li>
-                        <li><a href="#" data-content="extend-built-ins"><i style="font-size: 8px;"></i> Extending Built-in Objects</a></li>
+                        <li><a href="#" data-content="es6-let-const"><i style="font-size: 8px;"></i> Let and Const</a></li>
+                        <li><a href="#" data-content="arrow-functions-es6"><i style="font-size: 8px;"></i> Arrow Functions</a></li>
+                        <li><a href="#" data-content="enhanced-objects"><i style="font-size: 8px;"></i> Enhanced Object Literals</a></li>
+                        <li><a href="#" data-content="default-parameters"><i style="font-size: 8px;"></i> Default Parameters</a></li>
+                        <li><a href="#" data-content="rest-spread"><i style="font-size: 8px;"></i> Rest and Spread Operators</a></li>
+                        <li><a href="#" data-content="destructuring-es6"><i style="font-size: 8px;"></i> Destructuring</a></li>
+                        <li><a href="#" data-content="modules-intro"><i style="font-size: 8px;"></i> Modules (import/export)</a></li>
+                        <li><a href="#" data-content="classes-es6"><i style="font-size: 8px;"></i> Classes</a></li>
+                        <li><a href="#" data-content="static-get-set"><i style="font-size: 8px;"></i> Static, Getters, Setters</a></li>
+                        <li><a href="#" data-content="private-class-fields"><i style="font-size: 8px;"></i> Private Class Fields</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i> Design Patterns</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Promises & Async</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="module-pattern"><i style="font-size: 8px;"></i> Module Pattern</a></li>
-                        <li><a href="#" data-content="factory-pattern"><i style="font-size: 8px;"></i> Factory Pattern</a></li>
-                        <li><a href="#" data-content="observer-pattern"><i style="font-size: 8px;"></i> Observer Pattern</a></li>
-                        <li><a href="#" data-content="singleton-pattern"><i style="font-size: 8px;"></i> Singleton Pattern</a></li>
+                        <li><a href="#" data-content="callbacks-promises"><i style="font-size: 8px;"></i> Callbacks → Promises</a></li>
+                        <li><a href="#" data-content="async-await"><i style="font-size: 8px;"></i> async/await</a></li>
+                        <li><a href="#" data-content="fetch-api"><i style="font-size: 8px;"></i> Fetch API Example</a></li>
+                        <li><a href="#" data-content="error-handling"><i style="font-size: 8px;"></i> Error Handling</a></li>
+                        <li><a href="#" data-content="promise-all-race"><i style="font-size: 8px;"></i> Promise.all, race</a></li>
                     </ul>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i>Performance Optimization</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Symbols & Iterators</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="debounce-throttle"><i style="font-size: 8px;"></i> Debounce & Throttle</a></li>
-                        <li><a href="#" data-content="memoization"><i style="font-size: 8px;"></i> Memoization</a></li>
-                        <li><a href="#" data-content="lazy-loading"><i style="font-size: 8px;"></i> Lazy Loading</a></li>
-                        <li><a href="#" data-content="efficient-dom"><i style="font-size: 8px;"></i> Efficient DOM Updates</a></li>
-                        <li><a href="#" data-content="performance-tools"><i style="font-size: 8px;"></i> Performance Tools (Lighthouse)</a></li>
+                        <li><a href="#" data-content="symbol-type"><i style="font-size: 8px;"></i> Symbol Type</a></li>
+                        <li><a href="#" data-content="iterable-symbol"><i style="font-size: 8px;"></i> Symbol.iterator</a></li>
+                        <li><a href="#" data-content="custom-iterators"><i style="font-size: 8px;"></i> Custom Iterators</a></li>
+                        <li><a href="#" data-content="generators"><i style="font-size: 8px;"></i> Generators</a></li>
                     </ul>
                 </li>
                 
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-code me-2"></i> Sets & Maps</a>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="set-structure"><i style="font-size: 8px;"></i> Set Structure</a></li>
+                        <li><a href="#" data-content="map-structure"><i style="font-size: 8px;"></i> Map Structure</a></li>
+                        <li><a href="#" data-content="weakmap-weakset"><i style="font-size: 8px;"></i> WeakMap / WeakSet</a></li>
+                    </ul>
+                </li>
                 
+                <li class="menu-item">
+                    <a href="#"><i class="fas fa-code me-2"></i> Optional Chaining</a>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="optional-chaining"><i style="font-size: 8px;"></i> Optional Chaining (?.)</a></li>
+                        <li><a href="#" data-content="nullish-coalescing"><i style="font-size: 8px;"></i> Nullish Coalescing (??)</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <!-- Main Content Area -->
         <div class="main-content">
             <!-- Root Element Content -->
-            <div id="root-content" class="content-section active">
-                <h2>Root Element</h2>
-                <p>The root element is the top-level container for all HTML elements.</p>
-                <h3 style="margin-top: 30px;">Key Elements</h3>
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <!-- Explains Doctype -->
-                    <h4>&lt;!DOCTYPE html&gt;</h4>
-                        <li>The document type declaration (not an HTML tag)</li>
-                        <li>Must be the first line in an HTML document</li>
-                        <li>Declares this as an HTML5 document (simplified from previous HTML versions)</li>
-                        <li>Ensures the browser renders content in standards mode</li>
+            <div id="js-definition-content" class="content-section active">
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript is a high-level, interpreted programming language that runs in web 
+                    browsers and allows developers to make web pages interactive. 
+                    <br>It enables:</p>
+                    <li>Dynamic updates to HTML and CSS</li>
+                    <li>User interaction handling (e.g., form validation)</li>
+                    <li>Communication with servers (via APIs)</li>
+                    <li>Real-time data updates</li>
+                <p>Unlike HTML (structure) and CSS (style), JavaScript adds behavior to websites.</p>
 
-                    <!-- Explains html tag -->
-                    <br><h4>&lt;html&gt; Element</h4>
-                        <li>The root element wrapping all HTML content</li>
-                        <li>Should include the lang attribute for accessibility and SEO</li>
+                <!-- Role of js -->
+                <h4 style="margin-top: 30px;">Role of Javascript on Web Development:</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <!-- Explains what js can do -->               
+                        <li>Manipulate HTML/CSS dynamically</li>
+                        <li>Respond to user events (clicks, keypresses, etc.)</li>
+                        <li>Store and retrieve data using localStorage or cookies</li>
+                        <li>Communicate with backend services using AJAX/fetch API</li>
+
+                    <!-- Explains how js runs -->
+                    <br>
+                <h4>How JavaScript runs in a browser</h4>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li>The browser downloads an HTML file.</li>
+                        <li>It reads &lt;script&gt; tags and loads the associated JavaScript.</li>
+                        <li>A built-in engine like V8 (Chrome) or SpiderMonkey (Firefox) executes the code.</li>
+                        <li>JS interacts with the DOM (Document Object Model) and BOM (Browser Object Model).</li>                            
+                    </ol><br>
+
+                    <h4>You can implement JavaScript in two main ways:</h4>
+                    <ol>
+                        <li><strong>Inline:</strong> Directly inside &lt;script&gt; tags</li>
+                        <li><strong>External:</strong> In a .js file linked via &lt;script src="main.js"&gt;</li>
+                                          
+                    </ol>
                         <div class="code-display">
                             <div class="code-container">
+                                <h5>Internal:</h5>
                                 <div class="code-block">
                                 <pre>
 
-&lt;html lang="en"&gt; &lt;!-- Specifies English language content --&gt;
+&lt;script&gt;
+    alert("Welcome to Javascript")
+&lt;/script&gt;
                                 </pre>
                                 <button class="copy-btn">Copy</button>                          
                                 </div>
                             </div>
                         </div>
 
-                    
-                    <!-- body section -->
-                    <br><h4>&lt;body&gt;  Section</h4>
-                    <li>Contains all visible page content</li>
-                    <li>Where you place headings, paragraphs, images, etc.
                         <div class="code-display">
-                            <div class="code-container">                               
+                            <div class="code-container">
+                                <h5>External:</h5>
                                 <div class="code-block">
-                                    <pre>
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;  
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
+                                <pre>
+
+&lt;script src="main.js"&gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
                                 </div>
-                            </div>                         
+                            </div>
                         </div>
-                
-                <div class="code-display">
-                    <div class="code-container">
-                        <h3>Sample HTML Document Structure</h3>
-                        <div class="code-block">
-                            <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, <br>    initial-scale=1.0"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- Content goes here --&gt;
-    &lt;h1&gt;Page heading goes here&lt;/h1&gt;
-    &lt;p&gt;Visible content goes here &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                            </pre>
-                            <button class="copy-btn">Copy</button>
-                        </div>
-                    </div>
                     
-                    
-                </div>
+                    <!-- body section -->      
+            
                 <div class="preview-container">
                     <h3>Result</h3>
                     <div class="preview-frame">
@@ -282,32 +311,44 @@
 
             </div>
 
-            <!-- Head Section and tag Content -->
-            <div id="head-content" class="content-section">
-                <h2>&lt;head&gt;  Section (Document Metadata)</h2>
-                <p>The head section contains metadata and links to external resources.</p>
-                <p>Also contains non-visible page information </p>
 
-                        <!-- Explains head tag -->
-                        <h4>&lt;meta&gt;  tag</h4>
-                            <li>Contains metadata about the HTML document, such as character set, 
-                                description, keywords, author, and viewport settings.</li>
-                            <li>Provides information to browsers and search engines, 
-                                helping with page rendering and SEO.
-                            </li>
+
+
+            <!-- Set ups and basics -->
+            <div id="code-editor-content" class="content-section">
+                <h3>Setup & Basics</h3>
+                <h4>Code Editors</h4>
+                <p>A code editor is a software used to write and edit code. It provides features that help developers write code more efficiently.</p>
+                <p>✅ Popular Code Editors:</p>
+                    <li><strong>Visual Studio Code (VS Code)</strong> – Free, powerful, supports extensions.</li>
+                    <li><strong>Atom</strong> – Open-source from GitHub.</li>
+                    <li><strong>Sublime Text</strong> – Lightweight and fast.</li>
+                    <li><strong>Programiz</strong> - Online text editor.</li>
+
+                        <!--Developer tools -->
+                        <br><h4>Developer Tools (DevTools)</h4>
+                        <p>Developer Tools are built into modern web browsers to help you debug and test your websites directly in the browser.</p>
+
+                        <p><strong>🔍 How to Open DevTools:</strong></p>
+                            <li><strong>Chrome:</strong>Right-click → Inspect or press F12 / Ctrl + Shift + I</li>
+                            <li><strong>Firefox:</strong> Right-click → Inspect Element</li>
+                            <li><strong>Edge:</strong> Same as Chrome</li>
+
+                         <!--tabs in dev tools -->
+                        <br><p><strong>📁 Key Tabs in DevTools:</strong></p>
+                            <li><strong>Elements:</strong>Inspect and modify HTML/CSS live.</li>
+                            <li><strong>Console:</strong> Run JavaScript and see output/errors.</li>
+                            <li><strong>Sources:</strong> Debug JavaScript using breakpoints.</li>
+                            <li><strong>Network:</strong> View loaded files, check performance, inspect XHR requests.</li>
+                            <li><strong>Application:</strong>Check local storage, cookies, service workers, etc.</li>
+
                             <div class="code-display">
                                 <div class="code-container">
-                                    <h3>Head Section Elements</h3>
+                                 <h5>Example</h5>
                                     <div class="code-block">
                                         <pre>
     
-    &lt;head&gt;
-        &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-        &lt;meta name="description" content="Brief description of the page"&gt;
-        &lt;meta name="keywords" content="HTML, CSS, Javascript"&gt;
-        &lt;meta name="auther" content="Evans Osumba"&gt;
-        &lt;meta name="viewport" content="width=device-width, <br>         initial-scale=1.0"&gt;      
-    &lt;/head&gt;
+console.log("Hello from DevTools Console!");
                                         </pre>
                                         <button class="copy-btn">Copy</button>
                                     </div>
@@ -316,18 +357,51 @@
                               
                             </div>
 
-                        <h4>&lt;title&gt;  tag</h4>
-                            <li>Defines the title of the HTML document, which
-                                 is displayed in the browser's title bar or tab</li>
-                            <li>Important for SEO as it provides a concise description of the page's content</li>
+                                   <!--Console Logging -->
+                        <br><h4>Console Logging</h4>
+                        <p>The console is a tool in DevTools where developers can print messages, debug values, and track errors.</p>
+
+                        <p><strong>📝 Common Methods::</strong></p>
+                        <table style="width: 100%; border-collapse: collapse; background-color: #2b2b2b; color: #fff;">
+                            <thead>
+                                <tr>
+                                    <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">METHOD</th>
+                                    <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">DESCRIPTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.log()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Outputs general messages</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.warn()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Shows a warning message</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.error()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Displays an error</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.info()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Info-level logging</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">console.table()</td>
+                                    <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Displays data in table format</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                 
                         <div class="code-display">
-                            <div class="code-container">                                  
+                            <div class="code-container"> <br>
+                                <h5>💡 Usage:</h5>                                 
                                 <div class="code-block">
                                     <pre>
 
-&lt;head&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-&lt;/head&gt;
+console.log("This is a log message");
+console.warn("This is a warning");
+console.error("This is an error!");
                                     </pre>
                                     <button class="copy-btn">Copy</button>
                                 </div>
@@ -335,95 +409,271 @@
                             
                         </div>
 
-                        <h4>&lt;link&gt;  tag</h4>
-                            <li>Used to link external resources to the HTML document, such 
-                                as stylesheets, icons, and other documents.</li>
-                                <li>Helps in defining the relationship between the current 
-                                    document and an external resource.</li>
-                            <div class="code-display">
-                                <div class="code-container">                                  
-                                    <div class="code-block">
-                                        <pre>
-    
-&lt;head&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;link rel="icon" href="favicon.ico"&gt;
-&lt;/head&gt;
-                                        </pre>
-                                        <button class="copy-btn">Copy</button>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        <h4>&lt;style&gt;&lt;/style&gt;  tag</h4>
-                            <li>Defines CSS styles within the HTML document, 
-                                allowing for the styling of elements on the page.</li>
-                            <li>Can be used to embed CSS directly within the HTML file, 
-                                useful for small projects or inline styling.</li>
-                                <div class="code-display">
-                                    <div class="code-container">                                  
-                                        <div class="code-block">
-                                            <pre>
-        
-&lt;head&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-        body{
-            font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-                                            </pre>
-                                            <button class="copy-btn">Copy</button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
+                        <!-- Using the Script tag -->
+                        <br><h4>📜 Using Script Tag</h4>
+                        <p>JavaScript is typically embedded or linked in HTML using the &lt;script&gt; tag.</p>
                         <div class="code-display">
                             <div class="code-container">
-                                <h3>Head Section Elements</h3>
+                                <h5>Inline Script:</h5>
                                 <div class="code-block">
-                                    <pre>
+                                <pre>
 
-&lt;head&gt;
-    &lt;meta charset="UFT-8"&gt; &lt;!-- Character encoding declaration--&gt;
-    &lt;meta name="description" content="A brief description of the page"&gt;
-    &lt;title&gt;Digital Leap&lt;/title&gt; &lt;!-- Browser tab title --&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;style&gt;
-        /* Inline CSS */
-    &lt;/style&gt;
-    &lt;base href="https://example.com/"&gt;
-&lt;/head&gt;
-                                    </pre>
-                                    <button class="copy-btn">Copy</button>
-                                </div>
-                                <div class="preview-container">
-                                    <h3>Result</h3>
-                                    <div class="preview-frame">
-                                        <h4>Image</h4>
-                                        <p>The head section is not visible in the browser window but contains important metadata for the document.</p>
-                                        
-                                    </div>
+&lt;script&gt;
+    alert("Welcome to DigitalLeap!")
+&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
                                 </div>
                             </div>
-                          
                         </div>
-                        <div class="preview-frame">
-                            <h4>Key Elements</h4>
-                            <ul>
-                                <li>Character encoding declaration</li>
-                                <li>Viewport settings for responsive design</li>
-                                <li>Page description for search engines</li>
-                                <li>Title that appears in browser tab</li>
-                                <li>Links to external resources like CSS</li>
-                            </ul>
+
+                        <div class="code-display">
+                            <div class="code-container">
+                                <h5>External Script:</h5>
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js"&gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div><br>
+
+                        
+                        <h5>Best Practices</h5>
+                        <li>Avoid too much inline JavaScript.</li>
+                        <li>Keep JS in separate .js files for better maintainability.</li>
+                        <li>Use defer or async attributes when needed:</li>
+                        <div class="code-display">
+                            <div class="code-container">                       
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js" defer&gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- UFirst JS code -->
+                         <!-- <div id="first-script-content"> -->
+                        <br><h4>🧪 Your First JS Program</h4>
+                        <p>Let’s create a simple program that shows an alert and logs a message to the console.</p><br>
+
+                        <h5>Setps</h5>
+                        <ol>
+                            <li>Create a file named main.js</li>
+                            <li>Write the following code:</li>
+                       
+                        <div class="code-display">
+                            <div class="code-container">                             
+                                <div class="code-block">
+                                <pre>
+
+// This is your first JavaScript program
+alert("Welcome to DigitalLeap!");
+
+console.log("DigitalLeap says hello from the console.");
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div>
+                        <li>Link it in your HTML:</li>
+                        <div class="code-display">
+                            <div class="code-container">                             
+                                <div class="code-block">
+                                <pre>
+
+&lt;script src="main.js" &gt;&lt;/script&gt;
+                                </pre>
+                                <button class="copy-btn">Copy</button>                          
+                                </div>
+                            </div>
+                        </div>
+                    </ol>
+                        
+                <h5>✅ Expected Output:</h5>
+                <li>An alert box with "Welcome to DigitalLeap!"</li>
+                <li>A message in the browser console.</li><br>
+
+                <h5>🧠 Concepts :</h5>
+                <li>Aletr PopUps</li>
+                <li>Console output.</li>
+                <li>Basic Syntax</li>
+                <li>Script Linking</li>    
+            <!-- </div>                   -->
+    
+
             </div>
+
+
+
+
+
+            <!-- Variables and data types -->
+             <!-- var, let, and const -->
+            <div id="var-let-const-content" class="content-section">                
+                <h4>var, let, and const</h4>
+                <p>These are the three keywords used to declare variables in JavaScript. Each has different scope , hoisting , and reassignment behavior.</p>
+                <p>In JavaScript, variables are used to store data values.</p><br>
+
+                <!-- Var -->
+                <h5>✅ var</h5>
+                    <li>Function-scoped or globally scoped if declared outside of any function.</li>
+                    <li>Hoisted (moved to the top of their scope).</li>
+                    <li>Can be redeclared/re-assigned and updated.</li>
+                    <div class="code-display">
+                        <div class="code-container">
+                         <h5>Example</h5>
+                            <div class="code-block">
+                                <pre>
+
+var x = 10; // Number
+var x = 20; // redeclaration allowed
+var message = "Hello, world!"; // String
+var number = 42; // Number
+var isTrue = true; // Boolean
+var list = [1, 2, 3]; // Array
+var person = {name: "Evans", age: 22}; // Object
+                                </pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+                    <h5>Best Practice:</h5>
+                    <li>💡 Not recommended for use in modern JS due to issues with scoping and hoisting. </li>
+           
+
+                <!-- Let -->
+                <br><br>
+                <h5>✅ let</h5>
+                <li>Back-scoped.</li>
+                <li>Not hoisted (inaccessible before declaration — Temporal Dead Zone).</li>
+                <li>Can be redeclared/re-assigned and updated.</li>
+                <div class="code-display">
+                    <div class="code-container">
+                     <h5>Example</h5>
+                        <div class="code-block">
+                            <pre>
+
+let y = 10;
+y = 20; // allowed
+let y = 30; // error: Identifier 'y' has already been declared
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+
+                    </div>
+                  
+                </div>
+                <h5>Best Practice:</h5>
+                <li>💡 Best choice when variable value needs to change.</li>
+
+                
+                <!-- const -->
+                <br><br>
+                <h5>✅ const</h5>
+                <li>Back-scoped.</li>
+                <li>Not hoisted (inaccessible before declaration — Temporal Dead Zone).</li>
+                <li>Cannot be redeclared or re-assigned.</li>
+                <div class="code-display">
+                    <div class="code-container">
+                     <h5>Example</h5>
+                        <div class="code-block">
+                            <pre>
+
+const z = 10;
+z = 20; // error: Assignment to constant variable
+                            </pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+
+                    </div>
+                  
+                </div>
+                <h5>Best Practice:</h5>
+                <li>💡 Use this when the variable should not change (e.g., constants, references).</li>                      
+    
+
+            </div>
+
+
+            <!-- Primitive Data types -->
+            <div id="primitive-types-content" class="content-section">                
+                <h4>Primitive Data Types</h4>
+                <p>Primitive data types are the most basic data types and they include:</p>
+                <table style="width: 100%; border-collapse: collapse; background-color: #2b2b2b; color: #fff;">
+                    <thead>
+                        <tr>
+                            <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">TYPE</th>
+                            <th style="border-bottom: 2px solid #3f3f3f; padding: 10px 15px; text-align: left; font-weight: bold;">DESCRIPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">string</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents textual data created with double quotes, single quotes
+                                or backticks <br>(e.g.,"Hello", 'DigitalLeap', `JavaScript`)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">number</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents numeric values including integers and floating-point numbers <br>(e.g., 25, 3.14)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">boolean</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents logical entities with two values: true or false.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">null</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Represents an intentional absence of any object value. Has one value: <br>Example: var y = null;</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">undefined</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;"> A type that has only one value, undefined, which is the value of variables that 
+                                have been declared but not initialized. <br>Example: var x; console.log(x); // undefined</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">bigint</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">For representing very large integers with arbitrary precision <br>(e.g., 100n)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">symbol</td>
+                            <td style="padding: 10px 15px; border-top: 1px solid #3f3f3f; border-bottom: 1px solid #3f3f3f;">Unique identifiers for object properties (used internally by JS). <br>Example: var sym = Symbol('description');</td>
+                        </tr>
+                    </tbody>
+                </table><br>           
+
+         
+                    <div class="code-display">
+                        <div class="code-container">
+                         <h5>Examples</h5>
+                            <div class="code-block">
+                                <pre>
+
+let name = "DigitalLeap"; // string
+let age = 25; // number
+let isMember = true; // boolean
+let user = null; // null
+let value; // undefined
+let bigNum = 9007199254740991n; // bigint
+let sym = Symbol("id"); // symbol
+                                </pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+                  
+    
+
+            </div>
+
 
             <!-- Body Section Content -->
             <div id="body-content" class="content-section">

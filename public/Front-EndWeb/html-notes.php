@@ -9,13 +9,13 @@
 
     </style>
 
-<link href="../css/animate.min.css" rel="stylesheet">
-<link href="../css/owl.carousel.min.css" rel="stylesheet">
-<link href="../css/bootst.css" rel="stylesheet">
-<link href="../css/about.css" rel="stylesheet">
+<link href="../../css/animate.min.css" rel="stylesheet">
+<link href="../../css/owl.carousel.min.css" rel="stylesheet">
+<link href="../../css/bootst.css" rel="stylesheet">
+<link href="../../css/about.css" rel="stylesheet">
 
 <!-- Specific for notes sections -->
-<link href="../css/notes.css" rel="stylesheet">
+<link href="../../css/notes.css" rel="stylesheet">
 
    <!-- Google Web Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
