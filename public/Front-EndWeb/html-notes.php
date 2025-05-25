@@ -46,7 +46,6 @@
         </nav>
         <!-- Navbar End -->
     <div class="app-container">
-        <!-- Left Sidebar Navigation -->
         <div class="sidebar">
             <ul class="sidebar-menu">
                 <select id="courseMenu" onchange="goToPage()">
@@ -54,278 +53,104 @@
                     <option value="html-notes.html">HTML COURSE</option>
                     <option value="css-notes.html">CSS COURSE</option>
                     <option value="js-notes.html">JavaScript COURSE</option>
-                </select>  
+                </select>
                 <li class="menu-item active">
                     <a href="#"><i class="fas fa-code me-2"></i> Document Structure</a>
                     <ul class="submenu active">
-                        <li class="active"><a href="#" data-content="root"><i style="font-size: 8px;"></i> Root Element</a></li>
-                        <li><a href="#" data-content="head"><i style="font-size: 8px;"></i> Head Section</a></li>
-                        <li><a href="#" data-content="body"><i style="font-size: 8px;"></i> Body Section</a></li>
+                        <li data-section-id="root"><a href="#" data-content="root"><i style="font-size: 8px;"></i> Root Element</a></li>
+                        <li data-section-id="head"><a href="#" data-content="head"><i style="font-size: 8px;"></i> Head Section</a></li>
+                        <li data-section-id="body"><a href="#" data-content="body"><i style="font-size: 8px;"></i> Body Section</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Content Sections</a>
                     <ul class="submenu">
-                        <li class="active"><a href="#" data-content="semantic"><i style="font-size: 8px;"></i> Semantic Containers</a></li>
-                        <li><a href="#" data-content="semantic"><i style="font-size: 8px;"></i> Header</a></li>
-                        <li><a href="#" data-content="nnav"><i style="font-size: 8px;"></i> Navigation</a></li>
-                        <li><a href="#" data-content="mmain"><i style="font-size: 8px;"></i> Main Section</a></li>
-                        <li><a href="#" data-content="aarticle"><i style="font-size: 8px;"></i> Article</a></li>
-                        <li><a href="#" data-content="ssection"><i style="font-size: 8px;"></i> Section</a></li>
-                        <li><a href="#" data-content="aaside"><i style="font-size: 8px;"></i> Sidebar</a></li>
-                        <li><a href="#" data-content="ffooter"><i style="font-size: 8px;"></i> Footer Content</a></li>
-                        <li><a href="#" data-content="ssearch"><i style="font-size: 8px;"></i> Search Section</a></li>
+                        <li data-section-id="semantic"><a href="#" data-content="semantic"><i style="font-size: 8px;"></i> Semantic Containers</a></li>
+                        <li data-section-id="header-semantic"><a href="#" data-content="header-semantic"><i style="font-size: 8px;"></i> Header</a></li>
+                        <li data-section-id="nnav"><a href="#" data-content="nnav"><i style="font-size: 8px;"></i> Navigation</a></li>
+                        <li data-section-id="mmain"><a href="#" data-content="mmain"><i style="font-size: 8px;"></i> Main Section</a></li>
+                        <li data-section-id="aarticle"><a href="#" data-content="aarticle"><i style="font-size: 8px;"></i> Article</a></li>
+                        <li data-section-id="ssection"><a href="#" data-content="ssection"><i style="font-size: 8px;"></i> Section</a></li>
+                        <li data-section-id="aaside"><a href="#" data-content="aaside"><i style="font-size: 8px;"></i> Sidebar</a></li>
+                        <li data-section-id="ffooter"><a href="#" data-content="ffooter"><i style="font-size: 8px;"></i> Footer Content</a></li>
+                        <li data-section-id="ssearch"><a href="#" data-content="ssearch"><i style="font-size: 8px;"></i> Search Section</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Headings and Text</a>
-
-                    <!-- 
-                    Headings & Text
-                            Headings
-                            <h1> to <h6> (Heading Levels)
-
-                            Text Elements
-                            <p> (Paragraph)
-                            <br> (Line Break)
-                            <strong> (Strong Importance)
-                            <em> (Emphasis)
-                            <b> (Bold Text)
-                            <i> (Italic Text)
-                            <small> (Small Text)
-                            <mark> (Highlighted Text)
-                            <ins> (Inserted Text)
-                            <del> (Deleted Text)
-                            <s> (Strikethrough)
-                            <u> (Semantic Underline)
-                    -->
                     <ul class="submenu">
-                        <li><a href="#" data-content="headings"><i style="font-size: 8px;"></i> Headings</a></li>
-                        <li><a href="#" data-content="text"><i style="font-size: 8px;"></i> Text Elements</a></li>
+                        <li data-section-id="headings"><a href="#" data-content="headings"><i style="font-size: 8px;"></i> Headings</a></li>
+                        <li data-section-id="text"><a href="#" data-content="text"><i style="font-size: 8px;"></i> Text Elements</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Media</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="images"><i style="font-size: 8px;"></i> Images</a></li>
-                        <!-- Images & Embeds
-                                <img> (Image)
-                                <iframe> (Inline Frame)
-                                <video> (Video Player)
-                                <audio> (Audio Player)
-                                <source> (Media Source)
-                                <track> (Text Tracks for Media)
-                                <picture> (Responsive Image Container)
-                                <svg> (Scalable Vector Graphics)
-                                <canvas> (Graphics via JavaScript)
-                                <embed> (External Content)
-                                <object> (Embedded Resource) -->
-                        <li><a href="#" data-content="videos"><i style="font-size: 8px;"></i> Videos</a></li>
-                        <li><a href="#" data-content="external-videos"><i style="font-size: 8px;"></i> Videos from other sites</a></li>
+                        <li data-section-id="images"><a href="#" data-content="images"><i style="font-size: 8px;"></i> Images</a></li>
+                        <li data-section-id="videos"><a href="#" data-content="videos"><i style="font-size: 8px;"></i> Videos</a></li>
+                        <li data-section-id="external-videos"><a href="#" data-content="external-videos"><i style="font-size: 8px;"></i> Videos from other sites</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Lists</a>
-
-                    <!-- 
-                        5. Lists
-                            Unordered List
-                            <ul> (Unordered List)
-                            <li> (List Item)
-                            Ordered List
-                            <ol> (Ordered List)
-                            <li> (List Item)
-                            Description List
-                            <dl> (Description List)
-                            <dt> (Term)
-                            <dd> (Description
-                    -->
                     <ul class="submenu">
-                        <li><a href="#" data-content="unordered"><i style="font-size: 8px;"></i> Unordered List</a></li>
-                        <li><a href="#" data-content="ordered"><i style="font-size: 8px;"></i> Ordered List</a></li>
-                        <li><a href="#" data-content="description"><i style="font-size: 8px;"></i> Description List</a></li>
+                        <li data-section-id="unordered"><a href="#" data-content="unordered"><i style="font-size: 8px;"></i> Unordered List</a></li>
+                        <li data-section-id="ordered"><a href="#" data-content="ordered"><i style="font-size: 8px;"></i> Ordered List</a></li>
+                        <li data-section-id="description"><a href="#" data-content="description"><i style="font-size: 8px;"></i> Description List</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Interactive Elements</a>
-
-                    <!-- 
-                     Interactive Elements
-                        Links & Buttons
-                        <a> (Hyperlink)
-                        <button> (Clickable Button)
-                        Forms
-                        <form> (Form Container)
-                        <label> (Label for Input)
-                        <input> (Input Field)
-                        Types:
-                        text
-                        email
-                        password
-                        submit
-                        Others (e.g., checkbox, radio, file)
-                        <textarea> (Multi-line Text Input)
-                        <select> (Dropdown List)
-                        <option> (Dropdown Option)
-                        <optgroup> (Group Options)
-                        <datalist> (Predefined Options)
-                        <output> (Result of Calculation)
-                        <progress> (Progress Bar)
-                        <meter> (Scalar Measurement)
-                        <fieldset> (Group Form Controls)
-                        <legend> (Caption for Fieldset)
-                    -->
                     <ul class="submenu">
-                        <li><a href="#" data-content="links"><i style="font-size: 8px;"></i> Links and Buttons</a></li>
-                        <li><a href="#" data-content="forms"><i style="font-size: 8px;"></i> Forms</a></li>
-                        <li><a href="#" data-content="advanced-forms"><i style="font-size: 8px;"></i> Advanced Forms</a></li>
+                        <li data-section-id="links"><a href="#" data-content="links"><i style="font-size: 8px;"></i> Links and Buttons</a></li>
+                        <li data-section-id="forms"><a href="#" data-content="forms"><i style="font-size: 8px;"></i> Forms</a></li>
+                        <li data-section-id="advanced-forms"><a href="#" data-content="advanced-forms"><i style="font-size: 8px;"></i> Advanced Forms</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Dividers</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="thematic"><i style="font-size: 8px;"></i> Thematic Break</a></li>
-                        <!-- <hr> (Thematic Break) -->
+                        <li data-section-id="thematic"><a href="#" data-content="thematic"><i style="font-size: 8px;"></i> Thematic Break</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#"><i class="fas fa-code me-2"></i> Generic Containers</a>
-
-                   <!--
-                     8. Generic Containers
-                        <div> (Generic Block Container)
-                        <span> (Inline Container)
-
-                            Others
-                        <figure> (Self-contained Content)
-                        <figcaption> (Caption for Figure)
-                        <template> (Client-side Template)  
-    -->
                     <ul class="submenu">
-                        <li><a href="#" data-content="div"><i style="font-size: 8px;"></i> Div</a></li>
-                        <li><a href="#" data-content="span"><i style="font-size: 8px;"></i> Span</a></li>
-                        <li><a href="#" data-content="other-containers"><i style="font-size: 8px;"></i> Others</a></li>
+                        <li data-section-id="div"><a href="#" data-content="div"><i style="font-size: 8px;"></i> Div</a></li>
+                        <li data-section-id="span"><a href="#" data-content="span"><i style="font-size: 8px;"></i> Span</a></li>
+                        <li data-section-id="other-containers"><a href="#" data-content="other-containers"><i style="font-size: 8px;"></i> Others</a></li>
                     </ul>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="semantic-tags">
                     <a href="#" data-content="semantic-tags"><i class="fas fa-code me-2"></i> Semantic Tags (HTML5)</a>
-
-                    <!-- 
-                    9. Semantic Tags (HTML5)
-                        <aside> (Side Content)
-                        <details> (Interactive Widget)
-                        <summary> (Summary for Details)
-                        <time> (Date/Time Representation)
-                        <dialog> (Dialog Box/Modal)
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="semantic-text">
                     <a href="#" data-content="semantic-text"><i class="fas fa-code me-2"></i> Semantic Text</a>
-
-                    <!-- 
-                        10. Semantic Text
-                            <blockquote> (Long Quotation)
-                            <q> (Short Inline Quotation)
-                            <cite> (Title of Creative Work)
-                            <abbr> (Abbreviation/Acronym)
-                            <dfn> (Definition Term)
-                            <data> (Machine-readable Data)
-                            <code> (Inline Code Snippet)
-                            <var> (Variable in Math/Programming)
-                            <samp> (Sample Output)
-                            <kbd> (Keyboard Input)
-                            <sub> (Subscript)
-                            <sup> (Superscript)
-                            <ruby> (Ruby Annotations)
-                            <rt> (Ruby Text)
-                            <rp> (Ruby Parentheses)
-                            <wbr> (Word Break Opportunity)
-                            <bdi> (Bi-directional Isolation)
-                            <bdo> (Bi-directional Override)
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="tables">
                     <a href="#" data-content="tables"><i class="fas fa-code me-2"></i> Table Structures</a>
-
-                    <!-- 
-                        11. Table Structures
-                        <table> (Data Table)
-                        <thead> (Table Header)
-                        <tbody> (Table Body)
-                        <tfoot> (Table Footer)
-                        <tr> (Table Row)
-                        <th> (Table Header Cell)
-                        <td> (Table Data Cell)
-                        <caption> (Table Title)
-                        <colgroup> (Column Group)
-                        <col> (Column Properties)
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="scripting">
                     <a href="#" data-content="scripting"><i class="fas fa-code me-2"></i> Scripting</a>
-                    <!-- 
-                    12. Scripting
-                        <script> (JavaScript Code)
-                        <noscript> (Fallback Content for No Script)
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="embedded">
                     <a href="#" data-content="embedded"><i class="fas fa-code me-2"></i> Embedded Content</a>
-                    <!-- 
-                    13. Embedded Content
-                        <map> (Image Map)
-                        <area> (Clickable Area in Image Map)
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="deprecated">
                     <a href="#" data-content="deprecated"><i class="fas fa-code me-2"></i> Deprecated/Obsolete Tags</a>
-
-                    <!-- 
-                        14. Deprecated/Obsolete Tags
-                            Avoid Using:
-                            <acronym>
-                            <applet>
-                            <basefont>
-                            <big>
-                            <blink>
-                            <center>
-                            <dir>
-                            <font>
-                            <frame>
-                            <frameset>
-                            <isindex>
-                            <keygen>
-                            <marquee>
-                            <menuitem>
-                            <nobr>
-                            <noembed>
-                            <noframes>
-                            <param>
-                            <plaintext>
-                            <spacer>
-                            <strike>
-                            <tt>
-                            <xmp>
-                    -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" data-section-id="obscure">
                     <a href="#" data-content="obscure"><i class="fas fa-code me-2"></i> Obscure but Valid Tags</a>
-                    <!-- 
-                        15. Obscure but Valid Tags
-                            <portal> (Experimental Embedded Context)
-                            <slot> (Web Components Slot)
-                    -->
                 </li>
-
                 <li class="menu-item">
-                    <a href="#"><i class="fas fa-code me-2"></i> Aditional Semantic Elements</a>
+                    <a href="#"><i class="fas fa-code me-2"></i> Additional Semantic Elements</a>
                     <ul class="submenu">
-                        <li class="active"><a href="#" data-content="semantic"><i style="font-size: 8px;"></i> Firgure</a></li>
-                        <li><a href="#" data-content="semantic"><i style="font-size: 8px;"></i> Figcaption</a></li>
-                        <li><a href="#" data-content="nnav"><i style="font-size: 8px;"></i> Time</a></li>
-                        <li><a href="#" data-content="mmain"><i style="font-size: 8px;"></i> Mark</a></li>
-                        <li><a href="#" data-content="aarticle"><i style="font-size: 8px;"></i> Details</a></li>
-                        <li><a href="#" data-content="ssection"><i style="font-size: 8px;"></i> Summary</a></li>
+                        <li data-section-id="figure"><a href="#" data-content="figure"><i style="font-size: 8px;"></i> Figure</a></li>
+                        <li data-section-id="figcaption"><a href="#" data-content="figcaption"><i style="font-size: 8px;"></i> Figcaption</a></li>
+                        <li data-section-id="time-element"><a href="#" data-content="time-element"><i style="font-size: 8px;"></i> Time</a></li>
+                        <li data-section-id="mark-element"><a href="#" data-content="mark-element"><i style="font-size: 8px;"></i> Mark</a></li>
+                        <li data-section-id="details-element"><a href="#" data-content="details-element"><i style="font-size: 8px;"></i> Details</a></li>
+                        <li data-section-id="summary-element"><a href="#" data-content="summary-element"><i style="font-size: 8px;"></i> Summary</a></li>
                     </ul>
                 </li>
             </ul>
