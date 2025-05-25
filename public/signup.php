@@ -1,19 +1,6 @@
 <?php
-// Start PHP session to maintain state across pages
 session_start();
-
-$servername = "localhost";
-$username = "root";  // Default for XAMPP
-$password = "";      // Default for XAMPP, but use your password if set
-$dbname = "digital_leap";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'includes/auth.php'; 
 
 // Form submission handler
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
