@@ -375,7 +375,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden" style="height: 250px; width: 100%;">
-                        <img class="img-fluid w-100 h-100 object-contain" src="images/ladies-sports-bandana-in-floral-print.webp" alt="Jane Doe" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/333333?text=Image+Missing';">
+                        <img class="img-fluid w-100 h-100 object-contain" src="images/ladie.webp" alt="Jane Doe" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/333333?text=Image+Missing';">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -385,7 +385,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">Jane Doe</h5>
+                        <h5 class="mb-0">Jane </h5>
                         <small>Board Member</small>
                     </div>
                 </div>
