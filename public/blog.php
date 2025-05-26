@@ -46,12 +46,17 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="about.php" class="nav-item nav-link">Blog</a>
-                <a href="courses.php" class="nav-item nav-link">Courses</a>                         
-               
+                <a href="blog.php" class="nav-item nav-link">Blog</a>
+                <a href="e-library.php" class="nav-item nav-link">eLibrary</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <?php if ($user): ?>
+                    <a href="dashboard.php" class="nav-item nav-link">Welcome, <?php echo htmlspecialchars($user['name']); ?></a>
+                    <a href="logout.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Logout<i class="fa fa-sign-out-alt ms-3"></i></a>
+                <?php else: ?>
+                    <a href="register_step1.php" class="nav-item nav-link">Join Now</a>
+                    <a href="login.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Log In<i class="fa fa-arrow-right ms-3"></i></a>
+                <?php endif; ?>
             </div>
-            <a href="join_now.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
