@@ -190,6 +190,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <!-- Contact End -->
 
+
+
+    <!-- Become A Patner -->
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Partnerships</h6>
+                <h1 class="mb-5">Become A Partner</h1>
+            </div>
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Enter Your Details</h2>
+                    <form id="studentRegistrationForm" class="student-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Organisation/ Company Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Work Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="+254 or local country code" required>
+                        </div>                     
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Organisation Type:</label>
+                            <select class="form-select" id="gender" name="gender" required>
+                                <option value="Government">Government</option>
+                                <option value="NGO">NGO</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="program" class="form-label">Partnership Interest</label>
+                            <select class="form-select" id="program" name="program" required>
+                                <option value="Web Design">Sponsoship</option>
+                                <option value="Graphic Design">Learning Resources/ Materials</option>
+                                <option value="Video Vditing"></option>
+                                <option value="Online Marketing"></option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

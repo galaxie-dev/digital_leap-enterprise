@@ -128,9 +128,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best eLearning Platform</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Leap into the Web</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Connect With Like-Minded Tech Enthusiasts</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Learn new skills from the comfort of your home.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">Where the cursor meets the keyboard.</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="<?php echo $user ? 'courses.php' : 'register_step1.php'; ?>" class="btn btn-light py-md-3 px-md-5 animated slideInRight"><?php echo $user ? 'Explore Courses' : 'Join Now'; ?></a>
                             </div>
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best eLearning Platform</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Embrace Tech for Africanacity</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Build and Expand Your Network</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Interact with students from different parts of the world and build new connections.</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
@@ -201,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="images/businessman-working-laptop.jpg" alt="Professional working on laptop" style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="images/smiling-portrait-young-afro-american-young-man-carrying-bag-shoulder-books-hand-standing-against-wall.jpg" alt="Professional working on laptop" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
