@@ -46,8 +46,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link">Blog</a>
-                <a href="courses.php" class="nav-item nav-link">Courses</a>
+                <a href="blog.php" class="nav-item nav-link">Blog</a>
+                <a href="e-library.php" class="nav-item nav-link">eLibrary</a
                 <a href="contact.php" class="nav-item nav-link active">Contact</a>
                 <?php if ($user): ?>
                     <a href="dashboard.php" class="nav-item nav-link">Welcome, <?php echo htmlspecialchars($user['name']); ?></a>
